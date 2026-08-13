@@ -1,5 +1,7 @@
 # Evaluationsartefakte: Graphenbasierte Qualitätssicherung für User Story Backlogs
+
 Dieses Verzeichnis enthält die experimentelle Evaluations- und Testumgebung zur Masterarbeit:
+
 **Titel:** Graph-based design and implementation of quality assurance checks for user story backlogs  
 **Autor:** Daniel Scharf (Matrikelnummer: 4001730)  
 **Institution:** Brandenburgische Technische Universität Cottbus-Senftenberg (BTU)  
