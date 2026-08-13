@@ -3,7 +3,7 @@
 Dieses Verzeichnis enthält die experimentelle Evaluations- und Testumgebung zur Masterarbeit:
 
 **Titel:** Graph-based design and implementation of quality assurance checks for user story backlogs  
-**Autor:** Daniel Scharf (Matrikelnummer: 4001730)  
+**Autor:** Scharf  
 **Institution:** Brandenburgische Technische Universität Cottbus-Senftenberg (BTU)  
 **Fakultät:** Fakultät für Mathematik, Informatik, Physik, Elektrotechnik und Informationstechnik  
 **Institut:** Institut für Informatik, Lehrstuhl Software-Systemtechnik (Prof. Dr. rer. nat. Leen Lambers)  
