@@ -1,0 +1,1096 @@
+{
+  "G03": [
+    {
+      "id": "G03_01",
+      "text": "As a Public User, I want to Search for Information, so that I can obtain publicly available information concerning properties, County services, processes and other general information.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_02",
+      "text": "As a ProspectiveApplicant, I want to research requirements and to select a service, so that I can find the relevant service and/or application type to initiate via the online portal.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_03",
+      "text": "As an Applicant, I want to Request PreApplication Assistance, so that I can receive a response to a request for a meeting or information that is a result of the preapplication assistance.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_04",
+      "text": "As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_05",
+      "text": "As an Applicant, I want to Submit Application, so that I can provide my information, plans and/or documents to initiate a transaction with the County.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_06",
+      "text": "As an Applicant, I want to Submit Supporting Documentation, so that I can satisfy documentation requirements for my application.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_07",
+      "text": "As an Applicant, I want to Pay Fee, so that I can satisfy outstanding charge associated with the service requested or received from the County.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_08",
+      "text": "As an Applicant, I want to Check the Status of a transaction, so that I can understand where the provisioning of my service is in the process, such as information related to service levels, fees, plan review, permit, or inspection results.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_09",
+      "text": "As an Applicant, I want to Modify my Application, so that I can successfully change information on an application.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_10",
+      "text": "As a Staff member, I want to Perform a Completeness Review, so that I can validate when an application is complete and eligible for further technical review.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_11",
+      "text": "As a Staff member, I want to Record an Internal Note, so that I can share information with other Staff collaborating on the record.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_12",
+      "text": "As a Staff member, I want to Assign an Application for Detailed Review, so that I can review the for compliance and subsequently approved or denied.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_13",
+      "text": "As a Staff member, I want to Apply a Hold, so that I can prevent progression through the workflow or other actions in the system until the issue is resolved.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_14",
+      "text": "As a Staff member, I want to Remove a Hold, so that I can allow progression through the workflow or other actions in the system now that the issue has been resolved.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_15",
+      "text": "As a Staff member, I want to Send a Formal Response to Applicant, so that I can satisfy communication and records responsibilities.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_16",
+      "text": "As a Staff member, I want to Track  the Draft Proffers, so that I can preserve the history of draft proffer statements submitted by the Applicant.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_17",
+      "text": "As a Staff member, I want to Manage Approved Proffers, so that I can ensure compliance with and satisfaction of the proffer in the future.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_18",
+      "text": "As a Staff member, I want to Manage Ordinances, so that I can maintain accurate ordinance information in the System.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_19",
+      "text": "As a Staff member, I want to Schedule a Meeting, so that I can bring the required parties together at a specific date/time to address an issue.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_20",
+      "text": "As a staff member, I want to denote an application with a Final Action status. So that I can finish it.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_21",
+      "text": "As a Planning Staff member, I want to Conduct and Track Plan Amendments and Planning Studies, so that I can record work in process, outcome, and location-based information related to the Plan(s).",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_22",
+      "text": "As a Planning Staff member, I want to Generate Planning-related Reports, so that I can access, analyze and/or export the needed information in the format I requested.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_23",
+      "text": "As a Planning Staff member, I want to Evaluate Consistency with the Comprehensive Plan, so that I can complete my required review of a plan set and/or application.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_24",
+      "text": "As a Staff member, I want to Perform a Staff Review, so that I can validate compliance of an application with the Zoning Ordinance and impact approval/denial of the application accordingly.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_25",
+      "text": "As a Zoning Staff member, I want to Process the Requests for Zoning Information, so that I can capture my response to the request in the system and also send a communication from the system to the Applicant.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_26",
+      "text": "As a Zoning Staff member, I want to Issue the Zoning-Related Permits, so that I can satisfy an Applicant's request for service that has proven to be eligible and in compliance with the Zoning Ordinance.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_27",
+      "text": "As a Staff member, I want to Develop a Staff Report, so that I can publish and distribute the report according to business rules.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_28",
+      "text": "As a Staff member, I want to Manage Hearing Calendars, so that I can track hearing-related activities and due dates.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_29",
+      "text": "As a Staff member, I want to Assign a Hearing Date, so that I can present the application to the appropriate governing body within the timelines dictated by the relevant County rules and procedures.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_30",
+      "text": "As a Staff member, I want to Manage Affidavits, so that I can ensure compliance with the requirements prior to the hearing.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_31",
+      "text": "As an Applicant, I want to Satisfy Hearing Requirements, so that I can ensure all pre-hearing requirements are satisfied in time for the hearing.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_32",
+      "text": "As a Staff member, I want to Prepare for and Support Hearing Execution, so that I can ensure all pre-hearing requirements are satisfied and staff and Applicant are ready for the hearing.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_33",
+      "text": "As a Staff member, I want to Capture a Hearing Decision, so that I can enforce the system.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_34",
+      "text": "As a Staff member, I want to Process the Appeals, so that I can track the outcome and record the impact on the relevant records.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_35",
+      "text": "As a Plan Review Staff member, I want to Assign Plans for Review, so that I can ensure plans have been assigned to the appropriate Plan Reviewer.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_36",
+      "text": "As a Plan Review Staff Supervisor, I want to Manage Plan Reviewer Workload, so that I can monitor and effectively adjust workload as necessary and ensure service levels are met",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_37",
+      "text": "As an Applicant, I want to Request a Plan Review Meeting, so that I can meet with the Plan Review Staff regarding the plan review.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_38",
+      "text": "As a Plan Review Staff member, I want to successfully Conduct a Plan Review Meeting with the Applicant and record the outcome, so that I can listen to it again.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_39",
+      "text": "As a Plan Review Staff member, I want to Review Plans, so that I can review them for compliance and either approve, or fail or deny the plans and record any conditions, clearances, or corrections needed from the Applicant.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_40",
+      "text": "As an Applicant, I want to Resubmit Plans, so that I can review revised plans.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_41",
+      "text": "As a Plan Review Staff Member, I want to Review the Code Modifications submitted by the Applicant, so that I can review the request and if approved, associate it with the appropriate project.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_42",
+      "text": "As a Plan Review Staff member, I want to Track the Completion of Required Plan Reviews, so that I can ensure all plan review tasks are completed, results have been sent to the Applicant and any downstream steps are initiated such has a final review or payment for permit issuance.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_43",
+      "text": "As a Development Staff member, I want to Issue a Development-related Permit, so that I can grant the request to the Applicant to begin work",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_44",
+      "text": "As a Staff member, I want to Manage Bonds, so that I can track and manage bonds throughout the lifecycle of the project until release.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_45",
+      "text": "As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_46",
+      "text": "As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": true
+      }
+    },
+    {
+      "id": "G03_47",
+      "text": "As a Customer, I want to Request Inspection, so that a County inspector is assigned to perform an inspection of my project.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_48",
+      "text": "As an Inspection Staff member, I want to Create an Inspection, so that I can schedule and assign the inspection.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_49",
+      "text": "As an Inspection Staff Supervisor, I want to Assign Inspections, so that I can make sure the appropriate Inspector receives the work.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_50",
+      "text": "As an Inspection Supervisor, I want to Manage Inspector Workload, so that I can meet service level and quality requirements.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_51",
+      "text": "As an Inspector, I want to Conduct Inspections, so that I can validate Customer compliance with code and regulations and provide results of the inspection to the Customer.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_52",
+      "text": "As an Enforcement Staff member, I want to Issue a Notice of Violation, so that I can provide formal communication to the responsible party.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_53",
+      "text": "As a l Staff member, I want to search for Property information, so that I can obtain all associated current and historic owners, permits, and applications.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_54",
+      "text": "As a Staff member, I need to be notified when Geospatial attributes change, so that I can ensure that I am reviewing the permit/application to the most current data and appropriate standards.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": true,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_55",
+      "text": "As a County Staff Member, I want to create a custom query/report outside of the common querying/reporting functionality, so that I can fulfill a request.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_56",
+      "text": "As a Staff member, I want to create each condo unit, so that I can associate it to the child parcel and address after the condominiums are recorded in the system.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_57",
+      "text": "As a Technical Staff member, I want to update the GIS Property Management, so that I can successfully update the transactional Parcel Pin to reference the GIS layer where the Split or Merged Parcel Pin exists.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G03_58",
+      "text": "As a Staff member, I want to Send or Post Citations and Fines, so that I can successfully send the Notice Of Violation document to the property owner and log information about the action.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    }
+  ],
+  "G04": [
+    {
+      "id": "G04_01",
+      "text": "As a user, I want to click on the address, so that it takes me to a new tab with Google Maps.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_02",
+      "text": "As a user, I want to be able to anonymously view public information, so that I know about recycling centers near me before creating an account.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_03",
+      "text": "As a user, I want to be able to enter my zip code and get a list of nearby recycling facilities, so that I can determine which ones I should consider.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_04",
+      "text": "As a user, I want to be able to get the hours of each recycling facility, so that I can arrange drop-offs on my off days or during after-work hours.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_05",
+      "text": "As a user, I want to have a flexible pick up time, so that I can more conveniently use the website.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_06",
+      "text": "As a user, I want to be able to select different types of recyclable waste, so I have and get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_07",
+      "text": "As a user, I want to add donation centers as favorites on my profile, so that I can view them later.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_08",
+      "text": "As a user, I want to be able to give my email ID, so that I can receive notifications for new events as they are posted.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_09",
+      "text": "As a user, I want to be able to view a map display of the public recycling bins around my area.",
+      "defects": {
+        "missing_benefit": true,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_10",
+      "text": "As a user, I want to be able to view a map display of the special waste drop off sites around my area.",
+      "defects": {
+        "missing_benefit": true,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_11",
+      "text": "As a user, I want to be able to view the safe disposal events currently being organised around my area.",
+      "defects": {
+        "missing_benefit": true,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_12",
+      "text": "As a user, I want to choose a flexible pick up time, so that I can more conveniently use the website.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_13",
+      "text": "As a user, I want to view user documentation for the website, so that I know how to use the web app.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_14",
+      "text": "As a user, I want to get feedback when I enter an invalid zip code.",
+      "defects": {
+        "missing_benefit": true,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_15",
+      "text": "As a user, I want to be able to create an acocunt, so that I can create my own profile.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_16",
+      "text": "As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_17",
+      "text": "As an admin, I want to be able to read users' feedback and complaints, so that we can add more features and keep improving the service we provide to them.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_18",
+      "text": "As a user, I want to be able to check transaction history and keep a record of it, so that I can go back when needed.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_19",
+      "text": "As a user, I want to have a great UI and UX from the sites, so that I have a pleasant experience when navigating through them.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_20",
+      "text": "As a user, I want to be able to access the site and do all the other stuffs on all of my electronic devices.",
+      "defects": {
+        "missing_benefit": true,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_21",
+      "text": "As an admin, I want to be able to block specific users based on IP address, so that I can prevent spamming on the websites.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_22",
+      "text": "As an admin, I want to view a dashboard that monitors all the sites' statuses, so that I can have a sense of what people are doing on our sites and know the service status.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_23",
+      "text": "As an admin, I want to have all data encrypted, so that important information will not be stolen during a server breach or an attack.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_24",
+      "text": "As an executive, I want to have full access to data related to my company, so that I can have a sense of my company's performance.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_25",
+      "text": "As an employee, I want to access the route planning system during work, so that I can be guided through the neighbourhood.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_26",
+      "text": "As an employee from the HR department, I want to have access to the full information of all employees working for this business.",
+      "defects": {
+        "missing_benefit": true,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_27",
+      "text": "As a developer, I want to access an API from the website, so that I can integrate it and implement certain features in my own iOS application.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_28",
+      "text": "As a user, I want to be able to receive tempting rewards, so that I have a reason to use the website.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_29",
+      "text": "As a user, I want to have my personal information kept securely in the database of the website, so that I will not suffer from identity theft or telephone harassment.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_30",
+      "text": "As an admin, I want to handle all users' activities, so that I can manage more efficiently.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_31",
+      "text": "As a company, I want to have a website that is easy to use, so that I can upload or delete stuff step by step.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_32",
+      "text": "As an employee, I want to get quick notifications, so that I can process cases the first time.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_33",
+      "text": "As a company accountant, I want to view all available activity fees online, so that I can easily create a bill statement.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_34",
+      "text": "As a developer, I want to use bootstrap in the process of developing, so that I can easily design my website.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_35",
+      "text": "As a developer, I want to attend some UI/UX lessons, so that I can develop an awesome and beautiful features website.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_36",
+      "text": "As a user, I want to view all locations of recycling centers on a map, so that I can check which routes to take to drop off waste.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_37",
+      "text": "As a user, I want to upload my week's schedule, so that I can get recommendations for recycling centers that best fit my availability.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_38",
+      "text": "As a user, I want to link my email account to my profile, so that I can get a temporary password in case I forget my own one.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_39",
+      "text": "As a user, I want to contact the administrators, so that I can give feedback or ask for help.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_40",
+      "text": "As an admin, I want to add recycling center information, so that I can keep the database up-to-date over time.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_41",
+      "text": "As an admin, I want to view user error logs, so that I can fix or review any issues that are being faced by users of the system.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_42",
+      "text": "As an admin, I want to onboard recycling centers on the platform, so that I can increase information accuracy.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_43",
+      "text": "As a superuser, I want to update the recycling center information, so that I can provide the latest information about the recycling center.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_44",
+      "text": "As a superuser, I want to view users' stats, so that I can view in real-time how many users have visited my recycling center information and their recyclable waste.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_45",
+      "text": "As a superuser, I want to reply to user questions, so that I can answer any questions about my recycling center.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_46",
+      "text": "As an admin, I want to be able to have a dashboard that shows usage stats and locations, so that I can identify the neighbourhoods with the largest number of drop-offs and to try getting more facilities involved.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_47",
+      "text": "As an admin, I want to be able to communicate directly with facilities, so that I can keep them updated about features we have on our website.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": false,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_48",
+      "text": "As a user, I want to be able to browse through the list of facolities and see which ones are environment-friendly, so that I can know for sure my waste is not going to leave a negative ecological footprint.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_49",
+      "text": "As a recyclingfacility representative, I want to be able to update my information and the type of material I accept, so that I can avoid any miscommunication with users.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_50",
+      "text": "As a recyclingfacility representative, I want to have access to user stats and schedules, so that I can adjust my hours and/or upgrade equipment and capacity in order to be able to accomodate larger amounts of recyclable materials.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    },
+    {
+      "id": "G04_51",
+      "text": "As a recyclingfacility, I want to be able to communicate directly with the site admin and convey any issues or concerns I have, so that they fix them.",
+      "defects": {
+        "missing_benefit": false,
+        "non_atomic": true,
+        "incomplete_means": false,
+        "uniqueness": false
+      }
+    }
+  ]
+}
