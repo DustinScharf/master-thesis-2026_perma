@@ -1,0 +1,27 @@
+Story #2: "As a ProspectiveApplicant, I want to research requirements and to select a service, so that I can find the relevant service and/or application type to initiate via the online portal."
+   Defect type: atomic.conjunctions
+   Message: As a ProspectiveApplicant, I want to research requirements [* and *] to select a service, so that I can find the relevant service and [*/*] or application type to initiate via the online portal.
+Story #20: "As a staff member, I want to denote an application with a Final Action status. So that I can finish it."
+   Defect type: minimal.punctuation
+   Message: As a staff member, I want to denote an application with a Final Action status [*. So that I can finish it.*] 
+Story #21: "As a Planning Staff member, I want to Conduct and Track Plan Amendments and Planning Studies, so that I can record work in process, outcome, and location-based information related to the Plan(s)."
+   Defect type: atomic.conjunctions
+   Message: As a Planning Staff member, I want to Conduct [* and *] Track Plan Amendments and Planning Studies, so that I can record work in process, outcome, and location-based information related to the Plan(s).
+Story #21: "As a Planning Staff member, I want to Conduct and Track Plan Amendments and Planning Studies, so that I can record work in process, outcome, and location-based information related to the Plan(s)."
+   Defect type: minimal.brackets
+   Message: As a Planning Staff member, I want to Conduct and Track Plan Amendments and Planning Studies, so that I can record work in process, outcome, and location-based information related to the Plan [*(s)*] .
+Story #46: "As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy."
+   Defect type: unique.identical
+   Message: Remove all duplicate user stories
+Story #54: "As a Staff member, I need to be notified when Geospatial attributes change, so that I can ensure that I am reviewing the permit/application to the most current data and appropriate standards."
+   Defect type: well_formed.no_means
+   Message: Add what you want to achieve
+Story #55: "As a County Staff Member, I want to create a custom query/report outside of the common querying/reporting functionality, so that I can fulfill a request."
+   Defect type: atomic.conjunctions
+   Message: As a County Staff Member, I want to create a custom query [*/*] report outside of the common querying/reporting functionality, so that I can fulfill a request.
+Story #58: "As a Staff member, I want to Send or Post Citations and Fines, so that I can successfully send the Notice Of Violation document to the property owner and log information about the action."
+   Defect type: atomic.conjunctions
+   Message: As a Staff member, I want to Send [* or *] Post Citations [* and *] Fines, so that I can successfully send the Notice Of Violation document to the property owner and log information about the action.
+Story #54: "As a Staff member, I need to be notified when Geospatial attributes change, so that I can ensure that I am reviewing the permit/application to the most current data and appropriate standards."
+   Defect type: uniform.uniform
+   Message: Use the most common template: As a, I want to, So that

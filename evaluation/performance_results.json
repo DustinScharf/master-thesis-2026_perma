@@ -1,0 +1,74 @@
+{
+  "protocol": {
+    "database": "userstories",
+    "user_story_nodes": 103,
+    "warmup_runs_per_query": 25,
+    "measured_runs_per_query": 250,
+    "timing": "client wall time including the local driver round trip",
+    "execution": "sequential, warm cache, complete result consumption"
+  },
+  "environment": {
+    "python": "3.13.2",
+    "neo4j_driver": "6.2.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "database_components": [
+      {
+        "name": "Neo4j Kernel",
+        "versions": [
+          "2026.04.0"
+        ],
+        "edition": "enterprise"
+      },
+      {
+        "name": "Cypher",
+        "versions": [
+          "5",
+          "25"
+        ],
+        "edition": ""
+      }
+    ]
+  },
+  "measurements": {
+    "missing_benefit": {
+      "result_rows": 6,
+      "db_hits": 522,
+      "median_ms": 2.156,
+      "p95_ms": 3.552,
+      "minimum_ms": 1.622,
+      "maximum_ms": 17.728
+    },
+    "fat_story_gt2": {
+      "result_rows": 35,
+      "db_hits": 1464,
+      "median_ms": 4.181,
+      "p95_ms": 5.375,
+      "minimum_ms": 3.077,
+      "maximum_ms": 27.242
+    },
+    "dangling_action": {
+      "result_rows": 3,
+      "db_hits": 4224,
+      "median_ms": 2.17,
+      "p95_ms": 3.313,
+      "minimum_ms": 1.793,
+      "maximum_ms": 3.567
+    },
+    "overlap_candidate": {
+      "result_rows": 15,
+      "db_hits": 6607,
+      "median_ms": 4.061,
+      "p95_ms": 4.826,
+      "minimum_ms": 3.016,
+      "maximum_ms": 8.671
+    },
+    "cross_persona_overlap": {
+      "result_rows": 7,
+      "db_hits": 19835,
+      "median_ms": 5.075,
+      "p95_ms": 5.971,
+      "minimum_ms": 3.849,
+      "maximum_ms": 14.599
+    }
+  }
+}

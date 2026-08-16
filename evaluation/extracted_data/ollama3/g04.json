@@ -1,0 +1,2112 @@
+[
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to click on the address, so that it takes me to a new tab with Google Maps.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "click"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "new tab with Google Maps",
+                "address"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "it takes me to a new tab with Google Maps",
+        "Triggers": [
+            [
+                "user",
+                "click"
+            ]
+        ],
+        "Targets": [
+            [
+                "click",
+                "address"
+            ],
+            [
+                "click",
+                "new tab with Google Maps"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to anonymously view public information, so that I know about recycling centers near me before creating an account.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be able to"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "anonymously view public information",
+                "recycling centers near me"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I know about recycling centers near me before creating an account",
+        "Triggers": [
+            [
+                "user",
+                "be able to"
+            ]
+        ],
+        "Targets": [
+            [
+                "be able to",
+                "anonymously view public information"
+            ],
+            [
+                "be able to",
+                "recycling centers near me"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to enter my zip code and get a list of nearby recycling facilities, so that I can determine which ones I should consider.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "determine",
+                "get",
+                "consider",
+                "enter"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "recycling facilities",
+                "which ones I should consider",
+                "list of nearby recycling facilities",
+                "zip code"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can determine which ones I should consider",
+        "Triggers": [
+            [
+                "user",
+                "enter"
+            ],
+            [
+                "get",
+                "determine"
+            ],
+            [
+                "determine",
+                "consider"
+            ]
+        ],
+        "Targets": [
+            [
+                "enter",
+                "zip code"
+            ],
+            [
+                "enter",
+                "recycling facilities"
+            ],
+            [
+                "get",
+                "list of nearby recycling facilities"
+            ],
+            [
+                "determine",
+                "which ones I should consider"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to get the hours of each recycling facility, so that I can arrange drop-offs on my off days or during after-work hours.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "hours",
+                "recycling facility"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can arrange drop-offs on my off days or during after-work hours",
+        "Triggers": [
+            [
+                "user",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "hours"
+            ],
+            [
+                "get",
+                "recycling facility"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to select different types of recyclable waste, so I have and get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have",
+                "find",
+                "select",
+                "get"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "optimal route and schedule",
+                "list of facilities that accept each type and their opening hours",
+                "different types of recyclable waste"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "so that I can find an optimal route and schedule",
+        "Triggers": [
+            [
+                "user",
+                "select"
+            ],
+            [
+                "find",
+                "optimal route and schedule"
+            ]
+        ],
+        "Targets": [
+            [
+                "select",
+                "different types of recyclable waste"
+            ],
+            [
+                "have",
+                "list of facilities that accept each type and their opening hours"
+            ],
+            [
+                "get",
+                "list of facilities that accept each type and their opening hours"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to add donation centers as favorites on my profile, so that I can view them later.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "can",
+                "view",
+                "add"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "profile",
+                "favorites",
+                "donation centers"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can view them later",
+        "Triggers": [
+            [
+                "user",
+                "add"
+            ],
+            [
+                "can",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "donation centers"
+            ],
+            [
+                "add",
+                "favorites"
+            ],
+            [
+                "add",
+                "profile"
+            ],
+            [
+                "view",
+                "donation centers"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to give my email ID, so that I can receive notifications for new events as they are posted.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "give"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "email ID",
+                "receive notifications for new events as they are posted"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can receive notifications for new events as they are posted",
+        "Triggers": [
+            [
+                "user",
+                "give"
+            ],
+            [
+                "give",
+                "receive notifications for new events as they are posted"
+            ]
+        ],
+        "Targets": [
+            [
+                "give",
+                "email ID"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to view a map display of the public recycling bins around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "public recycling bins",
+                "around my area",
+                "map display"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "map display"
+            ],
+            [
+                "view",
+                "public recycling bins"
+            ],
+            [
+                "view",
+                "around my area"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to view a map display of the special waste drop off sites around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "special waste drop off sites",
+                "my area",
+                "map display"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "map display"
+            ],
+            [
+                "view",
+                "special waste drop off sites"
+            ],
+            [
+                "view",
+                "my area"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to view the safe disposal events currently being organised around my area.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "safe disposal events",
+                "currently being organised around my area"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "safe disposal events"
+            ],
+            [
+                "view",
+                "currently being organised around my area"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to choose a flexible pick up time, so that I can more conveniently use the website.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "choose"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "flexible pick up time",
+                "website"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can more conveniently use the website",
+        "Triggers": [
+            [
+                "user",
+                "choose"
+            ]
+        ],
+        "Targets": [
+            [
+                "choose",
+                "flexible pick up time"
+            ],
+            [
+                "choose",
+                "website"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to view user documentation for the website, so that I know how to use the web app.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view",
+                "know"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "how to use the web app",
+                "user documentation",
+                "website"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I know how to use the web app",
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ],
+            [
+                "know",
+                "how to use the web app"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "user documentation"
+            ],
+            [
+                "view",
+                "website"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be able to",
+                "remove",
+                "add"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "users get the most recent information",
+                "recycling facilities' information"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "users get the most recent information",
+        "Triggers": [
+            [
+                "admin",
+                "add"
+            ],
+            [
+                "be able to",
+                "users get the most recent information"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "recycling facilities' information"
+            ],
+            [
+                "remove",
+                "recycling facilities' information"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to be able to read users' feedback and complaints, so that we can add more features and keep improving the service we provide to them.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "keep improving",
+                "read",
+                "add"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "users' feedback and complaints",
+                "complaints",
+                "more features",
+                "service we provide to them"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "we can add more features and keep improving the service we provide to them",
+        "Triggers": [
+            [
+                "admin",
+                "read"
+            ],
+            [
+                "add",
+                "more features"
+            ],
+            [
+                "keep improving",
+                "service we provide to them"
+            ]
+        ],
+        "Targets": [
+            [
+                "read",
+                "users' feedback and complaints"
+            ],
+            [
+                "read",
+                "complaints"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to check transaction history and keep a record of it, so that I can go back when needed.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "go back",
+                "check"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "transaction history",
+                "record",
+                "when needed"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can go back when needed",
+        "Triggers": [
+            [
+                "user",
+                "check"
+            ],
+            [
+                "go back",
+                "when needed"
+            ]
+        ],
+        "Targets": [
+            [
+                "check",
+                "transaction history"
+            ],
+            [
+                "check",
+                "record"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to have a great UI and UX from the sites, so that I have a pleasant experience when navigating through them.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "sites",
+                "pleasant experience",
+                "great UI and UX"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I have a pleasant experience when navigating through them",
+        "Triggers": [
+            [
+                "user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "great UI and UX"
+            ],
+            [
+                "have",
+                "sites"
+            ],
+            [
+                "have",
+                "pleasant experience"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to access the site and do all the other stuffs on all of my electronic devices.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "access",
+                "do all the other stuffs"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "all of my electronic devices",
+                "site"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "user",
+                "access"
+            ],
+            [
+                "do all the other stuffs",
+                "user"
+            ]
+        ],
+        "Targets": [
+            [
+                "access",
+                "site"
+            ],
+            [
+                "access",
+                "all of my electronic devices"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to be able to block specific users based on IP address, so that I can prevent spamming on the websites.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "can prevent",
+                "block"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "spamming on the websites",
+                "specific users",
+                "IP address"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can prevent spamming on the websites",
+        "Triggers": [
+            [
+                "admin",
+                "block"
+            ],
+            [
+                "can prevent",
+                "spamming on the websites"
+            ]
+        ],
+        "Targets": [
+            [
+                "block",
+                "specific users"
+            ],
+            [
+                "block",
+                "IP address"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to view a dashboard that monitors all the sites' statuses, so that I can have a sense of what people are doing on our sites and know the service status.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have",
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "sites' statuses",
+                "service status",
+                "dashboard",
+                "sense of what people are doing on our sites"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can have a sense of what people are doing on our sites and know the service status",
+        "Triggers": [
+            [
+                "admin",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "dashboard"
+            ],
+            [
+                "view",
+                "sites' statuses"
+            ],
+            [
+                "have",
+                "sense of what people are doing on our sites"
+            ],
+            [
+                "have",
+                "service status"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to have all data encrypted, so that important information will not be stolen during a server breach or an attack.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "encrypted",
+                "all data"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "important information will not be stolen during a server breach or an attack",
+        "Triggers": [
+            [
+                "admin",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "all data"
+            ],
+            [
+                "have",
+                "encrypted"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an executive, I want to have full access to data related to my company, so that I can have a sense of my company's performance.",
+        "Persona": [
+            "executive"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "data related to my company",
+                "full access to data",
+                "my company's performance"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can have a sense of my company\\'s performance",
+        "Triggers": [
+            [
+                "executive",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "full access to data"
+            ],
+            [
+                "have",
+                "data related to my company"
+            ],
+            [
+                "have",
+                "my company's performance"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an employee, I want to access the route planning system during work, so that I can be guided through the neighbourhood.",
+        "Persona": [
+            "employee"
+        ],
+        "Action": {
+            "Primary Action": [
+                "access",
+                "be guided through the neighbourhood",
+                "can be guided through"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "route planning system",
+                "during work",
+                "the neighbourhood"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can be guided through the neighbourhood",
+        "Triggers": [
+            [
+                "employee",
+                "access"
+            ],
+            [
+                "can be guided through",
+                "be guided through the neighbourhood"
+            ]
+        ],
+        "Targets": [
+            [
+                "access",
+                "route planning system"
+            ],
+            [
+                "access",
+                "during work"
+            ],
+            [
+                "be guided through the neighbourhood",
+                "the neighbourhood"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an employee from the HR department, I want to have access to the full information of all employees working for this business.",
+        "Persona": [
+            "employee from the HR department"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "full information of all employees working for this business"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "",
+        "Triggers": [
+            [
+                "employee from the HR department",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "full information of all employees working for this business"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a developer, I want to access an API from the website, so that I can integrate it and implement certain features in my own iOS application.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "access",
+                "can",
+                "implement",
+                "integrate"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "certain features",
+                "API",
+                "iOS application",
+                "website"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can integrate it and implement certain features in my own iOS application",
+        "Triggers": [
+            [
+                "developer",
+                "access"
+            ],
+            [
+                "can",
+                "integrate"
+            ],
+            [
+                "can",
+                "implement"
+            ]
+        ],
+        "Targets": [
+            [
+                "access",
+                "API"
+            ],
+            [
+                "access",
+                "website"
+            ],
+            [
+                "integrate",
+                "API"
+            ],
+            [
+                "implement",
+                "certain features"
+            ],
+            [
+                "implement",
+                "iOS application"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to be able to receive tempting rewards, so that I have a reason to use the website.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have",
+                "receive"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "tempting rewards",
+                "reason to use the website"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I have a reason to use the website",
+        "Triggers": [
+            [
+                "user",
+                "receive"
+            ]
+        ],
+        "Targets": [
+            [
+                "receive",
+                "tempting rewards"
+            ],
+            [
+                "have",
+                "reason to use the website"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to have my personal information kept securely in the database of the website, so that I will not suffer from identity theft or telephone harassment.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "personal information",
+                "database of the website"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I will not suffer from identity theft or telephone harassment",
+        "Triggers": [
+            [
+                "user",
+                "have"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "personal information"
+            ],
+            [
+                "have",
+                "database of the website"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to handle all users' activities, so that I can manage more efficiently.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "manage",
+                "can",
+                "handle"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "more efficiently",
+                "all users' activities"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can manage more efficiently",
+        "Triggers": [
+            [
+                "admin",
+                "handle"
+            ],
+            [
+                "can",
+                "manage"
+            ]
+        ],
+        "Targets": [
+            [
+                "handle",
+                "all users' activities"
+            ],
+            [
+                "manage",
+                "more efficiently"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a company, I want to have a website that is easy to use, so that I can upload or delete stuff step by step.",
+        "Persona": [
+            "company"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have",
+                "upload or delete stuff step by step"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "easy to use",
+                "website"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can upload or delete stuff step by step",
+        "Triggers": [
+            [
+                "company",
+                "have"
+            ],
+            [
+                "have",
+                "upload or delete stuff step by step"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "website"
+            ],
+            [
+                "have",
+                "easy to use"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an employee, I want to get quick notifications, so that I can process cases the first time.",
+        "Persona": [
+            "employee"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "process cases the first time",
+                "quick notifications"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can process cases the first time",
+        "Triggers": [
+            [
+                "employee",
+                "get"
+            ]
+        ],
+        "Targets": [
+            [
+                "get",
+                "quick notifications"
+            ],
+            [
+                "get",
+                "process cases the first time"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a company accountant, I want to view all available activity fees online, so that I can easily create a bill statement.",
+        "Persona": [
+            "company accountant"
+        ],
+        "Action": {
+            "Primary Action": [
+                "can",
+                "view",
+                "create"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "all available activity fees online",
+                "online",
+                "a bill statement"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can easily create a bill statement",
+        "Triggers": [
+            [
+                "company accountant",
+                "view"
+            ],
+            [
+                "can",
+                "create"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "all available activity fees online"
+            ],
+            [
+                "view",
+                "online"
+            ],
+            [
+                "create",
+                "a bill statement"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a developer, I want to use bootstrap in the process of developing, so that I can easily design my website.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "can",
+                "use"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "process of developing",
+                "easily design my website",
+                "bootstrap"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can easily design my website",
+        "Triggers": [
+            [
+                "developer",
+                "use"
+            ],
+            [
+                "can",
+                "easily design my website"
+            ]
+        ],
+        "Targets": [
+            [
+                "use",
+                "bootstrap"
+            ],
+            [
+                "use",
+                "process of developing"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a developer, I want to attend some UI/UX lessons, so that I can develop an awesome and beautiful features website.",
+        "Persona": [
+            "developer"
+        ],
+        "Action": {
+            "Primary Action": [
+                "can develop",
+                "develop",
+                "attend"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "some UI/UX lessons",
+                "awesome and beautiful features website",
+                "UI/UX lessons"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can develop an awesome and beautiful features website",
+        "Triggers": [
+            [
+                "developer",
+                "attend"
+            ],
+            [
+                "can develop",
+                "develop"
+            ]
+        ],
+        "Targets": [
+            [
+                "attend",
+                "UI/UX lessons"
+            ],
+            [
+                "attend",
+                "some UI/UX lessons"
+            ],
+            [
+                "develop",
+                "awesome and beautiful features website"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to view all locations of recycling centers on a map, so that I can check which routes to take to drop off waste.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "map",
+                "all locations of recycling centers"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can check which routes to take to drop off waste",
+        "Triggers": [
+            [
+                "user",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "all locations of recycling centers"
+            ],
+            [
+                "view",
+                "map"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to upload my week's schedule, so that I can get recommendations for recycling centers that best fit my availability.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "upload",
+                "get"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "my week's schedule",
+                "recommendations",
+                "recycling centers",
+                "my availability"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can get recommendations for recycling centers that best fit my availability",
+        "Triggers": [
+            [
+                "user",
+                "upload"
+            ],
+            [
+                "get",
+                "recommendations"
+            ]
+        ],
+        "Targets": [
+            [
+                "upload",
+                "my week's schedule"
+            ],
+            [
+                "get",
+                "recycling centers"
+            ],
+            [
+                "get",
+                "my availability"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to link my email account to my profile, so that I can get a temporary password in case I forget my own one.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "get",
+                "link"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "password in case I forget my own one",
+                "profile",
+                "temporary password",
+                "email account"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can get a temporary password in case I forget my own one",
+        "Triggers": [
+            [
+                "user",
+                "link"
+            ],
+            [
+                "get",
+                "temporary password"
+            ]
+        ],
+        "Targets": [
+            [
+                "link",
+                "email account"
+            ],
+            [
+                "link",
+                "profile"
+            ],
+            [
+                "get",
+                "password in case I forget my own one"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a user, I want to contact the administrators, so that I can give feedback or ask for help.",
+        "Persona": [
+            "user"
+        ],
+        "Action": {
+            "Primary Action": [
+                "contact"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "help",
+                "feedback",
+                "administrators"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can give feedback or ask for help",
+        "Triggers": [
+            [
+                "user",
+                "contact"
+            ]
+        ],
+        "Targets": [
+            [
+                "contact",
+                "administrators"
+            ],
+            [
+                "contact",
+                "feedback"
+            ],
+            [
+                "contact",
+                "help"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to add recycling center information, so that I can keep the database up-to-date over time.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "add"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "database",
+                "recycling center information"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can keep the database up-to-date over time",
+        "Triggers": [
+            [
+                "admin",
+                "add"
+            ]
+        ],
+        "Targets": [
+            [
+                "add",
+                "recycling center information"
+            ],
+            [
+                "add",
+                "database"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to view user error logs, so that I can fix or review any issues that are being faced by users of the system.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "can",
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "fix or review any issues that are being faced by users of the system",
+                "user error logs",
+                "users of the system"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can fix or review any issues that are being faced by users of the system",
+        "Triggers": [
+            [
+                "admin",
+                "view"
+            ],
+            [
+                "can",
+                "fix or review any issues that are being faced by users of the system"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "user error logs"
+            ],
+            [
+                "fix or review any issues that are being faced by users of the system",
+                "users of the system"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to onboard recycling centers on the platform, so that I can increase information accuracy.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "can",
+                "onboard"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "recycling centers",
+                "platform",
+                "increase information accuracy"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can increase information accuracy",
+        "Triggers": [
+            [
+                "admin",
+                "onboard"
+            ],
+            [
+                "can",
+                "increase information accuracy"
+            ]
+        ],
+        "Targets": [
+            [
+                "onboard",
+                "recycling centers"
+            ],
+            [
+                "onboard",
+                "platform"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a superuser, I want to update the recycling center information, so that I can provide the latest information about the recycling center.",
+        "Persona": [
+            "superuser"
+        ],
+        "Action": {
+            "Primary Action": [
+                "update",
+                "provide"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "recycling center information",
+                "latest information about the recycling center"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can provide the latest information about the recycling center",
+        "Triggers": [
+            [
+                "superuser",
+                "update"
+            ]
+        ],
+        "Targets": [
+            [
+                "update",
+                "recycling center information"
+            ],
+            [
+                "provide",
+                "latest information about the recycling center"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a superuser, I want to view users' stats, so that I can view in real-time how many users have visited my recycling center information and their recyclable waste.",
+        "Persona": [
+            "superuser"
+        ],
+        "Action": {
+            "Primary Action": [
+                "view"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "users' stats",
+                "recycling center information"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can view in real-time how many users have visited my recycling center information and their recyclable waste",
+        "Triggers": [
+            [
+                "superuser",
+                "view"
+            ]
+        ],
+        "Targets": [
+            [
+                "view",
+                "users' stats"
+            ],
+            [
+                "view",
+                "recycling center information"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a superuser, I want to reply to user questions, so that I can answer any questions about my recycling center.",
+        "Persona": [
+            "superuser"
+        ],
+        "Action": {
+            "Primary Action": [
+                "reply"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "recycling center",
+                "user questions"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can answer any questions about my recycling center",
+        "Triggers": [
+            [
+                "superuser",
+                "reply"
+            ]
+        ],
+        "Targets": [
+            [
+                "reply",
+                "user questions"
+            ],
+            [
+                "reply",
+                "recycling center"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to be able to have a dashboard that shows usage stats and locations, so that I can identify the neighbourhoods with the largest number of drop-offs and to try getting more facilities involved.",
+        "Persona": [
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "have",
+                "try getting",
+                "identify"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "locations",
+                "dashboard",
+                "neighbourhoods with the largest number of drop-offs",
+                "more facilities involved",
+                "usage stats"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can identify the neighbourhoods with the largest number of drop-offs and to try getting more facilities involved",
+        "Triggers": [
+            [
+                "admin",
+                "have"
+            ],
+            [
+                "identify",
+                "neighbourhoods with the largest number of drop-offs"
+            ]
+        ],
+        "Targets": [
+            [
+                "have",
+                "dashboard"
+            ],
+            [
+                "have",
+                "usage stats"
+            ],
+            [
+                "have",
+                "locations"
+            ],
+            [
+                "try getting",
+                "more facilities involved"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As an admin, I want to be able to communicate directly with facilities, so that I can keep them updated about features we have on our website.",
+        "Persona": [
+            "I",
+            "admin"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be able to communicate directly with facilities",
+                "can keep them updated about features we have on our website"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "facilities",
+                "features we have on our website"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can keep them updated about features we have on our website",
+        "Triggers": [
+            [
+                "admin",
+                "be able to communicate directly with facilities"
+            ],
+            [
+                "can keep them updated about features we have on our website",
+                "I"
+            ]
+        ],
+        "Targets": [
+            [
+                "be able to communicate directly with facilities",
+                "facilities"
+            ],
+            [
+                "be able to communicate directly with facilities",
+                "features we have on our website"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a recyclingfacility representative, I want to be able to update my information and the type of material I accept, so that I can avoid any miscommunication with users.",
+        "Persona": [
+            "recycling facility representative"
+        ],
+        "Action": {
+            "Primary Action": [
+                "avoid",
+                "update"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "type of material I accept",
+                "miscommunication with users",
+                "information"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "I can avoid any miscommunication with users",
+        "Triggers": [
+            [
+                "recycling facility representative",
+                "update"
+            ],
+            [
+                "avoid",
+                "miscommunication with users"
+            ]
+        ],
+        "Targets": [
+            [
+                "update",
+                "information"
+            ],
+            [
+                "update",
+                "type of material I accept"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a recyclingfacility representative, I want to have access to user stats and schedules, so that I can adjust my hours and/or upgrade equipment and capacity in order to be able to accomodate larger amounts of recyclable materials.",
+        "Persona": [
+            "recycling facility representative"
+        ],
+        "Action": {
+            "Primary Action": [
+                "adjust my hours",
+                "have access",
+                "upgrade equipment and capacity"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "larger amounts of recyclable materials",
+                "user stats",
+                "schedules"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "be able to accomodate larger amounts of recyclable materials",
+        "Triggers": [
+            [
+                "recycling facility representative",
+                "have access"
+            ],
+            [
+                "adjust my hours",
+                "upgrade equipment and capacity"
+            ]
+        ],
+        "Targets": [
+            [
+                "have access",
+                "user stats"
+            ],
+            [
+                "have access",
+                "schedules"
+            ],
+            [
+                "adjust my hours",
+                "larger amounts of recyclable materials"
+            ]
+        ],
+        "Contains": []
+    },
+    {
+        "ID": "",
+        "PID": "g04",
+        "Text": " As a recyclingfacility, I want to be able to communicate directly with the site admin and convey any issues or concerns I have, so that they fix them.",
+        "Persona": [
+            "recycling facility"
+        ],
+        "Action": {
+            "Primary Action": [
+                "be able to communicate",
+                "convey any issues or concerns",
+                "so that they fix them"
+            ],
+            "Secondary Action": []
+        },
+        "Entity": {
+            "Primary Entity": [
+                "convey any issues or concerns",
+                "site admin"
+            ],
+            "Secondary Entity": []
+        },
+        "Benefit": "they fix them",
+        "Triggers": [
+            [
+                "recycling facility",
+                "be able to communicate"
+            ],
+            [
+                "convey any issues or concerns",
+                "so that they fix them"
+            ]
+        ],
+        "Targets": [
+            [
+                "be able to communicate",
+                "site admin"
+            ],
+            [
+                "be able to communicate",
+                "convey any issues or concerns"
+            ]
+        ],
+        "Contains": []
+    }
+]

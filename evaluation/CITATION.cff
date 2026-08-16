@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this evaluation artifact, please cite it using the metadata below."
+type: software
+title: "Evaluationsartefakt zur graphenbasierten Qualitätssicherung von User-Story-Backlogs"
+authors:
+  - family-names: "Scharf"
+    given-names: "Dustin"
+date-released: 2026-08-16
+repository-code: "https://github.com/DustinScharf/master-thesis-2026_perma"
