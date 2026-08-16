@@ -152,8 +152,6 @@ Im lokalen Warm-Cache-Kleinbenchmark lagen die Medianlaufzeiten der fünf unters
 
 ## 6. GitHub- und USB-Abgabe
 
-Das Verzeichnis `evaluation/` bildet die unveränderte Abgabeeinheit. Für den Online-Spiegel wird der komplette Ordner in das Wurzelverzeichnis des Repositorys hochgeladen, sodass der Pfad `master-thesis-2026_perma/evaluation/README.md` entsteht. Es dürfen insbesondere `extracted_data/`, `raw_datasets/`, `aqusa_outputs/`, `tests/`, die Ergebnis-JSON-Dateien, `.gitignore`, `CITATION.cff` und `MANIFEST.sha256` nicht ausgelassen werden.
-
 Für den USB-Datenträger wird derselbe Ordner unverändert kopiert. Die finale Masterarbeits-PDF liegt daneben und nicht innerhalb des Artefaktordners:
 
 ```text
