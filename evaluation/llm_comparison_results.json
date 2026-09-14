@@ -1,0 +1,6311 @@
+{
+  "protocol": {
+    "schema_version": "story-provenance-v2",
+    "execution": "json_reference",
+    "generated_at_utc": "2026-09-10T11:26:37.726374+00:00",
+    "models": [
+      "gpt-4-turbo",
+      "gpt-4o-mini",
+      "ollama3",
+      "chatgpt"
+    ],
+    "backlogs": [
+      "g03",
+      "g04"
+    ],
+    "note": "Downstream QA on saved extractions; not Neo4j runtime, new LLM inference, or extraction-ground-truth accuracy. No model is selected automatically on these test outcomes."
+  },
+  "models": {
+    "gpt-4-turbo": {
+      "coverage": {
+        "reference_stories": 109,
+        "source_records": 103,
+        "canonical_graph_stories": 103,
+        "represented_reference_stories": 104,
+        "missing_reference_story_ids": [
+          "G03_39",
+          "G03_54",
+          "G04_05",
+          "G04_15",
+          "G04_48"
+        ],
+        "shared_text_mappings": [
+          {
+            "graph_story_id": "g03_933c6b73",
+            "raw_story_ids": [
+              "G03_45",
+              "G03_46"
+            ]
+          }
+        ],
+        "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+      },
+      "missing_benefit": {
+        "ground_truth_count": 6,
+        "ground_truth_stories": [
+          "G04_09",
+          "G04_10",
+          "G04_11",
+          "G04_14",
+          "G04_20",
+          "G04_26"
+        ],
+        "neo4j": {
+          "TP": 6,
+          "FP": 0,
+          "FN": 0,
+          "Precision": 100.0,
+          "Recall": 100.0,
+          "F1": 100.0,
+          "Predicted_Stories": [
+            "G04_09",
+            "G04_10",
+            "G04_11",
+            "G04_14",
+            "G04_20",
+            "G04_26"
+          ],
+          "False_Positives": [],
+          "False_Negatives": []
+        }
+      },
+      "incomplete_means": {
+        "ground_truth_count": 1,
+        "ground_truth_stories": [
+          "G03_54"
+        ],
+        "metrics_applicable": false,
+        "status": "qualitative_only_unconfirmed_positive_reference",
+        "projected_alarms": [
+          "G03_20",
+          "G03_48",
+          "G04_51"
+        ],
+        "historical_annotation_comparison": {
+          "neo4j": {
+            "TP": 0,
+            "FP": 3,
+            "FN": 1,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1": 0.0,
+            "Predicted_Stories": [
+              "G03_20",
+              "G03_48",
+              "G04_51"
+            ],
+            "False_Positives": [
+              "G03_20",
+              "G03_48",
+              "G04_51"
+            ],
+            "False_Negatives": [
+              "G03_54"
+            ]
+          }
+        },
+        "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+      },
+      "atomicity": {
+        "ground_truth_count": 19,
+        "ground_truth_stories": [
+          "G03_02",
+          "G03_21",
+          "G03_32",
+          "G03_38",
+          "G03_55",
+          "G03_58",
+          "G04_03",
+          "G04_06",
+          "G04_16",
+          "G04_17",
+          "G04_18",
+          "G04_19",
+          "G04_20",
+          "G04_35",
+          "G04_46",
+          "G04_48",
+          "G04_49",
+          "G04_50",
+          "G04_51"
+        ],
+        "neo4j_threshold_gt1": {
+          "TP": 18,
+          "FP": 79,
+          "FN": 1,
+          "Precision": 18.56,
+          "Recall": 94.74,
+          "F1": 31.03,
+          "Predicted_Stories": [
+            "G03_01",
+            "G03_02",
+            "G03_03",
+            "G03_04",
+            "G03_05",
+            "G03_06",
+            "G03_07",
+            "G03_08",
+            "G03_09",
+            "G03_10",
+            "G03_11",
+            "G03_12",
+            "G03_13",
+            "G03_14",
+            "G03_15",
+            "G03_16",
+            "G03_17",
+            "G03_18",
+            "G03_19",
+            "G03_20",
+            "G03_21",
+            "G03_22",
+            "G03_23",
+            "G03_24",
+            "G03_25",
+            "G03_26",
+            "G03_27",
+            "G03_28",
+            "G03_29",
+            "G03_30",
+            "G03_31",
+            "G03_32",
+            "G03_33",
+            "G03_34",
+            "G03_36",
+            "G03_37",
+            "G03_38",
+            "G03_40",
+            "G03_41",
+            "G03_42",
+            "G03_43",
+            "G03_44",
+            "G03_45",
+            "G03_46",
+            "G03_47",
+            "G03_48",
+            "G03_50",
+            "G03_51",
+            "G03_52",
+            "G03_53",
+            "G03_55",
+            "G03_56",
+            "G03_57",
+            "G03_58",
+            "G04_01",
+            "G04_02",
+            "G04_03",
+            "G04_04",
+            "G04_06",
+            "G04_07",
+            "G04_08",
+            "G04_12",
+            "G04_13",
+            "G04_14",
+            "G04_16",
+            "G04_17",
+            "G04_18",
+            "G04_19",
+            "G04_20",
+            "G04_21",
+            "G04_22",
+            "G04_24",
+            "G04_25",
+            "G04_26",
+            "G04_27",
+            "G04_28",
+            "G04_29",
+            "G04_30",
+            "G04_31",
+            "G04_32",
+            "G04_33",
+            "G04_34",
+            "G04_35",
+            "G04_36",
+            "G04_37",
+            "G04_38",
+            "G04_39",
+            "G04_40",
+            "G04_41",
+            "G04_42",
+            "G04_43",
+            "G04_45",
+            "G04_46",
+            "G04_47",
+            "G04_49",
+            "G04_50",
+            "G04_51"
+          ],
+          "False_Positives": [
+            "G03_01",
+            "G03_03",
+            "G03_04",
+            "G03_05",
+            "G03_06",
+            "G03_07",
+            "G03_08",
+            "G03_09",
+            "G03_10",
+            "G03_11",
+            "G03_12",
+            "G03_13",
+            "G03_14",
+            "G03_15",
+            "G03_16",
+            "G03_17",
+            "G03_18",
+            "G03_19",
+            "G03_20",
+            "G03_22",
+            "G03_23",
+            "G03_24",
+            "G03_25",
+            "G03_26",
+            "G03_27",
+            "G03_28",
+            "G03_29",
+            "G03_30",
+            "G03_31",
+            "G03_33",
+            "G03_34",
+            "G03_36",
+            "G03_37",
+            "G03_40",
+            "G03_41",
+            "G03_42",
+            "G03_43",
+            "G03_44",
+            "G03_45",
+            "G03_46",
+            "G03_47",
+            "G03_48",
+            "G03_50",
+            "G03_51",
+            "G03_52",
+            "G03_53",
+            "G03_56",
+            "G03_57",
+            "G04_01",
+            "G04_02",
+            "G04_04",
+            "G04_07",
+            "G04_08",
+            "G04_12",
+            "G04_13",
+            "G04_14",
+            "G04_21",
+            "G04_22",
+            "G04_24",
+            "G04_25",
+            "G04_26",
+            "G04_27",
+            "G04_28",
+            "G04_29",
+            "G04_30",
+            "G04_31",
+            "G04_32",
+            "G04_33",
+            "G04_34",
+            "G04_36",
+            "G04_37",
+            "G04_38",
+            "G04_39",
+            "G04_40",
+            "G04_41",
+            "G04_42",
+            "G04_43",
+            "G04_45",
+            "G04_47"
+          ],
+          "False_Negatives": [
+            "G04_48"
+          ]
+        },
+        "neo4j_threshold_gt2": {
+          "TP": 10,
+          "FP": 26,
+          "FN": 9,
+          "Precision": 27.78,
+          "Recall": 52.63,
+          "F1": 36.36,
+          "Predicted_Stories": [
+            "G03_04",
+            "G03_05",
+            "G03_12",
+            "G03_13",
+            "G03_19",
+            "G03_21",
+            "G03_22",
+            "G03_24",
+            "G03_25",
+            "G03_26",
+            "G03_27",
+            "G03_34",
+            "G03_36",
+            "G03_38",
+            "G03_41",
+            "G03_42",
+            "G03_44",
+            "G03_45",
+            "G03_46",
+            "G03_48",
+            "G03_51",
+            "G03_58",
+            "G04_02",
+            "G04_03",
+            "G04_06",
+            "G04_17",
+            "G04_18",
+            "G04_27",
+            "G04_29",
+            "G04_31",
+            "G04_34",
+            "G04_39",
+            "G04_41",
+            "G04_46",
+            "G04_50",
+            "G04_51"
+          ],
+          "False_Positives": [
+            "G03_04",
+            "G03_05",
+            "G03_12",
+            "G03_13",
+            "G03_19",
+            "G03_22",
+            "G03_24",
+            "G03_25",
+            "G03_26",
+            "G03_27",
+            "G03_34",
+            "G03_36",
+            "G03_41",
+            "G03_42",
+            "G03_44",
+            "G03_45",
+            "G03_46",
+            "G03_48",
+            "G03_51",
+            "G04_02",
+            "G04_27",
+            "G04_29",
+            "G04_31",
+            "G04_34",
+            "G04_39",
+            "G04_41"
+          ],
+          "False_Negatives": [
+            "G03_02",
+            "G03_32",
+            "G03_55",
+            "G04_16",
+            "G04_19",
+            "G04_20",
+            "G04_35",
+            "G04_48",
+            "G04_49"
+          ]
+        },
+        "neo4j_threshold_gt4": {
+          "TP": 2,
+          "FP": 0,
+          "FN": 17,
+          "Precision": 100.0,
+          "Recall": 10.53,
+          "F1": 19.05,
+          "Predicted_Stories": [
+            "G04_46",
+            "G04_50"
+          ],
+          "False_Positives": [],
+          "False_Negatives": [
+            "G03_02",
+            "G03_21",
+            "G03_32",
+            "G03_38",
+            "G03_55",
+            "G03_58",
+            "G04_03",
+            "G04_06",
+            "G04_16",
+            "G04_17",
+            "G04_18",
+            "G04_19",
+            "G04_20",
+            "G04_35",
+            "G04_48",
+            "G04_49",
+            "G04_51"
+          ]
+        }
+      },
+      "well_formedness": {
+        "metrics_applicable": false,
+        "projected_alarms": [],
+        "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+      },
+      "uniqueness": {
+        "ground_truth_count": 1,
+        "ground_truth_stories": [
+          "G03_46"
+        ],
+        "etl_invariant": {
+          "classification_output": false,
+          "metrics_applicable": false,
+          "raw_exact_duplicate_groups": [
+            {
+              "pid": "g03",
+              "story_ids": [
+                "G03_45",
+                "G03_46"
+              ]
+            }
+          ],
+          "supplied_source_records": 103,
+          "canonical_import_records": 103,
+          "identical_supplied_records_coalesced": 0,
+          "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+        }
+      },
+      "exploratory": {
+        "metrics_applicable": false,
+        "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+        "per_backlog": {
+          "g03": {
+            "dangling_actions": [
+              [
+                "g03_660de6c9",
+                "finish"
+              ],
+              [
+                "g03_d6ab1b02",
+                "assign"
+              ],
+              [
+                "g03_d6ab1b02",
+                "schedule"
+              ]
+            ],
+            "overlap_groups": [
+              [
+                "ensure",
+                "compliance",
+                [
+                  "g03_d602e069",
+                  "g03_e2aff73e"
+                ]
+              ],
+              [
+                "ensure",
+                "hearing",
+                [
+                  "g03_330ded70",
+                  "g03_d602e069"
+                ]
+              ],
+              [
+                "record",
+                "outcome",
+                [
+                  "g03_0171156c",
+                  "g03_02b1af10"
+                ]
+              ],
+              [
+                "validate",
+                "application",
+                [
+                  "g03_0baf4244",
+                  "g03_739c37c6"
+                ]
+              ]
+            ],
+            "overlap_pairs": [
+              [
+                "g03_0171156c",
+                "g03_02b1af10",
+                "record",
+                "outcome"
+              ],
+              [
+                "g03_0baf4244",
+                "g03_739c37c6",
+                "validate",
+                "application"
+              ],
+              [
+                "g03_330ded70",
+                "g03_d602e069",
+                "ensure",
+                "hearing"
+              ],
+              [
+                "g03_d602e069",
+                "g03_e2aff73e",
+                "ensure",
+                "compliance"
+              ]
+            ],
+            "cross_persona_pairs": []
+          },
+          "g04": {
+            "dangling_actions": [
+              [
+                "g04_ef4b486c",
+                "fix"
+              ]
+            ],
+            "overlap_groups": [
+              [
+                "have",
+                "access",
+                [
+                  "g04_8d37edee",
+                  "g04_f0817839"
+                ]
+              ],
+              [
+                "have",
+                "sites",
+                [
+                  "g04_aed664aa",
+                  "g04_bc8c1896"
+                ]
+              ],
+              [
+                "have",
+                "website",
+                [
+                  "g04_365556a2",
+                  "g04_bd621a4b"
+                ]
+              ],
+              [
+                "view",
+                "area",
+                [
+                  "g04_10131c92",
+                  "g04_18283c5a",
+                  "g04_9ae93732"
+                ]
+              ],
+              [
+                "view",
+                "map display",
+                [
+                  "g04_18283c5a",
+                  "g04_9ae93732"
+                ]
+              ]
+            ],
+            "overlap_pairs": [
+              [
+                "g04_10131c92",
+                "g04_18283c5a",
+                "view",
+                "area"
+              ],
+              [
+                "g04_10131c92",
+                "g04_9ae93732",
+                "view",
+                "area"
+              ],
+              [
+                "g04_18283c5a",
+                "g04_9ae93732",
+                "view",
+                "area"
+              ],
+              [
+                "g04_18283c5a",
+                "g04_9ae93732",
+                "view",
+                "map display"
+              ],
+              [
+                "g04_365556a2",
+                "g04_bd621a4b",
+                "have",
+                "website"
+              ],
+              [
+                "g04_8d37edee",
+                "g04_f0817839",
+                "have",
+                "access"
+              ],
+              [
+                "g04_aed664aa",
+                "g04_bc8c1896",
+                "have",
+                "sites"
+              ]
+            ],
+            "cross_persona_pairs": [
+              [
+                "g04_8d37edee",
+                "g04_f0817839",
+                "executive",
+                "recyclingfacility representative",
+                "have",
+                "access"
+              ],
+              [
+                "g04_aed664aa",
+                "g04_bc8c1896",
+                "admin",
+                "user",
+                "have",
+                "sites"
+              ]
+            ]
+          }
+        }
+      },
+      "per_backlog": {
+        "g03": {
+          "coverage": {
+            "reference_stories": 58,
+            "source_records": 55,
+            "canonical_graph_stories": 55,
+            "represented_reference_stories": 56,
+            "missing_reference_story_ids": [
+              "G03_39",
+              "G03_54"
+            ],
+            "shared_text_mappings": [
+              {
+                "graph_story_id": "g03_933c6b73",
+                "raw_story_ids": [
+                  "G03_45",
+                  "G03_46"
+                ]
+              }
+            ],
+            "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+          },
+          "missing_benefit": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "neo4j": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "Precision": null,
+              "Recall": null,
+              "F1": null,
+              "Predicted_Stories": [],
+              "False_Positives": [],
+              "False_Negatives": []
+            }
+          },
+          "incomplete_means": {
+            "ground_truth_count": 1,
+            "ground_truth_stories": [
+              "G03_54"
+            ],
+            "metrics_applicable": false,
+            "status": "qualitative_only_unconfirmed_positive_reference",
+            "projected_alarms": [
+              "G03_20",
+              "G03_48"
+            ],
+            "historical_annotation_comparison": {
+              "neo4j": {
+                "TP": 0,
+                "FP": 2,
+                "FN": 1,
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0,
+                "Predicted_Stories": [
+                  "G03_20",
+                  "G03_48"
+                ],
+                "False_Positives": [
+                  "G03_20",
+                  "G03_48"
+                ],
+                "False_Negatives": [
+                  "G03_54"
+                ]
+              }
+            },
+            "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+          },
+          "atomicity": {
+            "ground_truth_count": 6,
+            "ground_truth_stories": [
+              "G03_02",
+              "G03_21",
+              "G03_32",
+              "G03_38",
+              "G03_55",
+              "G03_58"
+            ],
+            "neo4j_threshold_gt1": {
+              "TP": 6,
+              "FP": 48,
+              "FN": 0,
+              "Precision": 11.11,
+              "Recall": 100.0,
+              "F1": 20.0,
+              "Predicted_Stories": [
+                "G03_01",
+                "G03_02",
+                "G03_03",
+                "G03_04",
+                "G03_05",
+                "G03_06",
+                "G03_07",
+                "G03_08",
+                "G03_09",
+                "G03_10",
+                "G03_11",
+                "G03_12",
+                "G03_13",
+                "G03_14",
+                "G03_15",
+                "G03_16",
+                "G03_17",
+                "G03_18",
+                "G03_19",
+                "G03_20",
+                "G03_21",
+                "G03_22",
+                "G03_23",
+                "G03_24",
+                "G03_25",
+                "G03_26",
+                "G03_27",
+                "G03_28",
+                "G03_29",
+                "G03_30",
+                "G03_31",
+                "G03_32",
+                "G03_33",
+                "G03_34",
+                "G03_36",
+                "G03_37",
+                "G03_38",
+                "G03_40",
+                "G03_41",
+                "G03_42",
+                "G03_43",
+                "G03_44",
+                "G03_45",
+                "G03_46",
+                "G03_47",
+                "G03_48",
+                "G03_50",
+                "G03_51",
+                "G03_52",
+                "G03_53",
+                "G03_55",
+                "G03_56",
+                "G03_57",
+                "G03_58"
+              ],
+              "False_Positives": [
+                "G03_01",
+                "G03_03",
+                "G03_04",
+                "G03_05",
+                "G03_06",
+                "G03_07",
+                "G03_08",
+                "G03_09",
+                "G03_10",
+                "G03_11",
+                "G03_12",
+                "G03_13",
+                "G03_14",
+                "G03_15",
+                "G03_16",
+                "G03_17",
+                "G03_18",
+                "G03_19",
+                "G03_20",
+                "G03_22",
+                "G03_23",
+                "G03_24",
+                "G03_25",
+                "G03_26",
+                "G03_27",
+                "G03_28",
+                "G03_29",
+                "G03_30",
+                "G03_31",
+                "G03_33",
+                "G03_34",
+                "G03_36",
+                "G03_37",
+                "G03_40",
+                "G03_41",
+                "G03_42",
+                "G03_43",
+                "G03_44",
+                "G03_45",
+                "G03_46",
+                "G03_47",
+                "G03_48",
+                "G03_50",
+                "G03_51",
+                "G03_52",
+                "G03_53",
+                "G03_56",
+                "G03_57"
+              ],
+              "False_Negatives": []
+            },
+            "neo4j_threshold_gt2": {
+              "TP": 3,
+              "FP": 19,
+              "FN": 3,
+              "Precision": 13.64,
+              "Recall": 50.0,
+              "F1": 21.43,
+              "Predicted_Stories": [
+                "G03_04",
+                "G03_05",
+                "G03_12",
+                "G03_13",
+                "G03_19",
+                "G03_21",
+                "G03_22",
+                "G03_24",
+                "G03_25",
+                "G03_26",
+                "G03_27",
+                "G03_34",
+                "G03_36",
+                "G03_38",
+                "G03_41",
+                "G03_42",
+                "G03_44",
+                "G03_45",
+                "G03_46",
+                "G03_48",
+                "G03_51",
+                "G03_58"
+              ],
+              "False_Positives": [
+                "G03_04",
+                "G03_05",
+                "G03_12",
+                "G03_13",
+                "G03_19",
+                "G03_22",
+                "G03_24",
+                "G03_25",
+                "G03_26",
+                "G03_27",
+                "G03_34",
+                "G03_36",
+                "G03_41",
+                "G03_42",
+                "G03_44",
+                "G03_45",
+                "G03_46",
+                "G03_48",
+                "G03_51"
+              ],
+              "False_Negatives": [
+                "G03_02",
+                "G03_32",
+                "G03_55"
+              ]
+            },
+            "neo4j_threshold_gt4": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 6,
+              "Precision": null,
+              "Recall": 0.0,
+              "F1": 0.0,
+              "Predicted_Stories": [],
+              "False_Positives": [],
+              "False_Negatives": [
+                "G03_02",
+                "G03_21",
+                "G03_32",
+                "G03_38",
+                "G03_55",
+                "G03_58"
+              ]
+            }
+          },
+          "well_formedness": {
+            "metrics_applicable": false,
+            "projected_alarms": [],
+            "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+          },
+          "uniqueness": {
+            "ground_truth_count": 1,
+            "ground_truth_stories": [
+              "G03_46"
+            ],
+            "etl_invariant": {
+              "classification_output": false,
+              "metrics_applicable": false,
+              "raw_exact_duplicate_groups": [
+                {
+                  "pid": "g03",
+                  "story_ids": [
+                    "G03_45",
+                    "G03_46"
+                  ]
+                }
+              ],
+              "supplied_source_records": 55,
+              "canonical_import_records": 55,
+              "identical_supplied_records_coalesced": 0,
+              "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+            }
+          },
+          "exploratory": {
+            "metrics_applicable": false,
+            "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+            "per_backlog": {
+              "g03": {
+                "dangling_actions": [
+                  [
+                    "g03_660de6c9",
+                    "finish"
+                  ],
+                  [
+                    "g03_d6ab1b02",
+                    "assign"
+                  ],
+                  [
+                    "g03_d6ab1b02",
+                    "schedule"
+                  ]
+                ],
+                "overlap_groups": [
+                  [
+                    "ensure",
+                    "compliance",
+                    [
+                      "g03_d602e069",
+                      "g03_e2aff73e"
+                    ]
+                  ],
+                  [
+                    "ensure",
+                    "hearing",
+                    [
+                      "g03_330ded70",
+                      "g03_d602e069"
+                    ]
+                  ],
+                  [
+                    "record",
+                    "outcome",
+                    [
+                      "g03_0171156c",
+                      "g03_02b1af10"
+                    ]
+                  ],
+                  [
+                    "validate",
+                    "application",
+                    [
+                      "g03_0baf4244",
+                      "g03_739c37c6"
+                    ]
+                  ]
+                ],
+                "overlap_pairs": [
+                  [
+                    "g03_0171156c",
+                    "g03_02b1af10",
+                    "record",
+                    "outcome"
+                  ],
+                  [
+                    "g03_0baf4244",
+                    "g03_739c37c6",
+                    "validate",
+                    "application"
+                  ],
+                  [
+                    "g03_330ded70",
+                    "g03_d602e069",
+                    "ensure",
+                    "hearing"
+                  ],
+                  [
+                    "g03_d602e069",
+                    "g03_e2aff73e",
+                    "ensure",
+                    "compliance"
+                  ]
+                ],
+                "cross_persona_pairs": []
+              }
+            }
+          }
+        },
+        "g04": {
+          "coverage": {
+            "reference_stories": 51,
+            "source_records": 48,
+            "canonical_graph_stories": 48,
+            "represented_reference_stories": 48,
+            "missing_reference_story_ids": [
+              "G04_05",
+              "G04_15",
+              "G04_48"
+            ],
+            "shared_text_mappings": [],
+            "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+          },
+          "missing_benefit": {
+            "ground_truth_count": 6,
+            "ground_truth_stories": [
+              "G04_09",
+              "G04_10",
+              "G04_11",
+              "G04_14",
+              "G04_20",
+              "G04_26"
+            ],
+            "neo4j": {
+              "TP": 6,
+              "FP": 0,
+              "FN": 0,
+              "Precision": 100.0,
+              "Recall": 100.0,
+              "F1": 100.0,
+              "Predicted_Stories": [
+                "G04_09",
+                "G04_10",
+                "G04_11",
+                "G04_14",
+                "G04_20",
+                "G04_26"
+              ],
+              "False_Positives": [],
+              "False_Negatives": []
+            }
+          },
+          "incomplete_means": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "metrics_applicable": false,
+            "status": "qualitative_only_unconfirmed_positive_reference",
+            "projected_alarms": [
+              "G04_51"
+            ],
+            "historical_annotation_comparison": {
+              "neo4j": {
+                "TP": 0,
+                "FP": 1,
+                "FN": 0,
+                "Precision": 0.0,
+                "Recall": null,
+                "F1": 0.0,
+                "Predicted_Stories": [
+                  "G04_51"
+                ],
+                "False_Positives": [
+                  "G04_51"
+                ],
+                "False_Negatives": []
+              }
+            },
+            "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+          },
+          "atomicity": {
+            "ground_truth_count": 13,
+            "ground_truth_stories": [
+              "G04_03",
+              "G04_06",
+              "G04_16",
+              "G04_17",
+              "G04_18",
+              "G04_19",
+              "G04_20",
+              "G04_35",
+              "G04_46",
+              "G04_48",
+              "G04_49",
+              "G04_50",
+              "G04_51"
+            ],
+            "neo4j_threshold_gt1": {
+              "TP": 12,
+              "FP": 31,
+              "FN": 1,
+              "Precision": 27.91,
+              "Recall": 92.31,
+              "F1": 42.86,
+              "Predicted_Stories": [
+                "G04_01",
+                "G04_02",
+                "G04_03",
+                "G04_04",
+                "G04_06",
+                "G04_07",
+                "G04_08",
+                "G04_12",
+                "G04_13",
+                "G04_14",
+                "G04_16",
+                "G04_17",
+                "G04_18",
+                "G04_19",
+                "G04_20",
+                "G04_21",
+                "G04_22",
+                "G04_24",
+                "G04_25",
+                "G04_26",
+                "G04_27",
+                "G04_28",
+                "G04_29",
+                "G04_30",
+                "G04_31",
+                "G04_32",
+                "G04_33",
+                "G04_34",
+                "G04_35",
+                "G04_36",
+                "G04_37",
+                "G04_38",
+                "G04_39",
+                "G04_40",
+                "G04_41",
+                "G04_42",
+                "G04_43",
+                "G04_45",
+                "G04_46",
+                "G04_47",
+                "G04_49",
+                "G04_50",
+                "G04_51"
+              ],
+              "False_Positives": [
+                "G04_01",
+                "G04_02",
+                "G04_04",
+                "G04_07",
+                "G04_08",
+                "G04_12",
+                "G04_13",
+                "G04_14",
+                "G04_21",
+                "G04_22",
+                "G04_24",
+                "G04_25",
+                "G04_26",
+                "G04_27",
+                "G04_28",
+                "G04_29",
+                "G04_30",
+                "G04_31",
+                "G04_32",
+                "G04_33",
+                "G04_34",
+                "G04_36",
+                "G04_37",
+                "G04_38",
+                "G04_39",
+                "G04_40",
+                "G04_41",
+                "G04_42",
+                "G04_43",
+                "G04_45",
+                "G04_47"
+              ],
+              "False_Negatives": [
+                "G04_48"
+              ]
+            },
+            "neo4j_threshold_gt2": {
+              "TP": 7,
+              "FP": 7,
+              "FN": 6,
+              "Precision": 50.0,
+              "Recall": 53.85,
+              "F1": 51.85,
+              "Predicted_Stories": [
+                "G04_02",
+                "G04_03",
+                "G04_06",
+                "G04_17",
+                "G04_18",
+                "G04_27",
+                "G04_29",
+                "G04_31",
+                "G04_34",
+                "G04_39",
+                "G04_41",
+                "G04_46",
+                "G04_50",
+                "G04_51"
+              ],
+              "False_Positives": [
+                "G04_02",
+                "G04_27",
+                "G04_29",
+                "G04_31",
+                "G04_34",
+                "G04_39",
+                "G04_41"
+              ],
+              "False_Negatives": [
+                "G04_16",
+                "G04_19",
+                "G04_20",
+                "G04_35",
+                "G04_48",
+                "G04_49"
+              ]
+            },
+            "neo4j_threshold_gt4": {
+              "TP": 2,
+              "FP": 0,
+              "FN": 11,
+              "Precision": 100.0,
+              "Recall": 15.38,
+              "F1": 26.67,
+              "Predicted_Stories": [
+                "G04_46",
+                "G04_50"
+              ],
+              "False_Positives": [],
+              "False_Negatives": [
+                "G04_03",
+                "G04_06",
+                "G04_16",
+                "G04_17",
+                "G04_18",
+                "G04_19",
+                "G04_20",
+                "G04_35",
+                "G04_48",
+                "G04_49",
+                "G04_51"
+              ]
+            }
+          },
+          "well_formedness": {
+            "metrics_applicable": false,
+            "projected_alarms": [],
+            "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+          },
+          "uniqueness": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "etl_invariant": {
+              "classification_output": false,
+              "metrics_applicable": false,
+              "raw_exact_duplicate_groups": [],
+              "supplied_source_records": 48,
+              "canonical_import_records": 48,
+              "identical_supplied_records_coalesced": 0,
+              "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+            }
+          },
+          "exploratory": {
+            "metrics_applicable": false,
+            "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+            "per_backlog": {
+              "g04": {
+                "dangling_actions": [
+                  [
+                    "g04_ef4b486c",
+                    "fix"
+                  ]
+                ],
+                "overlap_groups": [
+                  [
+                    "have",
+                    "access",
+                    [
+                      "g04_8d37edee",
+                      "g04_f0817839"
+                    ]
+                  ],
+                  [
+                    "have",
+                    "sites",
+                    [
+                      "g04_aed664aa",
+                      "g04_bc8c1896"
+                    ]
+                  ],
+                  [
+                    "have",
+                    "website",
+                    [
+                      "g04_365556a2",
+                      "g04_bd621a4b"
+                    ]
+                  ],
+                  [
+                    "view",
+                    "area",
+                    [
+                      "g04_10131c92",
+                      "g04_18283c5a",
+                      "g04_9ae93732"
+                    ]
+                  ],
+                  [
+                    "view",
+                    "map display",
+                    [
+                      "g04_18283c5a",
+                      "g04_9ae93732"
+                    ]
+                  ]
+                ],
+                "overlap_pairs": [
+                  [
+                    "g04_10131c92",
+                    "g04_18283c5a",
+                    "view",
+                    "area"
+                  ],
+                  [
+                    "g04_10131c92",
+                    "g04_9ae93732",
+                    "view",
+                    "area"
+                  ],
+                  [
+                    "g04_18283c5a",
+                    "g04_9ae93732",
+                    "view",
+                    "area"
+                  ],
+                  [
+                    "g04_18283c5a",
+                    "g04_9ae93732",
+                    "view",
+                    "map display"
+                  ],
+                  [
+                    "g04_365556a2",
+                    "g04_bd621a4b",
+                    "have",
+                    "website"
+                  ],
+                  [
+                    "g04_8d37edee",
+                    "g04_f0817839",
+                    "have",
+                    "access"
+                  ],
+                  [
+                    "g04_aed664aa",
+                    "g04_bc8c1896",
+                    "have",
+                    "sites"
+                  ]
+                ],
+                "cross_persona_pairs": [
+                  [
+                    "g04_8d37edee",
+                    "g04_f0817839",
+                    "executive",
+                    "recyclingfacility representative",
+                    "have",
+                    "access"
+                  ],
+                  [
+                    "g04_aed664aa",
+                    "g04_bc8c1896",
+                    "admin",
+                    "user",
+                    "have",
+                    "sites"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      },
+      "fat_story_actions_gt2": {
+        "TP": 10,
+        "FP": 26,
+        "FN": 9,
+        "Precision": 27.78,
+        "Recall": 52.63,
+        "F1": 36.36,
+        "Predicted_Stories": [
+          "G03_04",
+          "G03_05",
+          "G03_12",
+          "G03_13",
+          "G03_19",
+          "G03_21",
+          "G03_22",
+          "G03_24",
+          "G03_25",
+          "G03_26",
+          "G03_27",
+          "G03_34",
+          "G03_36",
+          "G03_38",
+          "G03_41",
+          "G03_42",
+          "G03_44",
+          "G03_45",
+          "G03_46",
+          "G03_48",
+          "G03_51",
+          "G03_58",
+          "G04_02",
+          "G04_03",
+          "G04_06",
+          "G04_17",
+          "G04_18",
+          "G04_27",
+          "G04_29",
+          "G04_31",
+          "G04_34",
+          "G04_39",
+          "G04_41",
+          "G04_46",
+          "G04_50",
+          "G04_51"
+        ],
+        "False_Positives": [
+          "G03_04",
+          "G03_05",
+          "G03_12",
+          "G03_13",
+          "G03_19",
+          "G03_22",
+          "G03_24",
+          "G03_25",
+          "G03_26",
+          "G03_27",
+          "G03_34",
+          "G03_36",
+          "G03_41",
+          "G03_42",
+          "G03_44",
+          "G03_45",
+          "G03_46",
+          "G03_48",
+          "G03_51",
+          "G04_02",
+          "G04_27",
+          "G04_29",
+          "G04_31",
+          "G04_34",
+          "G04_39",
+          "G04_41"
+        ],
+        "False_Negatives": [
+          "G03_02",
+          "G03_32",
+          "G03_55",
+          "G04_16",
+          "G04_19",
+          "G04_20",
+          "G04_35",
+          "G04_48",
+          "G04_49"
+        ]
+      },
+      "graph_cardinalities_per_backlog": {
+        "g03": {
+          "Backlog": 1,
+          "UserStory": 55,
+          "Persona": 20,
+          "Action": 87,
+          "Entity": 173,
+          "Benefit": 55,
+          "TRIGGERS": 77,
+          "TARGETS": 240
+        },
+        "g04": {
+          "Backlog": 1,
+          "UserStory": 48,
+          "Persona": 11,
+          "Action": 64,
+          "Entity": 138,
+          "Benefit": 42,
+          "TRIGGERS": 71,
+          "TARGETS": 171
+        }
+      },
+      "inputs": [
+        {
+          "model": "gpt-4-turbo",
+          "pid": "g03",
+          "source_file": "extracted_data/gpt-4-turbo/g03.json",
+          "source_sha256": "8982fa6b832ee76fade0c3954898460e9a8f7e89d11ba9d0ed2ebf05f90e3fb8"
+        },
+        {
+          "model": "gpt-4-turbo",
+          "pid": "g04",
+          "source_file": "extracted_data/gpt-4-turbo/g04.json",
+          "source_sha256": "3b8e5cbdc033b732143b2e4a070a781c32e5dd0df45b00d63c4a044e620ad57a"
+        }
+      ]
+    },
+    "gpt-4o-mini": {
+      "coverage": {
+        "reference_stories": 109,
+        "source_records": 103,
+        "canonical_graph_stories": 103,
+        "represented_reference_stories": 104,
+        "missing_reference_story_ids": [
+          "G03_39",
+          "G03_54",
+          "G04_05",
+          "G04_15",
+          "G04_48"
+        ],
+        "shared_text_mappings": [
+          {
+            "graph_story_id": "g03_933c6b73",
+            "raw_story_ids": [
+              "G03_45",
+              "G03_46"
+            ]
+          }
+        ],
+        "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+      },
+      "missing_benefit": {
+        "ground_truth_count": 6,
+        "ground_truth_stories": [
+          "G04_09",
+          "G04_10",
+          "G04_11",
+          "G04_14",
+          "G04_20",
+          "G04_26"
+        ],
+        "neo4j": {
+          "TP": 5,
+          "FP": 1,
+          "FN": 1,
+          "Precision": 83.33,
+          "Recall": 83.33,
+          "F1": 83.33,
+          "Predicted_Stories": [
+            "G03_47",
+            "G04_09",
+            "G04_10",
+            "G04_11",
+            "G04_14",
+            "G04_26"
+          ],
+          "False_Positives": [
+            "G03_47"
+          ],
+          "False_Negatives": [
+            "G04_20"
+          ]
+        }
+      },
+      "incomplete_means": {
+        "ground_truth_count": 1,
+        "ground_truth_stories": [
+          "G03_54"
+        ],
+        "metrics_applicable": false,
+        "status": "qualitative_only_unconfirmed_positive_reference",
+        "projected_alarms": [
+          "G03_20",
+          "G03_48",
+          "G04_30"
+        ],
+        "historical_annotation_comparison": {
+          "neo4j": {
+            "TP": 0,
+            "FP": 3,
+            "FN": 1,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1": 0.0,
+            "Predicted_Stories": [
+              "G03_20",
+              "G03_48",
+              "G04_30"
+            ],
+            "False_Positives": [
+              "G03_20",
+              "G03_48",
+              "G04_30"
+            ],
+            "False_Negatives": [
+              "G03_54"
+            ]
+          }
+        },
+        "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+      },
+      "atomicity": {
+        "ground_truth_count": 19,
+        "ground_truth_stories": [
+          "G03_02",
+          "G03_21",
+          "G03_32",
+          "G03_38",
+          "G03_55",
+          "G03_58",
+          "G04_03",
+          "G04_06",
+          "G04_16",
+          "G04_17",
+          "G04_18",
+          "G04_19",
+          "G04_20",
+          "G04_35",
+          "G04_46",
+          "G04_48",
+          "G04_49",
+          "G04_50",
+          "G04_51"
+        ],
+        "neo4j_threshold_gt1": {
+          "TP": 18,
+          "FP": 70,
+          "FN": 1,
+          "Precision": 20.45,
+          "Recall": 94.74,
+          "F1": 33.64,
+          "Predicted_Stories": [
+            "G03_01",
+            "G03_02",
+            "G03_03",
+            "G03_04",
+            "G03_05",
+            "G03_06",
+            "G03_08",
+            "G03_09",
+            "G03_10",
+            "G03_11",
+            "G03_12",
+            "G03_13",
+            "G03_14",
+            "G03_16",
+            "G03_18",
+            "G03_19",
+            "G03_20",
+            "G03_21",
+            "G03_22",
+            "G03_23",
+            "G03_24",
+            "G03_25",
+            "G03_26",
+            "G03_27",
+            "G03_28",
+            "G03_29",
+            "G03_31",
+            "G03_32",
+            "G03_33",
+            "G03_34",
+            "G03_35",
+            "G03_36",
+            "G03_37",
+            "G03_38",
+            "G03_40",
+            "G03_42",
+            "G03_43",
+            "G03_44",
+            "G03_45",
+            "G03_46",
+            "G03_47",
+            "G03_48",
+            "G03_50",
+            "G03_51",
+            "G03_52",
+            "G03_53",
+            "G03_55",
+            "G03_56",
+            "G03_58",
+            "G04_01",
+            "G04_02",
+            "G04_03",
+            "G04_04",
+            "G04_06",
+            "G04_07",
+            "G04_08",
+            "G04_13",
+            "G04_16",
+            "G04_17",
+            "G04_18",
+            "G04_19",
+            "G04_20",
+            "G04_21",
+            "G04_22",
+            "G04_24",
+            "G04_25",
+            "G04_26",
+            "G04_27",
+            "G04_28",
+            "G04_30",
+            "G04_31",
+            "G04_32",
+            "G04_33",
+            "G04_34",
+            "G04_35",
+            "G04_36",
+            "G04_37",
+            "G04_38",
+            "G04_40",
+            "G04_41",
+            "G04_42",
+            "G04_43",
+            "G04_45",
+            "G04_46",
+            "G04_47",
+            "G04_49",
+            "G04_50",
+            "G04_51"
+          ],
+          "False_Positives": [
+            "G03_01",
+            "G03_03",
+            "G03_04",
+            "G03_05",
+            "G03_06",
+            "G03_08",
+            "G03_09",
+            "G03_10",
+            "G03_11",
+            "G03_12",
+            "G03_13",
+            "G03_14",
+            "G03_16",
+            "G03_18",
+            "G03_19",
+            "G03_20",
+            "G03_22",
+            "G03_23",
+            "G03_24",
+            "G03_25",
+            "G03_26",
+            "G03_27",
+            "G03_28",
+            "G03_29",
+            "G03_31",
+            "G03_33",
+            "G03_34",
+            "G03_35",
+            "G03_36",
+            "G03_37",
+            "G03_40",
+            "G03_42",
+            "G03_43",
+            "G03_44",
+            "G03_45",
+            "G03_46",
+            "G03_47",
+            "G03_48",
+            "G03_50",
+            "G03_51",
+            "G03_52",
+            "G03_53",
+            "G03_56",
+            "G04_01",
+            "G04_02",
+            "G04_04",
+            "G04_07",
+            "G04_08",
+            "G04_13",
+            "G04_21",
+            "G04_22",
+            "G04_24",
+            "G04_25",
+            "G04_26",
+            "G04_27",
+            "G04_28",
+            "G04_30",
+            "G04_31",
+            "G04_32",
+            "G04_33",
+            "G04_34",
+            "G04_36",
+            "G04_37",
+            "G04_38",
+            "G04_40",
+            "G04_41",
+            "G04_42",
+            "G04_43",
+            "G04_45",
+            "G04_47"
+          ],
+          "False_Negatives": [
+            "G04_48"
+          ]
+        },
+        "neo4j_threshold_gt2": {
+          "TP": 6,
+          "FP": 19,
+          "FN": 13,
+          "Precision": 24.0,
+          "Recall": 31.58,
+          "F1": 27.27,
+          "Predicted_Stories": [
+            "G03_04",
+            "G03_14",
+            "G03_16",
+            "G03_22",
+            "G03_25",
+            "G03_27",
+            "G03_29",
+            "G03_34",
+            "G03_36",
+            "G03_42",
+            "G03_44",
+            "G03_45",
+            "G03_46",
+            "G03_48",
+            "G03_51",
+            "G03_56",
+            "G04_03",
+            "G04_06",
+            "G04_17",
+            "G04_27",
+            "G04_31",
+            "G04_41",
+            "G04_46",
+            "G04_50",
+            "G04_51"
+          ],
+          "False_Positives": [
+            "G03_04",
+            "G03_14",
+            "G03_16",
+            "G03_22",
+            "G03_25",
+            "G03_27",
+            "G03_29",
+            "G03_34",
+            "G03_36",
+            "G03_42",
+            "G03_44",
+            "G03_45",
+            "G03_46",
+            "G03_48",
+            "G03_51",
+            "G03_56",
+            "G04_27",
+            "G04_31",
+            "G04_41"
+          ],
+          "False_Negatives": [
+            "G03_02",
+            "G03_21",
+            "G03_32",
+            "G03_38",
+            "G03_55",
+            "G03_58",
+            "G04_16",
+            "G04_18",
+            "G04_19",
+            "G04_20",
+            "G04_35",
+            "G04_48",
+            "G04_49"
+          ]
+        },
+        "neo4j_threshold_gt4": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 19,
+          "Precision": null,
+          "Recall": 0.0,
+          "F1": 0.0,
+          "Predicted_Stories": [],
+          "False_Positives": [],
+          "False_Negatives": [
+            "G03_02",
+            "G03_21",
+            "G03_32",
+            "G03_38",
+            "G03_55",
+            "G03_58",
+            "G04_03",
+            "G04_06",
+            "G04_16",
+            "G04_17",
+            "G04_18",
+            "G04_19",
+            "G04_20",
+            "G04_35",
+            "G04_46",
+            "G04_48",
+            "G04_49",
+            "G04_50",
+            "G04_51"
+          ]
+        }
+      },
+      "well_formedness": {
+        "metrics_applicable": false,
+        "projected_alarms": [],
+        "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+      },
+      "uniqueness": {
+        "ground_truth_count": 1,
+        "ground_truth_stories": [
+          "G03_46"
+        ],
+        "etl_invariant": {
+          "classification_output": false,
+          "metrics_applicable": false,
+          "raw_exact_duplicate_groups": [
+            {
+              "pid": "g03",
+              "story_ids": [
+                "G03_45",
+                "G03_46"
+              ]
+            }
+          ],
+          "supplied_source_records": 103,
+          "canonical_import_records": 103,
+          "identical_supplied_records_coalesced": 0,
+          "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+        }
+      },
+      "exploratory": {
+        "metrics_applicable": false,
+        "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+        "per_backlog": {
+          "g03": {
+            "dangling_actions": [
+              [
+                "g03_660de6c9",
+                "finish"
+              ],
+              [
+                "g03_d6ab1b02",
+                "assign"
+              ],
+              [
+                "g03_d6ab1b02",
+                "schedule"
+              ]
+            ],
+            "overlap_groups": [
+              [
+                "Manage",
+                "compliance",
+                [
+                  "g03_d602e069",
+                  "g03_e2aff73e"
+                ]
+              ],
+              [
+                "validate",
+                "application",
+                [
+                  "g03_0baf4244",
+                  "g03_739c37c6"
+                ]
+              ]
+            ],
+            "overlap_pairs": [
+              [
+                "g03_0baf4244",
+                "g03_739c37c6",
+                "validate",
+                "application"
+              ],
+              [
+                "g03_d602e069",
+                "g03_e2aff73e",
+                "Manage",
+                "compliance"
+              ]
+            ],
+            "cross_persona_pairs": []
+          },
+          "g04": {
+            "dangling_actions": [
+              [
+                "g04_8fd7541b",
+                "manage"
+              ]
+            ],
+            "overlap_groups": [
+              [
+                "fix",
+                "issues",
+                [
+                  "g04_7848d500",
+                  "g04_ef4b486c"
+                ]
+              ],
+              [
+                "have",
+                "data",
+                [
+                  "g04_25c11aa4",
+                  "g04_8d37edee"
+                ]
+              ],
+              [
+                "have",
+                "website",
+                [
+                  "g04_365556a2",
+                  "g04_bd621a4b",
+                  "g04_f86d7036"
+                ]
+              ],
+              [
+                "view",
+                "area",
+                [
+                  "g04_10131c92",
+                  "g04_18283c5a",
+                  "g04_9ae93732"
+                ]
+              ],
+              [
+                "view",
+                "map display",
+                [
+                  "g04_18283c5a",
+                  "g04_9ae93732"
+                ]
+              ]
+            ],
+            "overlap_pairs": [
+              [
+                "g04_10131c92",
+                "g04_18283c5a",
+                "view",
+                "area"
+              ],
+              [
+                "g04_10131c92",
+                "g04_9ae93732",
+                "view",
+                "area"
+              ],
+              [
+                "g04_18283c5a",
+                "g04_9ae93732",
+                "view",
+                "area"
+              ],
+              [
+                "g04_18283c5a",
+                "g04_9ae93732",
+                "view",
+                "map display"
+              ],
+              [
+                "g04_25c11aa4",
+                "g04_8d37edee",
+                "have",
+                "data"
+              ],
+              [
+                "g04_365556a2",
+                "g04_bd621a4b",
+                "have",
+                "website"
+              ],
+              [
+                "g04_365556a2",
+                "g04_f86d7036",
+                "have",
+                "website"
+              ],
+              [
+                "g04_7848d500",
+                "g04_ef4b486c",
+                "fix",
+                "issues"
+              ],
+              [
+                "g04_bd621a4b",
+                "g04_f86d7036",
+                "have",
+                "website"
+              ]
+            ],
+            "cross_persona_pairs": [
+              [
+                "g04_25c11aa4",
+                "g04_8d37edee",
+                "admin",
+                "executive",
+                "have",
+                "data"
+              ],
+              [
+                "g04_365556a2",
+                "g04_bd621a4b",
+                "user",
+                "company",
+                "have",
+                "website"
+              ],
+              [
+                "g04_bd621a4b",
+                "g04_f86d7036",
+                "company",
+                "user",
+                "have",
+                "website"
+              ]
+            ]
+          }
+        }
+      },
+      "per_backlog": {
+        "g03": {
+          "coverage": {
+            "reference_stories": 58,
+            "source_records": 55,
+            "canonical_graph_stories": 55,
+            "represented_reference_stories": 56,
+            "missing_reference_story_ids": [
+              "G03_39",
+              "G03_54"
+            ],
+            "shared_text_mappings": [
+              {
+                "graph_story_id": "g03_933c6b73",
+                "raw_story_ids": [
+                  "G03_45",
+                  "G03_46"
+                ]
+              }
+            ],
+            "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+          },
+          "missing_benefit": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "neo4j": {
+              "TP": 0,
+              "FP": 1,
+              "FN": 0,
+              "Precision": 0.0,
+              "Recall": null,
+              "F1": 0.0,
+              "Predicted_Stories": [
+                "G03_47"
+              ],
+              "False_Positives": [
+                "G03_47"
+              ],
+              "False_Negatives": []
+            }
+          },
+          "incomplete_means": {
+            "ground_truth_count": 1,
+            "ground_truth_stories": [
+              "G03_54"
+            ],
+            "metrics_applicable": false,
+            "status": "qualitative_only_unconfirmed_positive_reference",
+            "projected_alarms": [
+              "G03_20",
+              "G03_48"
+            ],
+            "historical_annotation_comparison": {
+              "neo4j": {
+                "TP": 0,
+                "FP": 2,
+                "FN": 1,
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0,
+                "Predicted_Stories": [
+                  "G03_20",
+                  "G03_48"
+                ],
+                "False_Positives": [
+                  "G03_20",
+                  "G03_48"
+                ],
+                "False_Negatives": [
+                  "G03_54"
+                ]
+              }
+            },
+            "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+          },
+          "atomicity": {
+            "ground_truth_count": 6,
+            "ground_truth_stories": [
+              "G03_02",
+              "G03_21",
+              "G03_32",
+              "G03_38",
+              "G03_55",
+              "G03_58"
+            ],
+            "neo4j_threshold_gt1": {
+              "TP": 6,
+              "FP": 43,
+              "FN": 0,
+              "Precision": 12.24,
+              "Recall": 100.0,
+              "F1": 21.82,
+              "Predicted_Stories": [
+                "G03_01",
+                "G03_02",
+                "G03_03",
+                "G03_04",
+                "G03_05",
+                "G03_06",
+                "G03_08",
+                "G03_09",
+                "G03_10",
+                "G03_11",
+                "G03_12",
+                "G03_13",
+                "G03_14",
+                "G03_16",
+                "G03_18",
+                "G03_19",
+                "G03_20",
+                "G03_21",
+                "G03_22",
+                "G03_23",
+                "G03_24",
+                "G03_25",
+                "G03_26",
+                "G03_27",
+                "G03_28",
+                "G03_29",
+                "G03_31",
+                "G03_32",
+                "G03_33",
+                "G03_34",
+                "G03_35",
+                "G03_36",
+                "G03_37",
+                "G03_38",
+                "G03_40",
+                "G03_42",
+                "G03_43",
+                "G03_44",
+                "G03_45",
+                "G03_46",
+                "G03_47",
+                "G03_48",
+                "G03_50",
+                "G03_51",
+                "G03_52",
+                "G03_53",
+                "G03_55",
+                "G03_56",
+                "G03_58"
+              ],
+              "False_Positives": [
+                "G03_01",
+                "G03_03",
+                "G03_04",
+                "G03_05",
+                "G03_06",
+                "G03_08",
+                "G03_09",
+                "G03_10",
+                "G03_11",
+                "G03_12",
+                "G03_13",
+                "G03_14",
+                "G03_16",
+                "G03_18",
+                "G03_19",
+                "G03_20",
+                "G03_22",
+                "G03_23",
+                "G03_24",
+                "G03_25",
+                "G03_26",
+                "G03_27",
+                "G03_28",
+                "G03_29",
+                "G03_31",
+                "G03_33",
+                "G03_34",
+                "G03_35",
+                "G03_36",
+                "G03_37",
+                "G03_40",
+                "G03_42",
+                "G03_43",
+                "G03_44",
+                "G03_45",
+                "G03_46",
+                "G03_47",
+                "G03_48",
+                "G03_50",
+                "G03_51",
+                "G03_52",
+                "G03_53",
+                "G03_56"
+              ],
+              "False_Negatives": []
+            },
+            "neo4j_threshold_gt2": {
+              "TP": 0,
+              "FP": 16,
+              "FN": 6,
+              "Precision": 0.0,
+              "Recall": 0.0,
+              "F1": 0.0,
+              "Predicted_Stories": [
+                "G03_04",
+                "G03_14",
+                "G03_16",
+                "G03_22",
+                "G03_25",
+                "G03_27",
+                "G03_29",
+                "G03_34",
+                "G03_36",
+                "G03_42",
+                "G03_44",
+                "G03_45",
+                "G03_46",
+                "G03_48",
+                "G03_51",
+                "G03_56"
+              ],
+              "False_Positives": [
+                "G03_04",
+                "G03_14",
+                "G03_16",
+                "G03_22",
+                "G03_25",
+                "G03_27",
+                "G03_29",
+                "G03_34",
+                "G03_36",
+                "G03_42",
+                "G03_44",
+                "G03_45",
+                "G03_46",
+                "G03_48",
+                "G03_51",
+                "G03_56"
+              ],
+              "False_Negatives": [
+                "G03_02",
+                "G03_21",
+                "G03_32",
+                "G03_38",
+                "G03_55",
+                "G03_58"
+              ]
+            },
+            "neo4j_threshold_gt4": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 6,
+              "Precision": null,
+              "Recall": 0.0,
+              "F1": 0.0,
+              "Predicted_Stories": [],
+              "False_Positives": [],
+              "False_Negatives": [
+                "G03_02",
+                "G03_21",
+                "G03_32",
+                "G03_38",
+                "G03_55",
+                "G03_58"
+              ]
+            }
+          },
+          "well_formedness": {
+            "metrics_applicable": false,
+            "projected_alarms": [],
+            "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+          },
+          "uniqueness": {
+            "ground_truth_count": 1,
+            "ground_truth_stories": [
+              "G03_46"
+            ],
+            "etl_invariant": {
+              "classification_output": false,
+              "metrics_applicable": false,
+              "raw_exact_duplicate_groups": [
+                {
+                  "pid": "g03",
+                  "story_ids": [
+                    "G03_45",
+                    "G03_46"
+                  ]
+                }
+              ],
+              "supplied_source_records": 55,
+              "canonical_import_records": 55,
+              "identical_supplied_records_coalesced": 0,
+              "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+            }
+          },
+          "exploratory": {
+            "metrics_applicable": false,
+            "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+            "per_backlog": {
+              "g03": {
+                "dangling_actions": [
+                  [
+                    "g03_660de6c9",
+                    "finish"
+                  ],
+                  [
+                    "g03_d6ab1b02",
+                    "assign"
+                  ],
+                  [
+                    "g03_d6ab1b02",
+                    "schedule"
+                  ]
+                ],
+                "overlap_groups": [
+                  [
+                    "Manage",
+                    "compliance",
+                    [
+                      "g03_d602e069",
+                      "g03_e2aff73e"
+                    ]
+                  ],
+                  [
+                    "validate",
+                    "application",
+                    [
+                      "g03_0baf4244",
+                      "g03_739c37c6"
+                    ]
+                  ]
+                ],
+                "overlap_pairs": [
+                  [
+                    "g03_0baf4244",
+                    "g03_739c37c6",
+                    "validate",
+                    "application"
+                  ],
+                  [
+                    "g03_d602e069",
+                    "g03_e2aff73e",
+                    "Manage",
+                    "compliance"
+                  ]
+                ],
+                "cross_persona_pairs": []
+              }
+            }
+          }
+        },
+        "g04": {
+          "coverage": {
+            "reference_stories": 51,
+            "source_records": 48,
+            "canonical_graph_stories": 48,
+            "represented_reference_stories": 48,
+            "missing_reference_story_ids": [
+              "G04_05",
+              "G04_15",
+              "G04_48"
+            ],
+            "shared_text_mappings": [],
+            "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+          },
+          "missing_benefit": {
+            "ground_truth_count": 6,
+            "ground_truth_stories": [
+              "G04_09",
+              "G04_10",
+              "G04_11",
+              "G04_14",
+              "G04_20",
+              "G04_26"
+            ],
+            "neo4j": {
+              "TP": 5,
+              "FP": 0,
+              "FN": 1,
+              "Precision": 100.0,
+              "Recall": 83.33,
+              "F1": 90.91,
+              "Predicted_Stories": [
+                "G04_09",
+                "G04_10",
+                "G04_11",
+                "G04_14",
+                "G04_26"
+              ],
+              "False_Positives": [],
+              "False_Negatives": [
+                "G04_20"
+              ]
+            }
+          },
+          "incomplete_means": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "metrics_applicable": false,
+            "status": "qualitative_only_unconfirmed_positive_reference",
+            "projected_alarms": [
+              "G04_30"
+            ],
+            "historical_annotation_comparison": {
+              "neo4j": {
+                "TP": 0,
+                "FP": 1,
+                "FN": 0,
+                "Precision": 0.0,
+                "Recall": null,
+                "F1": 0.0,
+                "Predicted_Stories": [
+                  "G04_30"
+                ],
+                "False_Positives": [
+                  "G04_30"
+                ],
+                "False_Negatives": []
+              }
+            },
+            "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+          },
+          "atomicity": {
+            "ground_truth_count": 13,
+            "ground_truth_stories": [
+              "G04_03",
+              "G04_06",
+              "G04_16",
+              "G04_17",
+              "G04_18",
+              "G04_19",
+              "G04_20",
+              "G04_35",
+              "G04_46",
+              "G04_48",
+              "G04_49",
+              "G04_50",
+              "G04_51"
+            ],
+            "neo4j_threshold_gt1": {
+              "TP": 12,
+              "FP": 27,
+              "FN": 1,
+              "Precision": 30.77,
+              "Recall": 92.31,
+              "F1": 46.15,
+              "Predicted_Stories": [
+                "G04_01",
+                "G04_02",
+                "G04_03",
+                "G04_04",
+                "G04_06",
+                "G04_07",
+                "G04_08",
+                "G04_13",
+                "G04_16",
+                "G04_17",
+                "G04_18",
+                "G04_19",
+                "G04_20",
+                "G04_21",
+                "G04_22",
+                "G04_24",
+                "G04_25",
+                "G04_26",
+                "G04_27",
+                "G04_28",
+                "G04_30",
+                "G04_31",
+                "G04_32",
+                "G04_33",
+                "G04_34",
+                "G04_35",
+                "G04_36",
+                "G04_37",
+                "G04_38",
+                "G04_40",
+                "G04_41",
+                "G04_42",
+                "G04_43",
+                "G04_45",
+                "G04_46",
+                "G04_47",
+                "G04_49",
+                "G04_50",
+                "G04_51"
+              ],
+              "False_Positives": [
+                "G04_01",
+                "G04_02",
+                "G04_04",
+                "G04_07",
+                "G04_08",
+                "G04_13",
+                "G04_21",
+                "G04_22",
+                "G04_24",
+                "G04_25",
+                "G04_26",
+                "G04_27",
+                "G04_28",
+                "G04_30",
+                "G04_31",
+                "G04_32",
+                "G04_33",
+                "G04_34",
+                "G04_36",
+                "G04_37",
+                "G04_38",
+                "G04_40",
+                "G04_41",
+                "G04_42",
+                "G04_43",
+                "G04_45",
+                "G04_47"
+              ],
+              "False_Negatives": [
+                "G04_48"
+              ]
+            },
+            "neo4j_threshold_gt2": {
+              "TP": 6,
+              "FP": 3,
+              "FN": 7,
+              "Precision": 66.67,
+              "Recall": 46.15,
+              "F1": 54.55,
+              "Predicted_Stories": [
+                "G04_03",
+                "G04_06",
+                "G04_17",
+                "G04_27",
+                "G04_31",
+                "G04_41",
+                "G04_46",
+                "G04_50",
+                "G04_51"
+              ],
+              "False_Positives": [
+                "G04_27",
+                "G04_31",
+                "G04_41"
+              ],
+              "False_Negatives": [
+                "G04_16",
+                "G04_18",
+                "G04_19",
+                "G04_20",
+                "G04_35",
+                "G04_48",
+                "G04_49"
+              ]
+            },
+            "neo4j_threshold_gt4": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 13,
+              "Precision": null,
+              "Recall": 0.0,
+              "F1": 0.0,
+              "Predicted_Stories": [],
+              "False_Positives": [],
+              "False_Negatives": [
+                "G04_03",
+                "G04_06",
+                "G04_16",
+                "G04_17",
+                "G04_18",
+                "G04_19",
+                "G04_20",
+                "G04_35",
+                "G04_46",
+                "G04_48",
+                "G04_49",
+                "G04_50",
+                "G04_51"
+              ]
+            }
+          },
+          "well_formedness": {
+            "metrics_applicable": false,
+            "projected_alarms": [],
+            "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+          },
+          "uniqueness": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "etl_invariant": {
+              "classification_output": false,
+              "metrics_applicable": false,
+              "raw_exact_duplicate_groups": [],
+              "supplied_source_records": 48,
+              "canonical_import_records": 48,
+              "identical_supplied_records_coalesced": 0,
+              "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+            }
+          },
+          "exploratory": {
+            "metrics_applicable": false,
+            "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+            "per_backlog": {
+              "g04": {
+                "dangling_actions": [
+                  [
+                    "g04_8fd7541b",
+                    "manage"
+                  ]
+                ],
+                "overlap_groups": [
+                  [
+                    "fix",
+                    "issues",
+                    [
+                      "g04_7848d500",
+                      "g04_ef4b486c"
+                    ]
+                  ],
+                  [
+                    "have",
+                    "data",
+                    [
+                      "g04_25c11aa4",
+                      "g04_8d37edee"
+                    ]
+                  ],
+                  [
+                    "have",
+                    "website",
+                    [
+                      "g04_365556a2",
+                      "g04_bd621a4b",
+                      "g04_f86d7036"
+                    ]
+                  ],
+                  [
+                    "view",
+                    "area",
+                    [
+                      "g04_10131c92",
+                      "g04_18283c5a",
+                      "g04_9ae93732"
+                    ]
+                  ],
+                  [
+                    "view",
+                    "map display",
+                    [
+                      "g04_18283c5a",
+                      "g04_9ae93732"
+                    ]
+                  ]
+                ],
+                "overlap_pairs": [
+                  [
+                    "g04_10131c92",
+                    "g04_18283c5a",
+                    "view",
+                    "area"
+                  ],
+                  [
+                    "g04_10131c92",
+                    "g04_9ae93732",
+                    "view",
+                    "area"
+                  ],
+                  [
+                    "g04_18283c5a",
+                    "g04_9ae93732",
+                    "view",
+                    "area"
+                  ],
+                  [
+                    "g04_18283c5a",
+                    "g04_9ae93732",
+                    "view",
+                    "map display"
+                  ],
+                  [
+                    "g04_25c11aa4",
+                    "g04_8d37edee",
+                    "have",
+                    "data"
+                  ],
+                  [
+                    "g04_365556a2",
+                    "g04_bd621a4b",
+                    "have",
+                    "website"
+                  ],
+                  [
+                    "g04_365556a2",
+                    "g04_f86d7036",
+                    "have",
+                    "website"
+                  ],
+                  [
+                    "g04_7848d500",
+                    "g04_ef4b486c",
+                    "fix",
+                    "issues"
+                  ],
+                  [
+                    "g04_bd621a4b",
+                    "g04_f86d7036",
+                    "have",
+                    "website"
+                  ]
+                ],
+                "cross_persona_pairs": [
+                  [
+                    "g04_25c11aa4",
+                    "g04_8d37edee",
+                    "admin",
+                    "executive",
+                    "have",
+                    "data"
+                  ],
+                  [
+                    "g04_365556a2",
+                    "g04_bd621a4b",
+                    "user",
+                    "company",
+                    "have",
+                    "website"
+                  ],
+                  [
+                    "g04_bd621a4b",
+                    "g04_f86d7036",
+                    "company",
+                    "user",
+                    "have",
+                    "website"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      },
+      "fat_story_actions_gt2": {
+        "TP": 6,
+        "FP": 19,
+        "FN": 13,
+        "Precision": 24.0,
+        "Recall": 31.58,
+        "F1": 27.27,
+        "Predicted_Stories": [
+          "G03_04",
+          "G03_14",
+          "G03_16",
+          "G03_22",
+          "G03_25",
+          "G03_27",
+          "G03_29",
+          "G03_34",
+          "G03_36",
+          "G03_42",
+          "G03_44",
+          "G03_45",
+          "G03_46",
+          "G03_48",
+          "G03_51",
+          "G03_56",
+          "G04_03",
+          "G04_06",
+          "G04_17",
+          "G04_27",
+          "G04_31",
+          "G04_41",
+          "G04_46",
+          "G04_50",
+          "G04_51"
+        ],
+        "False_Positives": [
+          "G03_04",
+          "G03_14",
+          "G03_16",
+          "G03_22",
+          "G03_25",
+          "G03_27",
+          "G03_29",
+          "G03_34",
+          "G03_36",
+          "G03_42",
+          "G03_44",
+          "G03_45",
+          "G03_46",
+          "G03_48",
+          "G03_51",
+          "G03_56",
+          "G04_27",
+          "G04_31",
+          "G04_41"
+        ],
+        "False_Negatives": [
+          "G03_02",
+          "G03_21",
+          "G03_32",
+          "G03_38",
+          "G03_55",
+          "G03_58",
+          "G04_16",
+          "G04_18",
+          "G04_19",
+          "G04_20",
+          "G04_35",
+          "G04_48",
+          "G04_49"
+        ]
+      },
+      "graph_cardinalities_per_backlog": {
+        "g03": {
+          "Backlog": 1,
+          "UserStory": 55,
+          "Persona": 19,
+          "Action": 83,
+          "Entity": 173,
+          "Benefit": 54,
+          "TRIGGERS": 70,
+          "TARGETS": 236
+        },
+        "g04": {
+          "Backlog": 1,
+          "UserStory": 48,
+          "Persona": 10,
+          "Action": 59,
+          "Entity": 143,
+          "Benefit": 43,
+          "TRIGGERS": 73,
+          "TARGETS": 165
+        }
+      },
+      "inputs": [
+        {
+          "model": "gpt-4o-mini",
+          "pid": "g03",
+          "source_file": "extracted_data/gpt-4o-mini/g03.json",
+          "source_sha256": "537d6d098323d50baba42c5b3552e0f58e6fc6943ae82a8d6e40cd6c107f3326"
+        },
+        {
+          "model": "gpt-4o-mini",
+          "pid": "g04",
+          "source_file": "extracted_data/gpt-4o-mini/g04.json",
+          "source_sha256": "05093bcd866a556b54f4323397217e6504a3bb9570ba2e858c33f5f313fd7a93"
+        }
+      ]
+    },
+    "ollama3": {
+      "coverage": {
+        "reference_stories": 109,
+        "source_records": 102,
+        "canonical_graph_stories": 102,
+        "represented_reference_stories": 103,
+        "missing_reference_story_ids": [
+          "G03_39",
+          "G03_54",
+          "G04_05",
+          "G04_14",
+          "G04_15",
+          "G04_48"
+        ],
+        "shared_text_mappings": [
+          {
+            "graph_story_id": "g03_933c6b73",
+            "raw_story_ids": [
+              "G03_45",
+              "G03_46"
+            ]
+          }
+        ],
+        "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+      },
+      "missing_benefit": {
+        "ground_truth_count": 6,
+        "ground_truth_stories": [
+          "G04_09",
+          "G04_10",
+          "G04_11",
+          "G04_14",
+          "G04_20",
+          "G04_26"
+        ],
+        "neo4j": {
+          "TP": 5,
+          "FP": 0,
+          "FN": 1,
+          "Precision": 100.0,
+          "Recall": 83.33,
+          "F1": 90.91,
+          "Predicted_Stories": [
+            "G04_09",
+            "G04_10",
+            "G04_11",
+            "G04_20",
+            "G04_26"
+          ],
+          "False_Positives": [],
+          "False_Negatives": [
+            "G04_14"
+          ]
+        }
+      },
+      "incomplete_means": {
+        "ground_truth_count": 1,
+        "ground_truth_stories": [
+          "G03_54"
+        ],
+        "metrics_applicable": false,
+        "status": "qualitative_only_unconfirmed_positive_reference",
+        "projected_alarms": [
+          "G03_02",
+          "G03_04",
+          "G03_05",
+          "G03_12",
+          "G03_13",
+          "G03_20",
+          "G03_21",
+          "G03_23",
+          "G03_24",
+          "G03_25",
+          "G03_31",
+          "G03_32",
+          "G03_34",
+          "G03_38",
+          "G03_41",
+          "G03_42",
+          "G03_48",
+          "G03_55",
+          "G03_57",
+          "G04_03",
+          "G04_06",
+          "G04_07",
+          "G04_08",
+          "G04_13",
+          "G04_16",
+          "G04_17",
+          "G04_18",
+          "G04_20",
+          "G04_21",
+          "G04_25",
+          "G04_27",
+          "G04_30",
+          "G04_31",
+          "G04_33",
+          "G04_34",
+          "G04_35",
+          "G04_37",
+          "G04_38",
+          "G04_41",
+          "G04_42",
+          "G04_46",
+          "G04_47",
+          "G04_49",
+          "G04_50",
+          "G04_51"
+        ],
+        "historical_annotation_comparison": {
+          "neo4j": {
+            "TP": 0,
+            "FP": 45,
+            "FN": 1,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1": 0.0,
+            "Predicted_Stories": [
+              "G03_02",
+              "G03_04",
+              "G03_05",
+              "G03_12",
+              "G03_13",
+              "G03_20",
+              "G03_21",
+              "G03_23",
+              "G03_24",
+              "G03_25",
+              "G03_31",
+              "G03_32",
+              "G03_34",
+              "G03_38",
+              "G03_41",
+              "G03_42",
+              "G03_48",
+              "G03_55",
+              "G03_57",
+              "G04_03",
+              "G04_06",
+              "G04_07",
+              "G04_08",
+              "G04_13",
+              "G04_16",
+              "G04_17",
+              "G04_18",
+              "G04_20",
+              "G04_21",
+              "G04_25",
+              "G04_27",
+              "G04_30",
+              "G04_31",
+              "G04_33",
+              "G04_34",
+              "G04_35",
+              "G04_37",
+              "G04_38",
+              "G04_41",
+              "G04_42",
+              "G04_46",
+              "G04_47",
+              "G04_49",
+              "G04_50",
+              "G04_51"
+            ],
+            "False_Positives": [
+              "G03_02",
+              "G03_04",
+              "G03_05",
+              "G03_12",
+              "G03_13",
+              "G03_20",
+              "G03_21",
+              "G03_23",
+              "G03_24",
+              "G03_25",
+              "G03_31",
+              "G03_32",
+              "G03_34",
+              "G03_38",
+              "G03_41",
+              "G03_42",
+              "G03_48",
+              "G03_55",
+              "G03_57",
+              "G04_03",
+              "G04_06",
+              "G04_07",
+              "G04_08",
+              "G04_13",
+              "G04_16",
+              "G04_17",
+              "G04_18",
+              "G04_20",
+              "G04_21",
+              "G04_25",
+              "G04_27",
+              "G04_30",
+              "G04_31",
+              "G04_33",
+              "G04_34",
+              "G04_35",
+              "G04_37",
+              "G04_38",
+              "G04_41",
+              "G04_42",
+              "G04_46",
+              "G04_47",
+              "G04_49",
+              "G04_50",
+              "G04_51"
+            ],
+            "False_Negatives": [
+              "G03_54"
+            ]
+          }
+        },
+        "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+      },
+      "atomicity": {
+        "ground_truth_count": 19,
+        "ground_truth_stories": [
+          "G03_02",
+          "G03_21",
+          "G03_32",
+          "G03_38",
+          "G03_55",
+          "G03_58",
+          "G04_03",
+          "G04_06",
+          "G04_16",
+          "G04_17",
+          "G04_18",
+          "G04_19",
+          "G04_20",
+          "G04_35",
+          "G04_46",
+          "G04_48",
+          "G04_49",
+          "G04_50",
+          "G04_51"
+        ],
+        "neo4j_threshold_gt1": {
+          "TP": 16,
+          "FP": 37,
+          "FN": 3,
+          "Precision": 30.19,
+          "Recall": 84.21,
+          "F1": 44.44,
+          "Predicted_Stories": [
+            "G03_02",
+            "G03_04",
+            "G03_05",
+            "G03_08",
+            "G03_12",
+            "G03_13",
+            "G03_20",
+            "G03_21",
+            "G03_22",
+            "G03_23",
+            "G03_24",
+            "G03_25",
+            "G03_27",
+            "G03_31",
+            "G03_32",
+            "G03_34",
+            "G03_37",
+            "G03_38",
+            "G03_41",
+            "G03_42",
+            "G03_43",
+            "G03_48",
+            "G03_55",
+            "G03_57",
+            "G04_03",
+            "G04_06",
+            "G04_07",
+            "G04_08",
+            "G04_13",
+            "G04_16",
+            "G04_17",
+            "G04_18",
+            "G04_20",
+            "G04_21",
+            "G04_22",
+            "G04_25",
+            "G04_27",
+            "G04_28",
+            "G04_30",
+            "G04_31",
+            "G04_33",
+            "G04_34",
+            "G04_35",
+            "G04_37",
+            "G04_38",
+            "G04_41",
+            "G04_42",
+            "G04_43",
+            "G04_46",
+            "G04_47",
+            "G04_49",
+            "G04_50",
+            "G04_51"
+          ],
+          "False_Positives": [
+            "G03_04",
+            "G03_05",
+            "G03_08",
+            "G03_12",
+            "G03_13",
+            "G03_20",
+            "G03_22",
+            "G03_23",
+            "G03_24",
+            "G03_25",
+            "G03_27",
+            "G03_31",
+            "G03_34",
+            "G03_37",
+            "G03_41",
+            "G03_42",
+            "G03_43",
+            "G03_48",
+            "G03_57",
+            "G04_07",
+            "G04_08",
+            "G04_13",
+            "G04_21",
+            "G04_22",
+            "G04_25",
+            "G04_27",
+            "G04_28",
+            "G04_30",
+            "G04_31",
+            "G04_33",
+            "G04_34",
+            "G04_37",
+            "G04_38",
+            "G04_41",
+            "G04_42",
+            "G04_43",
+            "G04_47"
+          ],
+          "False_Negatives": [
+            "G03_58",
+            "G04_19",
+            "G04_48"
+          ]
+        },
+        "neo4j_threshold_gt2": {
+          "TP": 16,
+          "FP": 28,
+          "FN": 3,
+          "Precision": 36.36,
+          "Recall": 84.21,
+          "F1": 50.79,
+          "Predicted_Stories": [
+            "G03_02",
+            "G03_04",
+            "G03_05",
+            "G03_12",
+            "G03_13",
+            "G03_20",
+            "G03_21",
+            "G03_22",
+            "G03_23",
+            "G03_24",
+            "G03_25",
+            "G03_27",
+            "G03_31",
+            "G03_32",
+            "G03_34",
+            "G03_38",
+            "G03_41",
+            "G03_42",
+            "G03_55",
+            "G03_57",
+            "G04_03",
+            "G04_06",
+            "G04_07",
+            "G04_13",
+            "G04_16",
+            "G04_17",
+            "G04_18",
+            "G04_20",
+            "G04_21",
+            "G04_25",
+            "G04_27",
+            "G04_30",
+            "G04_33",
+            "G04_34",
+            "G04_35",
+            "G04_37",
+            "G04_38",
+            "G04_41",
+            "G04_42",
+            "G04_46",
+            "G04_47",
+            "G04_49",
+            "G04_50",
+            "G04_51"
+          ],
+          "False_Positives": [
+            "G03_04",
+            "G03_05",
+            "G03_12",
+            "G03_13",
+            "G03_20",
+            "G03_22",
+            "G03_23",
+            "G03_24",
+            "G03_25",
+            "G03_27",
+            "G03_31",
+            "G03_34",
+            "G03_41",
+            "G03_42",
+            "G03_57",
+            "G04_07",
+            "G04_13",
+            "G04_21",
+            "G04_25",
+            "G04_27",
+            "G04_30",
+            "G04_33",
+            "G04_34",
+            "G04_37",
+            "G04_38",
+            "G04_41",
+            "G04_42",
+            "G04_47"
+          ],
+          "False_Negatives": [
+            "G03_58",
+            "G04_19",
+            "G04_48"
+          ]
+        },
+        "neo4j_threshold_gt4": {
+          "TP": 3,
+          "FP": 3,
+          "FN": 16,
+          "Precision": 50.0,
+          "Recall": 15.79,
+          "F1": 24.0,
+          "Predicted_Stories": [
+            "G03_02",
+            "G03_25",
+            "G03_34",
+            "G03_42",
+            "G04_06",
+            "G04_17"
+          ],
+          "False_Positives": [
+            "G03_25",
+            "G03_34",
+            "G03_42"
+          ],
+          "False_Negatives": [
+            "G03_21",
+            "G03_32",
+            "G03_38",
+            "G03_55",
+            "G03_58",
+            "G04_03",
+            "G04_16",
+            "G04_18",
+            "G04_19",
+            "G04_20",
+            "G04_35",
+            "G04_46",
+            "G04_48",
+            "G04_49",
+            "G04_50",
+            "G04_51"
+          ]
+        }
+      },
+      "well_formedness": {
+        "metrics_applicable": false,
+        "projected_alarms": [],
+        "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+      },
+      "uniqueness": {
+        "ground_truth_count": 1,
+        "ground_truth_stories": [
+          "G03_46"
+        ],
+        "etl_invariant": {
+          "classification_output": false,
+          "metrics_applicable": false,
+          "raw_exact_duplicate_groups": [
+            {
+              "pid": "g03",
+              "story_ids": [
+                "G03_45",
+                "G03_46"
+              ]
+            }
+          ],
+          "supplied_source_records": 102,
+          "canonical_import_records": 102,
+          "identical_supplied_records_coalesced": 0,
+          "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+        }
+      },
+      "exploratory": {
+        "metrics_applicable": false,
+        "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+        "per_backlog": {
+          "g03": {
+            "dangling_actions": [
+              [
+                "g03_0171156c",
+                "listen to it again"
+              ],
+              [
+                "g03_0171156c",
+                "record the outcome"
+              ],
+              [
+                "g03_02b1af10",
+                "can record"
+              ],
+              [
+                "g03_02b1af10",
+                "record work in process, outcome, and location-based information related to the Plan(s)"
+              ],
+              [
+                "g03_052692c7",
+                "approved or denied"
+              ],
+              [
+                "g03_0baf4244",
+                "Staff member"
+              ],
+              [
+                "g03_19e1d1f9",
+                "can record"
+              ],
+              [
+                "g03_19e1d1f9",
+                "can track"
+              ],
+              [
+                "g03_19e1d1f9",
+                "impact"
+              ],
+              [
+                "g03_19e1d1f9",
+                "outcome"
+              ],
+              [
+                "g03_19e1d1f9",
+                "relevant records"
+              ],
+              [
+                "g03_31b30f30",
+                "my response to the request"
+              ],
+              [
+                "g03_31b30f30",
+                "send a communication from the system"
+              ],
+              [
+                "g03_31b30f30",
+                "to the Applicant"
+              ],
+              [
+                "g03_330ded70",
+                "ensure"
+              ],
+              [
+                "g03_3d9fce9e",
+                "ProspectiveApplicant"
+              ],
+              [
+                "g03_5f2fa05c",
+                "all pre-hearing requirements are satisfied"
+              ],
+              [
+                "g03_660de6c9",
+                "can"
+              ],
+              [
+                "g03_660de6c9",
+                "finish"
+              ],
+              [
+                "g03_87445bd8",
+                "associate it with the appropriate project"
+              ],
+              [
+                "g03_87445bd8",
+                "review the request"
+              ],
+              [
+                "g03_9187c11b",
+                "can successfully update"
+              ],
+              [
+                "g03_a316c575",
+                "Planning Staff member"
+              ],
+              [
+                "g03_aaa2f372",
+                "Staff member"
+              ],
+              [
+                "g03_aaa2f372",
+                "can prevent progression through"
+              ],
+              [
+                "g03_ab87e640",
+                "all plan review tasks are completed"
+              ],
+              [
+                "g03_ab87e640",
+                "can"
+              ],
+              [
+                "g03_ab87e640",
+                "can ensure"
+              ],
+              [
+                "g03_ab87e640",
+                "results have been sent to the Applicant and any downstream steps are initiated such has a final review or payment for permit issuance"
+              ],
+              [
+                "g03_bf8c30e9",
+                "initiate a transaction with the County"
+              ],
+              [
+                "g03_d306ae99",
+                "can fulfill"
+              ],
+              [
+                "g03_d306ae99",
+                "request"
+              ],
+              [
+                "g03_d6ab1b02",
+                "schedule and assign the inspection"
+              ],
+              [
+                "g03_e0f40b88",
+                "Customer Portal"
+              ],
+              [
+                "g03_e0f40b88",
+                "log on"
+              ]
+            ],
+            "overlap_groups": [],
+            "overlap_pairs": [],
+            "cross_persona_pairs": []
+          },
+          "g04": {
+            "dangling_actions": [
+              [
+                "g04_28e506da",
+                "can develop"
+              ],
+              [
+                "g04_3f580cf5",
+                "receive notifications for new events as they are posted"
+              ],
+              [
+                "g04_44d810d0",
+                "find"
+              ],
+              [
+                "g04_44d810d0",
+                "optimal route and schedule"
+              ],
+              [
+                "g04_45d19bb7",
+                "can"
+              ],
+              [
+                "g04_60eeb47d",
+                "go back"
+              ],
+              [
+                "g04_60eeb47d",
+                "when needed"
+              ],
+              [
+                "g04_6f21d111",
+                "I"
+              ],
+              [
+                "g04_6f21d111",
+                "can keep them updated about features we have on our website"
+              ],
+              [
+                "g04_728d4f5d",
+                "consider"
+              ],
+              [
+                "g04_72c7c24b",
+                "can prevent"
+              ],
+              [
+                "g04_72c7c24b",
+                "spamming on the websites"
+              ],
+              [
+                "g04_7848d500",
+                "can"
+              ],
+              [
+                "g04_8259314c",
+                "can"
+              ],
+              [
+                "g04_8259314c",
+                "easily design my website"
+              ],
+              [
+                "g04_8fd7541b",
+                "can"
+              ],
+              [
+                "g04_94de3b72",
+                "recommendations"
+              ],
+              [
+                "g04_9b0d7cf4",
+                "can"
+              ],
+              [
+                "g04_a0d125b9",
+                "can"
+              ],
+              [
+                "g04_ade724f3",
+                "do all the other stuffs"
+              ],
+              [
+                "g04_ade724f3",
+                "user"
+              ],
+              [
+                "g04_afe19608",
+                "add"
+              ],
+              [
+                "g04_afe19608",
+                "keep improving"
+              ],
+              [
+                "g04_afe19608",
+                "more features"
+              ],
+              [
+                "g04_afe19608",
+                "service we provide to them"
+              ],
+              [
+                "g04_b5e134b1",
+                "be able to"
+              ],
+              [
+                "g04_b5e134b1",
+                "users get the most recent information"
+              ],
+              [
+                "g04_bb74766b",
+                "how to use the web app"
+              ],
+              [
+                "g04_bb74766b",
+                "know"
+              ],
+              [
+                "g04_bd621a4b",
+                "upload or delete stuff step by step"
+              ],
+              [
+                "g04_d61bc34f",
+                "can be guided through"
+              ],
+              [
+                "g04_d7eb754e",
+                "avoid"
+              ],
+              [
+                "g04_d7eb754e",
+                "miscommunication with users"
+              ],
+              [
+                "g04_e4971abc",
+                "temporary password"
+              ],
+              [
+                "g04_e4fe1421",
+                "can"
+              ],
+              [
+                "g04_e4fe1421",
+                "increase information accuracy"
+              ],
+              [
+                "g04_ef4b486c",
+                "convey any issues or concerns"
+              ],
+              [
+                "g04_ef4b486c",
+                "so that they fix them"
+              ],
+              [
+                "g04_f0817839",
+                "upgrade equipment and capacity"
+              ],
+              [
+                "g04_fff68c45",
+                "identify"
+              ],
+              [
+                "g04_fff68c45",
+                "neighbourhoods with the largest number of drop-offs"
+              ]
+            ],
+            "overlap_groups": [
+              [
+                "view",
+                "map display",
+                [
+                  "g04_18283c5a",
+                  "g04_9ae93732"
+                ]
+              ]
+            ],
+            "overlap_pairs": [
+              [
+                "g04_18283c5a",
+                "g04_9ae93732",
+                "view",
+                "map display"
+              ]
+            ],
+            "cross_persona_pairs": []
+          }
+        }
+      },
+      "per_backlog": {
+        "g03": {
+          "coverage": {
+            "reference_stories": 58,
+            "source_records": 55,
+            "canonical_graph_stories": 55,
+            "represented_reference_stories": 56,
+            "missing_reference_story_ids": [
+              "G03_39",
+              "G03_54"
+            ],
+            "shared_text_mappings": [
+              {
+                "graph_story_id": "g03_933c6b73",
+                "raw_story_ids": [
+                  "G03_45",
+                  "G03_46"
+                ]
+              }
+            ],
+            "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+          },
+          "missing_benefit": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "neo4j": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "Precision": null,
+              "Recall": null,
+              "F1": null,
+              "Predicted_Stories": [],
+              "False_Positives": [],
+              "False_Negatives": []
+            }
+          },
+          "incomplete_means": {
+            "ground_truth_count": 1,
+            "ground_truth_stories": [
+              "G03_54"
+            ],
+            "metrics_applicable": false,
+            "status": "qualitative_only_unconfirmed_positive_reference",
+            "projected_alarms": [
+              "G03_02",
+              "G03_04",
+              "G03_05",
+              "G03_12",
+              "G03_13",
+              "G03_20",
+              "G03_21",
+              "G03_23",
+              "G03_24",
+              "G03_25",
+              "G03_31",
+              "G03_32",
+              "G03_34",
+              "G03_38",
+              "G03_41",
+              "G03_42",
+              "G03_48",
+              "G03_55",
+              "G03_57"
+            ],
+            "historical_annotation_comparison": {
+              "neo4j": {
+                "TP": 0,
+                "FP": 19,
+                "FN": 1,
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0,
+                "Predicted_Stories": [
+                  "G03_02",
+                  "G03_04",
+                  "G03_05",
+                  "G03_12",
+                  "G03_13",
+                  "G03_20",
+                  "G03_21",
+                  "G03_23",
+                  "G03_24",
+                  "G03_25",
+                  "G03_31",
+                  "G03_32",
+                  "G03_34",
+                  "G03_38",
+                  "G03_41",
+                  "G03_42",
+                  "G03_48",
+                  "G03_55",
+                  "G03_57"
+                ],
+                "False_Positives": [
+                  "G03_02",
+                  "G03_04",
+                  "G03_05",
+                  "G03_12",
+                  "G03_13",
+                  "G03_20",
+                  "G03_21",
+                  "G03_23",
+                  "G03_24",
+                  "G03_25",
+                  "G03_31",
+                  "G03_32",
+                  "G03_34",
+                  "G03_38",
+                  "G03_41",
+                  "G03_42",
+                  "G03_48",
+                  "G03_55",
+                  "G03_57"
+                ],
+                "False_Negatives": [
+                  "G03_54"
+                ]
+              }
+            },
+            "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+          },
+          "atomicity": {
+            "ground_truth_count": 6,
+            "ground_truth_stories": [
+              "G03_02",
+              "G03_21",
+              "G03_32",
+              "G03_38",
+              "G03_55",
+              "G03_58"
+            ],
+            "neo4j_threshold_gt1": {
+              "TP": 5,
+              "FP": 19,
+              "FN": 1,
+              "Precision": 20.83,
+              "Recall": 83.33,
+              "F1": 33.33,
+              "Predicted_Stories": [
+                "G03_02",
+                "G03_04",
+                "G03_05",
+                "G03_08",
+                "G03_12",
+                "G03_13",
+                "G03_20",
+                "G03_21",
+                "G03_22",
+                "G03_23",
+                "G03_24",
+                "G03_25",
+                "G03_27",
+                "G03_31",
+                "G03_32",
+                "G03_34",
+                "G03_37",
+                "G03_38",
+                "G03_41",
+                "G03_42",
+                "G03_43",
+                "G03_48",
+                "G03_55",
+                "G03_57"
+              ],
+              "False_Positives": [
+                "G03_04",
+                "G03_05",
+                "G03_08",
+                "G03_12",
+                "G03_13",
+                "G03_20",
+                "G03_22",
+                "G03_23",
+                "G03_24",
+                "G03_25",
+                "G03_27",
+                "G03_31",
+                "G03_34",
+                "G03_37",
+                "G03_41",
+                "G03_42",
+                "G03_43",
+                "G03_48",
+                "G03_57"
+              ],
+              "False_Negatives": [
+                "G03_58"
+              ]
+            },
+            "neo4j_threshold_gt2": {
+              "TP": 5,
+              "FP": 15,
+              "FN": 1,
+              "Precision": 25.0,
+              "Recall": 83.33,
+              "F1": 38.46,
+              "Predicted_Stories": [
+                "G03_02",
+                "G03_04",
+                "G03_05",
+                "G03_12",
+                "G03_13",
+                "G03_20",
+                "G03_21",
+                "G03_22",
+                "G03_23",
+                "G03_24",
+                "G03_25",
+                "G03_27",
+                "G03_31",
+                "G03_32",
+                "G03_34",
+                "G03_38",
+                "G03_41",
+                "G03_42",
+                "G03_55",
+                "G03_57"
+              ],
+              "False_Positives": [
+                "G03_04",
+                "G03_05",
+                "G03_12",
+                "G03_13",
+                "G03_20",
+                "G03_22",
+                "G03_23",
+                "G03_24",
+                "G03_25",
+                "G03_27",
+                "G03_31",
+                "G03_34",
+                "G03_41",
+                "G03_42",
+                "G03_57"
+              ],
+              "False_Negatives": [
+                "G03_58"
+              ]
+            },
+            "neo4j_threshold_gt4": {
+              "TP": 1,
+              "FP": 3,
+              "FN": 5,
+              "Precision": 25.0,
+              "Recall": 16.67,
+              "F1": 20.0,
+              "Predicted_Stories": [
+                "G03_02",
+                "G03_25",
+                "G03_34",
+                "G03_42"
+              ],
+              "False_Positives": [
+                "G03_25",
+                "G03_34",
+                "G03_42"
+              ],
+              "False_Negatives": [
+                "G03_21",
+                "G03_32",
+                "G03_38",
+                "G03_55",
+                "G03_58"
+              ]
+            }
+          },
+          "well_formedness": {
+            "metrics_applicable": false,
+            "projected_alarms": [],
+            "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+          },
+          "uniqueness": {
+            "ground_truth_count": 1,
+            "ground_truth_stories": [
+              "G03_46"
+            ],
+            "etl_invariant": {
+              "classification_output": false,
+              "metrics_applicable": false,
+              "raw_exact_duplicate_groups": [
+                {
+                  "pid": "g03",
+                  "story_ids": [
+                    "G03_45",
+                    "G03_46"
+                  ]
+                }
+              ],
+              "supplied_source_records": 55,
+              "canonical_import_records": 55,
+              "identical_supplied_records_coalesced": 0,
+              "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+            }
+          },
+          "exploratory": {
+            "metrics_applicable": false,
+            "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+            "per_backlog": {
+              "g03": {
+                "dangling_actions": [
+                  [
+                    "g03_0171156c",
+                    "listen to it again"
+                  ],
+                  [
+                    "g03_0171156c",
+                    "record the outcome"
+                  ],
+                  [
+                    "g03_02b1af10",
+                    "can record"
+                  ],
+                  [
+                    "g03_02b1af10",
+                    "record work in process, outcome, and location-based information related to the Plan(s)"
+                  ],
+                  [
+                    "g03_052692c7",
+                    "approved or denied"
+                  ],
+                  [
+                    "g03_0baf4244",
+                    "Staff member"
+                  ],
+                  [
+                    "g03_19e1d1f9",
+                    "can record"
+                  ],
+                  [
+                    "g03_19e1d1f9",
+                    "can track"
+                  ],
+                  [
+                    "g03_19e1d1f9",
+                    "impact"
+                  ],
+                  [
+                    "g03_19e1d1f9",
+                    "outcome"
+                  ],
+                  [
+                    "g03_19e1d1f9",
+                    "relevant records"
+                  ],
+                  [
+                    "g03_31b30f30",
+                    "my response to the request"
+                  ],
+                  [
+                    "g03_31b30f30",
+                    "send a communication from the system"
+                  ],
+                  [
+                    "g03_31b30f30",
+                    "to the Applicant"
+                  ],
+                  [
+                    "g03_330ded70",
+                    "ensure"
+                  ],
+                  [
+                    "g03_3d9fce9e",
+                    "ProspectiveApplicant"
+                  ],
+                  [
+                    "g03_5f2fa05c",
+                    "all pre-hearing requirements are satisfied"
+                  ],
+                  [
+                    "g03_660de6c9",
+                    "can"
+                  ],
+                  [
+                    "g03_660de6c9",
+                    "finish"
+                  ],
+                  [
+                    "g03_87445bd8",
+                    "associate it with the appropriate project"
+                  ],
+                  [
+                    "g03_87445bd8",
+                    "review the request"
+                  ],
+                  [
+                    "g03_9187c11b",
+                    "can successfully update"
+                  ],
+                  [
+                    "g03_a316c575",
+                    "Planning Staff member"
+                  ],
+                  [
+                    "g03_aaa2f372",
+                    "Staff member"
+                  ],
+                  [
+                    "g03_aaa2f372",
+                    "can prevent progression through"
+                  ],
+                  [
+                    "g03_ab87e640",
+                    "all plan review tasks are completed"
+                  ],
+                  [
+                    "g03_ab87e640",
+                    "can"
+                  ],
+                  [
+                    "g03_ab87e640",
+                    "can ensure"
+                  ],
+                  [
+                    "g03_ab87e640",
+                    "results have been sent to the Applicant and any downstream steps are initiated such has a final review or payment for permit issuance"
+                  ],
+                  [
+                    "g03_bf8c30e9",
+                    "initiate a transaction with the County"
+                  ],
+                  [
+                    "g03_d306ae99",
+                    "can fulfill"
+                  ],
+                  [
+                    "g03_d306ae99",
+                    "request"
+                  ],
+                  [
+                    "g03_d6ab1b02",
+                    "schedule and assign the inspection"
+                  ],
+                  [
+                    "g03_e0f40b88",
+                    "Customer Portal"
+                  ],
+                  [
+                    "g03_e0f40b88",
+                    "log on"
+                  ]
+                ],
+                "overlap_groups": [],
+                "overlap_pairs": [],
+                "cross_persona_pairs": []
+              }
+            }
+          }
+        },
+        "g04": {
+          "coverage": {
+            "reference_stories": 51,
+            "source_records": 47,
+            "canonical_graph_stories": 47,
+            "represented_reference_stories": 47,
+            "missing_reference_story_ids": [
+              "G04_05",
+              "G04_14",
+              "G04_15",
+              "G04_48"
+            ],
+            "shared_text_mappings": [],
+            "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+          },
+          "missing_benefit": {
+            "ground_truth_count": 6,
+            "ground_truth_stories": [
+              "G04_09",
+              "G04_10",
+              "G04_11",
+              "G04_14",
+              "G04_20",
+              "G04_26"
+            ],
+            "neo4j": {
+              "TP": 5,
+              "FP": 0,
+              "FN": 1,
+              "Precision": 100.0,
+              "Recall": 83.33,
+              "F1": 90.91,
+              "Predicted_Stories": [
+                "G04_09",
+                "G04_10",
+                "G04_11",
+                "G04_20",
+                "G04_26"
+              ],
+              "False_Positives": [],
+              "False_Negatives": [
+                "G04_14"
+              ]
+            }
+          },
+          "incomplete_means": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "metrics_applicable": false,
+            "status": "qualitative_only_unconfirmed_positive_reference",
+            "projected_alarms": [
+              "G04_03",
+              "G04_06",
+              "G04_07",
+              "G04_08",
+              "G04_13",
+              "G04_16",
+              "G04_17",
+              "G04_18",
+              "G04_20",
+              "G04_21",
+              "G04_25",
+              "G04_27",
+              "G04_30",
+              "G04_31",
+              "G04_33",
+              "G04_34",
+              "G04_35",
+              "G04_37",
+              "G04_38",
+              "G04_41",
+              "G04_42",
+              "G04_46",
+              "G04_47",
+              "G04_49",
+              "G04_50",
+              "G04_51"
+            ],
+            "historical_annotation_comparison": {
+              "neo4j": {
+                "TP": 0,
+                "FP": 26,
+                "FN": 0,
+                "Precision": 0.0,
+                "Recall": null,
+                "F1": 0.0,
+                "Predicted_Stories": [
+                  "G04_03",
+                  "G04_06",
+                  "G04_07",
+                  "G04_08",
+                  "G04_13",
+                  "G04_16",
+                  "G04_17",
+                  "G04_18",
+                  "G04_20",
+                  "G04_21",
+                  "G04_25",
+                  "G04_27",
+                  "G04_30",
+                  "G04_31",
+                  "G04_33",
+                  "G04_34",
+                  "G04_35",
+                  "G04_37",
+                  "G04_38",
+                  "G04_41",
+                  "G04_42",
+                  "G04_46",
+                  "G04_47",
+                  "G04_49",
+                  "G04_50",
+                  "G04_51"
+                ],
+                "False_Positives": [
+                  "G04_03",
+                  "G04_06",
+                  "G04_07",
+                  "G04_08",
+                  "G04_13",
+                  "G04_16",
+                  "G04_17",
+                  "G04_18",
+                  "G04_20",
+                  "G04_21",
+                  "G04_25",
+                  "G04_27",
+                  "G04_30",
+                  "G04_31",
+                  "G04_33",
+                  "G04_34",
+                  "G04_35",
+                  "G04_37",
+                  "G04_38",
+                  "G04_41",
+                  "G04_42",
+                  "G04_46",
+                  "G04_47",
+                  "G04_49",
+                  "G04_50",
+                  "G04_51"
+                ],
+                "False_Negatives": []
+              }
+            },
+            "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+          },
+          "atomicity": {
+            "ground_truth_count": 13,
+            "ground_truth_stories": [
+              "G04_03",
+              "G04_06",
+              "G04_16",
+              "G04_17",
+              "G04_18",
+              "G04_19",
+              "G04_20",
+              "G04_35",
+              "G04_46",
+              "G04_48",
+              "G04_49",
+              "G04_50",
+              "G04_51"
+            ],
+            "neo4j_threshold_gt1": {
+              "TP": 11,
+              "FP": 18,
+              "FN": 2,
+              "Precision": 37.93,
+              "Recall": 84.62,
+              "F1": 52.38,
+              "Predicted_Stories": [
+                "G04_03",
+                "G04_06",
+                "G04_07",
+                "G04_08",
+                "G04_13",
+                "G04_16",
+                "G04_17",
+                "G04_18",
+                "G04_20",
+                "G04_21",
+                "G04_22",
+                "G04_25",
+                "G04_27",
+                "G04_28",
+                "G04_30",
+                "G04_31",
+                "G04_33",
+                "G04_34",
+                "G04_35",
+                "G04_37",
+                "G04_38",
+                "G04_41",
+                "G04_42",
+                "G04_43",
+                "G04_46",
+                "G04_47",
+                "G04_49",
+                "G04_50",
+                "G04_51"
+              ],
+              "False_Positives": [
+                "G04_07",
+                "G04_08",
+                "G04_13",
+                "G04_21",
+                "G04_22",
+                "G04_25",
+                "G04_27",
+                "G04_28",
+                "G04_30",
+                "G04_31",
+                "G04_33",
+                "G04_34",
+                "G04_37",
+                "G04_38",
+                "G04_41",
+                "G04_42",
+                "G04_43",
+                "G04_47"
+              ],
+              "False_Negatives": [
+                "G04_19",
+                "G04_48"
+              ]
+            },
+            "neo4j_threshold_gt2": {
+              "TP": 11,
+              "FP": 13,
+              "FN": 2,
+              "Precision": 45.83,
+              "Recall": 84.62,
+              "F1": 59.46,
+              "Predicted_Stories": [
+                "G04_03",
+                "G04_06",
+                "G04_07",
+                "G04_13",
+                "G04_16",
+                "G04_17",
+                "G04_18",
+                "G04_20",
+                "G04_21",
+                "G04_25",
+                "G04_27",
+                "G04_30",
+                "G04_33",
+                "G04_34",
+                "G04_35",
+                "G04_37",
+                "G04_38",
+                "G04_41",
+                "G04_42",
+                "G04_46",
+                "G04_47",
+                "G04_49",
+                "G04_50",
+                "G04_51"
+              ],
+              "False_Positives": [
+                "G04_07",
+                "G04_13",
+                "G04_21",
+                "G04_25",
+                "G04_27",
+                "G04_30",
+                "G04_33",
+                "G04_34",
+                "G04_37",
+                "G04_38",
+                "G04_41",
+                "G04_42",
+                "G04_47"
+              ],
+              "False_Negatives": [
+                "G04_19",
+                "G04_48"
+              ]
+            },
+            "neo4j_threshold_gt4": {
+              "TP": 2,
+              "FP": 0,
+              "FN": 11,
+              "Precision": 100.0,
+              "Recall": 15.38,
+              "F1": 26.67,
+              "Predicted_Stories": [
+                "G04_06",
+                "G04_17"
+              ],
+              "False_Positives": [],
+              "False_Negatives": [
+                "G04_03",
+                "G04_16",
+                "G04_18",
+                "G04_19",
+                "G04_20",
+                "G04_35",
+                "G04_46",
+                "G04_48",
+                "G04_49",
+                "G04_50",
+                "G04_51"
+              ]
+            }
+          },
+          "well_formedness": {
+            "metrics_applicable": false,
+            "projected_alarms": [],
+            "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+          },
+          "uniqueness": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "etl_invariant": {
+              "classification_output": false,
+              "metrics_applicable": false,
+              "raw_exact_duplicate_groups": [],
+              "supplied_source_records": 47,
+              "canonical_import_records": 47,
+              "identical_supplied_records_coalesced": 0,
+              "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+            }
+          },
+          "exploratory": {
+            "metrics_applicable": false,
+            "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+            "per_backlog": {
+              "g04": {
+                "dangling_actions": [
+                  [
+                    "g04_28e506da",
+                    "can develop"
+                  ],
+                  [
+                    "g04_3f580cf5",
+                    "receive notifications for new events as they are posted"
+                  ],
+                  [
+                    "g04_44d810d0",
+                    "find"
+                  ],
+                  [
+                    "g04_44d810d0",
+                    "optimal route and schedule"
+                  ],
+                  [
+                    "g04_45d19bb7",
+                    "can"
+                  ],
+                  [
+                    "g04_60eeb47d",
+                    "go back"
+                  ],
+                  [
+                    "g04_60eeb47d",
+                    "when needed"
+                  ],
+                  [
+                    "g04_6f21d111",
+                    "I"
+                  ],
+                  [
+                    "g04_6f21d111",
+                    "can keep them updated about features we have on our website"
+                  ],
+                  [
+                    "g04_728d4f5d",
+                    "consider"
+                  ],
+                  [
+                    "g04_72c7c24b",
+                    "can prevent"
+                  ],
+                  [
+                    "g04_72c7c24b",
+                    "spamming on the websites"
+                  ],
+                  [
+                    "g04_7848d500",
+                    "can"
+                  ],
+                  [
+                    "g04_8259314c",
+                    "can"
+                  ],
+                  [
+                    "g04_8259314c",
+                    "easily design my website"
+                  ],
+                  [
+                    "g04_8fd7541b",
+                    "can"
+                  ],
+                  [
+                    "g04_94de3b72",
+                    "recommendations"
+                  ],
+                  [
+                    "g04_9b0d7cf4",
+                    "can"
+                  ],
+                  [
+                    "g04_a0d125b9",
+                    "can"
+                  ],
+                  [
+                    "g04_ade724f3",
+                    "do all the other stuffs"
+                  ],
+                  [
+                    "g04_ade724f3",
+                    "user"
+                  ],
+                  [
+                    "g04_afe19608",
+                    "add"
+                  ],
+                  [
+                    "g04_afe19608",
+                    "keep improving"
+                  ],
+                  [
+                    "g04_afe19608",
+                    "more features"
+                  ],
+                  [
+                    "g04_afe19608",
+                    "service we provide to them"
+                  ],
+                  [
+                    "g04_b5e134b1",
+                    "be able to"
+                  ],
+                  [
+                    "g04_b5e134b1",
+                    "users get the most recent information"
+                  ],
+                  [
+                    "g04_bb74766b",
+                    "how to use the web app"
+                  ],
+                  [
+                    "g04_bb74766b",
+                    "know"
+                  ],
+                  [
+                    "g04_bd621a4b",
+                    "upload or delete stuff step by step"
+                  ],
+                  [
+                    "g04_d61bc34f",
+                    "can be guided through"
+                  ],
+                  [
+                    "g04_d7eb754e",
+                    "avoid"
+                  ],
+                  [
+                    "g04_d7eb754e",
+                    "miscommunication with users"
+                  ],
+                  [
+                    "g04_e4971abc",
+                    "temporary password"
+                  ],
+                  [
+                    "g04_e4fe1421",
+                    "can"
+                  ],
+                  [
+                    "g04_e4fe1421",
+                    "increase information accuracy"
+                  ],
+                  [
+                    "g04_ef4b486c",
+                    "convey any issues or concerns"
+                  ],
+                  [
+                    "g04_ef4b486c",
+                    "so that they fix them"
+                  ],
+                  [
+                    "g04_f0817839",
+                    "upgrade equipment and capacity"
+                  ],
+                  [
+                    "g04_fff68c45",
+                    "identify"
+                  ],
+                  [
+                    "g04_fff68c45",
+                    "neighbourhoods with the largest number of drop-offs"
+                  ]
+                ],
+                "overlap_groups": [
+                  [
+                    "view",
+                    "map display",
+                    [
+                      "g04_18283c5a",
+                      "g04_9ae93732"
+                    ]
+                  ]
+                ],
+                "overlap_pairs": [
+                  [
+                    "g04_18283c5a",
+                    "g04_9ae93732",
+                    "view",
+                    "map display"
+                  ]
+                ],
+                "cross_persona_pairs": []
+              }
+            }
+          }
+        }
+      },
+      "fat_story_actions_gt2": {
+        "TP": 16,
+        "FP": 28,
+        "FN": 3,
+        "Precision": 36.36,
+        "Recall": 84.21,
+        "F1": 50.79,
+        "Predicted_Stories": [
+          "G03_02",
+          "G03_04",
+          "G03_05",
+          "G03_12",
+          "G03_13",
+          "G03_20",
+          "G03_21",
+          "G03_22",
+          "G03_23",
+          "G03_24",
+          "G03_25",
+          "G03_27",
+          "G03_31",
+          "G03_32",
+          "G03_34",
+          "G03_38",
+          "G03_41",
+          "G03_42",
+          "G03_55",
+          "G03_57",
+          "G04_03",
+          "G04_06",
+          "G04_07",
+          "G04_13",
+          "G04_16",
+          "G04_17",
+          "G04_18",
+          "G04_20",
+          "G04_21",
+          "G04_25",
+          "G04_27",
+          "G04_30",
+          "G04_33",
+          "G04_34",
+          "G04_35",
+          "G04_37",
+          "G04_38",
+          "G04_41",
+          "G04_42",
+          "G04_46",
+          "G04_47",
+          "G04_49",
+          "G04_50",
+          "G04_51"
+        ],
+        "False_Positives": [
+          "G03_04",
+          "G03_05",
+          "G03_12",
+          "G03_13",
+          "G03_20",
+          "G03_22",
+          "G03_23",
+          "G03_24",
+          "G03_25",
+          "G03_27",
+          "G03_31",
+          "G03_34",
+          "G03_41",
+          "G03_42",
+          "G03_57",
+          "G04_07",
+          "G04_13",
+          "G04_21",
+          "G04_25",
+          "G04_27",
+          "G04_30",
+          "G04_33",
+          "G04_34",
+          "G04_37",
+          "G04_38",
+          "G04_41",
+          "G04_42",
+          "G04_47"
+        ],
+        "False_Negatives": [
+          "G03_58",
+          "G04_19",
+          "G04_48"
+        ]
+      },
+      "graph_cardinalities_per_backlog": {
+        "g03": {
+          "Backlog": 1,
+          "UserStory": 55,
+          "Persona": 50,
+          "Action": 95,
+          "Entity": 138,
+          "Benefit": 55,
+          "TRIGGERS": 88,
+          "TARGETS": 153
+        },
+        "g04": {
+          "Backlog": 1,
+          "UserStory": 47,
+          "Persona": 32,
+          "Action": 72,
+          "Entity": 117,
+          "Benefit": 42,
+          "TRIGGERS": 76,
+          "TARGETS": 115
+        }
+      },
+      "inputs": [
+        {
+          "model": "ollama3",
+          "pid": "g03",
+          "source_file": "extracted_data/ollama3/g03.json",
+          "source_sha256": "31e6a8733a5c1358ed5b4b8c0d84f269213aec06dfd9a36dcd670b23bd63a900"
+        },
+        {
+          "model": "ollama3",
+          "pid": "g04",
+          "source_file": "extracted_data/ollama3/g04.json",
+          "source_sha256": "0b79db565b35633d4b49ed45a1425e29592c09050f56f041d417f536f702b54e"
+        }
+      ]
+    },
+    "chatgpt": {
+      "coverage": {
+        "reference_stories": 109,
+        "source_records": 103,
+        "canonical_graph_stories": 103,
+        "represented_reference_stories": 104,
+        "missing_reference_story_ids": [
+          "G03_39",
+          "G03_54",
+          "G04_05",
+          "G04_15",
+          "G04_48"
+        ],
+        "shared_text_mappings": [
+          {
+            "graph_story_id": "g03_617daa73",
+            "raw_story_ids": [
+              "G03_45",
+              "G03_46"
+            ]
+          }
+        ],
+        "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+      },
+      "missing_benefit": {
+        "ground_truth_count": 6,
+        "ground_truth_stories": [
+          "G04_09",
+          "G04_10",
+          "G04_11",
+          "G04_14",
+          "G04_20",
+          "G04_26"
+        ],
+        "neo4j": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 6,
+          "Precision": null,
+          "Recall": 0.0,
+          "F1": 0.0,
+          "Predicted_Stories": [],
+          "False_Positives": [],
+          "False_Negatives": [
+            "G04_09",
+            "G04_10",
+            "G04_11",
+            "G04_14",
+            "G04_20",
+            "G04_26"
+          ]
+        }
+      },
+      "incomplete_means": {
+        "ground_truth_count": 1,
+        "ground_truth_stories": [
+          "G03_54"
+        ],
+        "metrics_applicable": false,
+        "status": "qualitative_only_unconfirmed_positive_reference",
+        "projected_alarms": [
+          "G03_02",
+          "G03_03",
+          "G03_09",
+          "G03_11",
+          "G03_13",
+          "G03_16",
+          "G03_22",
+          "G03_24",
+          "G03_28",
+          "G03_34",
+          "G03_40",
+          "G03_42",
+          "G03_44",
+          "G04_02",
+          "G04_12",
+          "G04_22",
+          "G04_26",
+          "G04_49"
+        ],
+        "historical_annotation_comparison": {
+          "neo4j": {
+            "TP": 0,
+            "FP": 18,
+            "FN": 1,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1": 0.0,
+            "Predicted_Stories": [
+              "G03_02",
+              "G03_03",
+              "G03_09",
+              "G03_11",
+              "G03_13",
+              "G03_16",
+              "G03_22",
+              "G03_24",
+              "G03_28",
+              "G03_34",
+              "G03_40",
+              "G03_42",
+              "G03_44",
+              "G04_02",
+              "G04_12",
+              "G04_22",
+              "G04_26",
+              "G04_49"
+            ],
+            "False_Positives": [
+              "G03_02",
+              "G03_03",
+              "G03_09",
+              "G03_11",
+              "G03_13",
+              "G03_16",
+              "G03_22",
+              "G03_24",
+              "G03_28",
+              "G03_34",
+              "G03_40",
+              "G03_42",
+              "G03_44",
+              "G04_02",
+              "G04_12",
+              "G04_22",
+              "G04_26",
+              "G04_49"
+            ],
+            "False_Negatives": [
+              "G03_54"
+            ]
+          }
+        },
+        "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+      },
+      "atomicity": {
+        "ground_truth_count": 19,
+        "ground_truth_stories": [
+          "G03_02",
+          "G03_21",
+          "G03_32",
+          "G03_38",
+          "G03_55",
+          "G03_58",
+          "G04_03",
+          "G04_06",
+          "G04_16",
+          "G04_17",
+          "G04_18",
+          "G04_19",
+          "G04_20",
+          "G04_35",
+          "G04_46",
+          "G04_48",
+          "G04_49",
+          "G04_50",
+          "G04_51"
+        ],
+        "neo4j_threshold_gt1": {
+          "TP": 17,
+          "FP": 47,
+          "FN": 2,
+          "Precision": 26.56,
+          "Recall": 89.47,
+          "F1": 40.96,
+          "Predicted_Stories": [
+            "G03_02",
+            "G03_03",
+            "G03_04",
+            "G03_09",
+            "G03_11",
+            "G03_12",
+            "G03_13",
+            "G03_14",
+            "G03_16",
+            "G03_20",
+            "G03_21",
+            "G03_22",
+            "G03_24",
+            "G03_25",
+            "G03_27",
+            "G03_28",
+            "G03_29",
+            "G03_32",
+            "G03_33",
+            "G03_34",
+            "G03_36",
+            "G03_37",
+            "G03_38",
+            "G03_40",
+            "G03_41",
+            "G03_42",
+            "G03_43",
+            "G03_44",
+            "G03_47",
+            "G03_48",
+            "G03_55",
+            "G03_56",
+            "G03_58",
+            "G04_02",
+            "G04_03",
+            "G04_04",
+            "G04_06",
+            "G04_07",
+            "G04_08",
+            "G04_12",
+            "G04_16",
+            "G04_18",
+            "G04_19",
+            "G04_20",
+            "G04_22",
+            "G04_24",
+            "G04_25",
+            "G04_27",
+            "G04_30",
+            "G04_31",
+            "G04_32",
+            "G04_33",
+            "G04_34",
+            "G04_35",
+            "G04_36",
+            "G04_37",
+            "G04_38",
+            "G04_41",
+            "G04_45",
+            "G04_46",
+            "G04_47",
+            "G04_49",
+            "G04_50",
+            "G04_51"
+          ],
+          "False_Positives": [
+            "G03_03",
+            "G03_04",
+            "G03_09",
+            "G03_11",
+            "G03_12",
+            "G03_13",
+            "G03_14",
+            "G03_16",
+            "G03_20",
+            "G03_22",
+            "G03_24",
+            "G03_25",
+            "G03_27",
+            "G03_28",
+            "G03_29",
+            "G03_33",
+            "G03_34",
+            "G03_36",
+            "G03_37",
+            "G03_40",
+            "G03_41",
+            "G03_42",
+            "G03_43",
+            "G03_44",
+            "G03_47",
+            "G03_48",
+            "G03_56",
+            "G04_02",
+            "G04_04",
+            "G04_07",
+            "G04_08",
+            "G04_12",
+            "G04_22",
+            "G04_24",
+            "G04_25",
+            "G04_27",
+            "G04_30",
+            "G04_31",
+            "G04_32",
+            "G04_33",
+            "G04_34",
+            "G04_36",
+            "G04_37",
+            "G04_38",
+            "G04_41",
+            "G04_45",
+            "G04_47"
+          ],
+          "False_Negatives": [
+            "G04_17",
+            "G04_48"
+          ]
+        },
+        "neo4j_threshold_gt2": {
+          "TP": 8,
+          "FP": 18,
+          "FN": 11,
+          "Precision": 30.77,
+          "Recall": 42.11,
+          "F1": 35.56,
+          "Predicted_Stories": [
+            "G03_02",
+            "G03_04",
+            "G03_12",
+            "G03_13",
+            "G03_22",
+            "G03_24",
+            "G03_25",
+            "G03_27",
+            "G03_34",
+            "G03_36",
+            "G03_38",
+            "G03_42",
+            "G03_44",
+            "G03_48",
+            "G03_56",
+            "G04_02",
+            "G04_03",
+            "G04_06",
+            "G04_27",
+            "G04_34",
+            "G04_36",
+            "G04_41",
+            "G04_46",
+            "G04_49",
+            "G04_50",
+            "G04_51"
+          ],
+          "False_Positives": [
+            "G03_04",
+            "G03_12",
+            "G03_13",
+            "G03_22",
+            "G03_24",
+            "G03_25",
+            "G03_27",
+            "G03_34",
+            "G03_36",
+            "G03_42",
+            "G03_44",
+            "G03_48",
+            "G03_56",
+            "G04_02",
+            "G04_27",
+            "G04_34",
+            "G04_36",
+            "G04_41"
+          ],
+          "False_Negatives": [
+            "G03_21",
+            "G03_32",
+            "G03_55",
+            "G03_58",
+            "G04_16",
+            "G04_17",
+            "G04_18",
+            "G04_19",
+            "G04_20",
+            "G04_35",
+            "G04_48"
+          ]
+        },
+        "neo4j_threshold_gt4": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 19,
+          "Precision": 0.0,
+          "Recall": 0.0,
+          "F1": 0.0,
+          "Predicted_Stories": [
+            "G03_13",
+            "G03_42"
+          ],
+          "False_Positives": [
+            "G03_13",
+            "G03_42"
+          ],
+          "False_Negatives": [
+            "G03_02",
+            "G03_21",
+            "G03_32",
+            "G03_38",
+            "G03_55",
+            "G03_58",
+            "G04_03",
+            "G04_06",
+            "G04_16",
+            "G04_17",
+            "G04_18",
+            "G04_19",
+            "G04_20",
+            "G04_35",
+            "G04_46",
+            "G04_48",
+            "G04_49",
+            "G04_50",
+            "G04_51"
+          ]
+        }
+      },
+      "well_formedness": {
+        "metrics_applicable": false,
+        "projected_alarms": [],
+        "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+      },
+      "uniqueness": {
+        "ground_truth_count": 1,
+        "ground_truth_stories": [
+          "G03_46"
+        ],
+        "etl_invariant": {
+          "classification_output": false,
+          "metrics_applicable": false,
+          "raw_exact_duplicate_groups": [
+            {
+              "pid": "g03",
+              "story_ids": [
+                "G03_45",
+                "G03_46"
+              ]
+            }
+          ],
+          "supplied_source_records": 103,
+          "canonical_import_records": 103,
+          "identical_supplied_records_coalesced": 0,
+          "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+        }
+      },
+      "exploratory": {
+        "metrics_applicable": false,
+        "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+        "per_backlog": {
+          "g03": {
+            "dangling_actions": [
+              [
+                "g03_0c745ea8",
+                "record"
+              ],
+              [
+                "g03_0c745ea8",
+                "track"
+              ],
+              [
+                "g03_15122a98",
+                "impact approval/denial"
+              ],
+              [
+                "g03_15122a98",
+                "validate"
+              ],
+              [
+                "g03_16b137a1",
+                "manage"
+              ],
+              [
+                "g03_16b137a1",
+                "track"
+              ],
+              [
+                "g03_1d7d8897",
+                "change information"
+              ],
+              [
+                "g03_2eea3c1f",
+                "find"
+              ],
+              [
+                "g03_423203bf",
+                "access"
+              ],
+              [
+                "g03_423203bf",
+                "analyze"
+              ],
+              [
+                "g03_423203bf",
+                "export"
+              ],
+              [
+                "g03_6ecdd921",
+                "completed"
+              ],
+              [
+                "g03_6ecdd921",
+                "ensure"
+              ],
+              [
+                "g03_6ecdd921",
+                "initiated"
+              ],
+              [
+                "g03_6ecdd921",
+                "sent"
+              ],
+              [
+                "g03_748d0fbc",
+                "preserve"
+              ],
+              [
+                "g03_83a761bc",
+                "Share"
+              ],
+              [
+                "g03_a8019fa8",
+                "receive"
+              ],
+              [
+                "g03_ba299b0a",
+                "review"
+              ],
+              [
+                "g03_c3e89731",
+                "prevent"
+              ],
+              [
+                "g03_c3e89731",
+                "progression"
+              ],
+              [
+                "g03_c3e89731",
+                "resolve"
+              ],
+              [
+                "g03_c5015b56",
+                "track"
+              ]
+            ],
+            "overlap_groups": [],
+            "overlap_pairs": [],
+            "cross_persona_pairs": []
+          },
+          "g04": {
+            "dangling_actions": [
+              [
+                "g04_3415bddc",
+                "use"
+              ],
+              [
+                "g04_4ac9115d",
+                "monitors"
+              ],
+              [
+                "g04_5abd23ef",
+                "have access"
+              ],
+              [
+                "g04_8f59598d",
+                "avoid miscommunication"
+              ],
+              [
+                "g04_c3c2af32",
+                "creating an account"
+              ]
+            ],
+            "overlap_groups": [
+              [
+                "view",
+                "map display",
+                [
+                  "g04_5203dd40",
+                  "g04_d0e85422"
+                ]
+              ]
+            ],
+            "overlap_pairs": [
+              [
+                "g04_5203dd40",
+                "g04_d0e85422",
+                "view",
+                "map display"
+              ]
+            ],
+            "cross_persona_pairs": []
+          }
+        }
+      },
+      "per_backlog": {
+        "g03": {
+          "coverage": {
+            "reference_stories": 58,
+            "source_records": 55,
+            "canonical_graph_stories": 55,
+            "represented_reference_stories": 56,
+            "missing_reference_story_ids": [
+              "G03_39",
+              "G03_54"
+            ],
+            "shared_text_mappings": [
+              {
+                "graph_story_id": "g03_617daa73",
+                "raw_story_ids": [
+                  "G03_45",
+                  "G03_46"
+                ]
+              }
+            ],
+            "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+          },
+          "missing_benefit": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "neo4j": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "Precision": null,
+              "Recall": null,
+              "F1": null,
+              "Predicted_Stories": [],
+              "False_Positives": [],
+              "False_Negatives": []
+            }
+          },
+          "incomplete_means": {
+            "ground_truth_count": 1,
+            "ground_truth_stories": [
+              "G03_54"
+            ],
+            "metrics_applicable": false,
+            "status": "qualitative_only_unconfirmed_positive_reference",
+            "projected_alarms": [
+              "G03_02",
+              "G03_03",
+              "G03_09",
+              "G03_11",
+              "G03_13",
+              "G03_16",
+              "G03_22",
+              "G03_24",
+              "G03_28",
+              "G03_34",
+              "G03_40",
+              "G03_42",
+              "G03_44"
+            ],
+            "historical_annotation_comparison": {
+              "neo4j": {
+                "TP": 0,
+                "FP": 13,
+                "FN": 1,
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0,
+                "Predicted_Stories": [
+                  "G03_02",
+                  "G03_03",
+                  "G03_09",
+                  "G03_11",
+                  "G03_13",
+                  "G03_16",
+                  "G03_22",
+                  "G03_24",
+                  "G03_28",
+                  "G03_34",
+                  "G03_40",
+                  "G03_42",
+                  "G03_44"
+                ],
+                "False_Positives": [
+                  "G03_02",
+                  "G03_03",
+                  "G03_09",
+                  "G03_11",
+                  "G03_13",
+                  "G03_16",
+                  "G03_22",
+                  "G03_24",
+                  "G03_28",
+                  "G03_34",
+                  "G03_40",
+                  "G03_42",
+                  "G03_44"
+                ],
+                "False_Negatives": [
+                  "G03_54"
+                ]
+              }
+            },
+            "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+          },
+          "atomicity": {
+            "ground_truth_count": 6,
+            "ground_truth_stories": [
+              "G03_02",
+              "G03_21",
+              "G03_32",
+              "G03_38",
+              "G03_55",
+              "G03_58"
+            ],
+            "neo4j_threshold_gt1": {
+              "TP": 6,
+              "FP": 27,
+              "FN": 0,
+              "Precision": 18.18,
+              "Recall": 100.0,
+              "F1": 30.77,
+              "Predicted_Stories": [
+                "G03_02",
+                "G03_03",
+                "G03_04",
+                "G03_09",
+                "G03_11",
+                "G03_12",
+                "G03_13",
+                "G03_14",
+                "G03_16",
+                "G03_20",
+                "G03_21",
+                "G03_22",
+                "G03_24",
+                "G03_25",
+                "G03_27",
+                "G03_28",
+                "G03_29",
+                "G03_32",
+                "G03_33",
+                "G03_34",
+                "G03_36",
+                "G03_37",
+                "G03_38",
+                "G03_40",
+                "G03_41",
+                "G03_42",
+                "G03_43",
+                "G03_44",
+                "G03_47",
+                "G03_48",
+                "G03_55",
+                "G03_56",
+                "G03_58"
+              ],
+              "False_Positives": [
+                "G03_03",
+                "G03_04",
+                "G03_09",
+                "G03_11",
+                "G03_12",
+                "G03_13",
+                "G03_14",
+                "G03_16",
+                "G03_20",
+                "G03_22",
+                "G03_24",
+                "G03_25",
+                "G03_27",
+                "G03_28",
+                "G03_29",
+                "G03_33",
+                "G03_34",
+                "G03_36",
+                "G03_37",
+                "G03_40",
+                "G03_41",
+                "G03_42",
+                "G03_43",
+                "G03_44",
+                "G03_47",
+                "G03_48",
+                "G03_56"
+              ],
+              "False_Negatives": []
+            },
+            "neo4j_threshold_gt2": {
+              "TP": 2,
+              "FP": 13,
+              "FN": 4,
+              "Precision": 13.33,
+              "Recall": 33.33,
+              "F1": 19.05,
+              "Predicted_Stories": [
+                "G03_02",
+                "G03_04",
+                "G03_12",
+                "G03_13",
+                "G03_22",
+                "G03_24",
+                "G03_25",
+                "G03_27",
+                "G03_34",
+                "G03_36",
+                "G03_38",
+                "G03_42",
+                "G03_44",
+                "G03_48",
+                "G03_56"
+              ],
+              "False_Positives": [
+                "G03_04",
+                "G03_12",
+                "G03_13",
+                "G03_22",
+                "G03_24",
+                "G03_25",
+                "G03_27",
+                "G03_34",
+                "G03_36",
+                "G03_42",
+                "G03_44",
+                "G03_48",
+                "G03_56"
+              ],
+              "False_Negatives": [
+                "G03_21",
+                "G03_32",
+                "G03_55",
+                "G03_58"
+              ]
+            },
+            "neo4j_threshold_gt4": {
+              "TP": 0,
+              "FP": 2,
+              "FN": 6,
+              "Precision": 0.0,
+              "Recall": 0.0,
+              "F1": 0.0,
+              "Predicted_Stories": [
+                "G03_13",
+                "G03_42"
+              ],
+              "False_Positives": [
+                "G03_13",
+                "G03_42"
+              ],
+              "False_Negatives": [
+                "G03_02",
+                "G03_21",
+                "G03_32",
+                "G03_38",
+                "G03_55",
+                "G03_58"
+              ]
+            }
+          },
+          "well_formedness": {
+            "metrics_applicable": false,
+            "projected_alarms": [],
+            "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+          },
+          "uniqueness": {
+            "ground_truth_count": 1,
+            "ground_truth_stories": [
+              "G03_46"
+            ],
+            "etl_invariant": {
+              "classification_output": false,
+              "metrics_applicable": false,
+              "raw_exact_duplicate_groups": [
+                {
+                  "pid": "g03",
+                  "story_ids": [
+                    "G03_45",
+                    "G03_46"
+                  ]
+                }
+              ],
+              "supplied_source_records": 55,
+              "canonical_import_records": 55,
+              "identical_supplied_records_coalesced": 0,
+              "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+            }
+          },
+          "exploratory": {
+            "metrics_applicable": false,
+            "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+            "per_backlog": {
+              "g03": {
+                "dangling_actions": [
+                  [
+                    "g03_0c745ea8",
+                    "record"
+                  ],
+                  [
+                    "g03_0c745ea8",
+                    "track"
+                  ],
+                  [
+                    "g03_15122a98",
+                    "impact approval/denial"
+                  ],
+                  [
+                    "g03_15122a98",
+                    "validate"
+                  ],
+                  [
+                    "g03_16b137a1",
+                    "manage"
+                  ],
+                  [
+                    "g03_16b137a1",
+                    "track"
+                  ],
+                  [
+                    "g03_1d7d8897",
+                    "change information"
+                  ],
+                  [
+                    "g03_2eea3c1f",
+                    "find"
+                  ],
+                  [
+                    "g03_423203bf",
+                    "access"
+                  ],
+                  [
+                    "g03_423203bf",
+                    "analyze"
+                  ],
+                  [
+                    "g03_423203bf",
+                    "export"
+                  ],
+                  [
+                    "g03_6ecdd921",
+                    "completed"
+                  ],
+                  [
+                    "g03_6ecdd921",
+                    "ensure"
+                  ],
+                  [
+                    "g03_6ecdd921",
+                    "initiated"
+                  ],
+                  [
+                    "g03_6ecdd921",
+                    "sent"
+                  ],
+                  [
+                    "g03_748d0fbc",
+                    "preserve"
+                  ],
+                  [
+                    "g03_83a761bc",
+                    "Share"
+                  ],
+                  [
+                    "g03_a8019fa8",
+                    "receive"
+                  ],
+                  [
+                    "g03_ba299b0a",
+                    "review"
+                  ],
+                  [
+                    "g03_c3e89731",
+                    "prevent"
+                  ],
+                  [
+                    "g03_c3e89731",
+                    "progression"
+                  ],
+                  [
+                    "g03_c3e89731",
+                    "resolve"
+                  ],
+                  [
+                    "g03_c5015b56",
+                    "track"
+                  ]
+                ],
+                "overlap_groups": [],
+                "overlap_pairs": [],
+                "cross_persona_pairs": []
+              }
+            }
+          }
+        },
+        "g04": {
+          "coverage": {
+            "reference_stories": 51,
+            "source_records": 48,
+            "canonical_graph_stories": 48,
+            "represented_reference_stories": 48,
+            "missing_reference_story_ids": [
+              "G04_05",
+              "G04_15",
+              "G04_48"
+            ],
+            "shared_text_mappings": [],
+            "rule": "Every graph alarm is projected to all raw stories with the same backlog and normalized text; unrepresented raw stories receive no alarm."
+          },
+          "missing_benefit": {
+            "ground_truth_count": 6,
+            "ground_truth_stories": [
+              "G04_09",
+              "G04_10",
+              "G04_11",
+              "G04_14",
+              "G04_20",
+              "G04_26"
+            ],
+            "neo4j": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 6,
+              "Precision": null,
+              "Recall": 0.0,
+              "F1": 0.0,
+              "Predicted_Stories": [],
+              "False_Positives": [],
+              "False_Negatives": [
+                "G04_09",
+                "G04_10",
+                "G04_11",
+                "G04_14",
+                "G04_20",
+                "G04_26"
+              ]
+            }
+          },
+          "incomplete_means": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "metrics_applicable": false,
+            "status": "qualitative_only_unconfirmed_positive_reference",
+            "projected_alarms": [
+              "G04_02",
+              "G04_12",
+              "G04_22",
+              "G04_26",
+              "G04_49"
+            ],
+            "historical_annotation_comparison": {
+              "neo4j": {
+                "TP": 0,
+                "FP": 5,
+                "FN": 0,
+                "Precision": 0.0,
+                "Recall": null,
+                "F1": 0.0,
+                "Predicted_Stories": [
+                  "G04_02",
+                  "G04_12",
+                  "G04_22",
+                  "G04_26",
+                  "G04_49"
+                ],
+                "False_Positives": [
+                  "G04_02",
+                  "G04_12",
+                  "G04_22",
+                  "G04_26",
+                  "G04_49"
+                ],
+                "False_Negatives": []
+              }
+            },
+            "note": "The original label G03_54 is retained, not independently confirmed. Historical counts are supplied only for traceability; no regular precision/recall/F1 comparison is claimed for this category."
+          },
+          "atomicity": {
+            "ground_truth_count": 13,
+            "ground_truth_stories": [
+              "G04_03",
+              "G04_06",
+              "G04_16",
+              "G04_17",
+              "G04_18",
+              "G04_19",
+              "G04_20",
+              "G04_35",
+              "G04_46",
+              "G04_48",
+              "G04_49",
+              "G04_50",
+              "G04_51"
+            ],
+            "neo4j_threshold_gt1": {
+              "TP": 11,
+              "FP": 20,
+              "FN": 2,
+              "Precision": 35.48,
+              "Recall": 84.62,
+              "F1": 50.0,
+              "Predicted_Stories": [
+                "G04_02",
+                "G04_03",
+                "G04_04",
+                "G04_06",
+                "G04_07",
+                "G04_08",
+                "G04_12",
+                "G04_16",
+                "G04_18",
+                "G04_19",
+                "G04_20",
+                "G04_22",
+                "G04_24",
+                "G04_25",
+                "G04_27",
+                "G04_30",
+                "G04_31",
+                "G04_32",
+                "G04_33",
+                "G04_34",
+                "G04_35",
+                "G04_36",
+                "G04_37",
+                "G04_38",
+                "G04_41",
+                "G04_45",
+                "G04_46",
+                "G04_47",
+                "G04_49",
+                "G04_50",
+                "G04_51"
+              ],
+              "False_Positives": [
+                "G04_02",
+                "G04_04",
+                "G04_07",
+                "G04_08",
+                "G04_12",
+                "G04_22",
+                "G04_24",
+                "G04_25",
+                "G04_27",
+                "G04_30",
+                "G04_31",
+                "G04_32",
+                "G04_33",
+                "G04_34",
+                "G04_36",
+                "G04_37",
+                "G04_38",
+                "G04_41",
+                "G04_45",
+                "G04_47"
+              ],
+              "False_Negatives": [
+                "G04_17",
+                "G04_48"
+              ]
+            },
+            "neo4j_threshold_gt2": {
+              "TP": 6,
+              "FP": 5,
+              "FN": 7,
+              "Precision": 54.55,
+              "Recall": 46.15,
+              "F1": 50.0,
+              "Predicted_Stories": [
+                "G04_02",
+                "G04_03",
+                "G04_06",
+                "G04_27",
+                "G04_34",
+                "G04_36",
+                "G04_41",
+                "G04_46",
+                "G04_49",
+                "G04_50",
+                "G04_51"
+              ],
+              "False_Positives": [
+                "G04_02",
+                "G04_27",
+                "G04_34",
+                "G04_36",
+                "G04_41"
+              ],
+              "False_Negatives": [
+                "G04_16",
+                "G04_17",
+                "G04_18",
+                "G04_19",
+                "G04_20",
+                "G04_35",
+                "G04_48"
+              ]
+            },
+            "neo4j_threshold_gt4": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 13,
+              "Precision": null,
+              "Recall": 0.0,
+              "F1": 0.0,
+              "Predicted_Stories": [],
+              "False_Positives": [],
+              "False_Negatives": [
+                "G04_03",
+                "G04_06",
+                "G04_16",
+                "G04_17",
+                "G04_18",
+                "G04_19",
+                "G04_20",
+                "G04_35",
+                "G04_46",
+                "G04_48",
+                "G04_49",
+                "G04_50",
+                "G04_51"
+              ]
+            }
+          },
+          "well_formedness": {
+            "metrics_applicable": false,
+            "projected_alarms": [],
+            "note": "Structural graph rule; no separate well-formedness labels in the supplied defect ground truth."
+          },
+          "uniqueness": {
+            "ground_truth_count": 0,
+            "ground_truth_stories": [],
+            "etl_invariant": {
+              "classification_output": false,
+              "metrics_applicable": false,
+              "raw_exact_duplicate_groups": [],
+              "supplied_source_records": 48,
+              "canonical_import_records": 48,
+              "identical_supplied_records_coalesced": 0,
+              "note": "The supplied extraction subset is inspected separately from raw-text duplicates. No duplicate detection or coalescing is attributed to this import unless repeated records actually occur in its input. Graph fidelity is a structural invariant, not a defect-classification metric."
+            }
+          },
+          "exploratory": {
+            "metrics_applicable": false,
+            "note": "Source-confirmed shared relation patterns are review candidates, not confirmed semantic redundancies or conflicts. No pairwise redundancy ground truth is available here.",
+            "per_backlog": {
+              "g04": {
+                "dangling_actions": [
+                  [
+                    "g04_3415bddc",
+                    "use"
+                  ],
+                  [
+                    "g04_4ac9115d",
+                    "monitors"
+                  ],
+                  [
+                    "g04_5abd23ef",
+                    "have access"
+                  ],
+                  [
+                    "g04_8f59598d",
+                    "avoid miscommunication"
+                  ],
+                  [
+                    "g04_c3c2af32",
+                    "creating an account"
+                  ]
+                ],
+                "overlap_groups": [
+                  [
+                    "view",
+                    "map display",
+                    [
+                      "g04_5203dd40",
+                      "g04_d0e85422"
+                    ]
+                  ]
+                ],
+                "overlap_pairs": [
+                  [
+                    "g04_5203dd40",
+                    "g04_d0e85422",
+                    "view",
+                    "map display"
+                  ]
+                ],
+                "cross_persona_pairs": []
+              }
+            }
+          }
+        }
+      },
+      "fat_story_actions_gt2": {
+        "TP": 8,
+        "FP": 18,
+        "FN": 11,
+        "Precision": 30.77,
+        "Recall": 42.11,
+        "F1": 35.56,
+        "Predicted_Stories": [
+          "G03_02",
+          "G03_04",
+          "G03_12",
+          "G03_13",
+          "G03_22",
+          "G03_24",
+          "G03_25",
+          "G03_27",
+          "G03_34",
+          "G03_36",
+          "G03_38",
+          "G03_42",
+          "G03_44",
+          "G03_48",
+          "G03_56",
+          "G04_02",
+          "G04_03",
+          "G04_06",
+          "G04_27",
+          "G04_34",
+          "G04_36",
+          "G04_41",
+          "G04_46",
+          "G04_49",
+          "G04_50",
+          "G04_51"
+        ],
+        "False_Positives": [
+          "G03_04",
+          "G03_12",
+          "G03_13",
+          "G03_22",
+          "G03_24",
+          "G03_25",
+          "G03_27",
+          "G03_34",
+          "G03_36",
+          "G03_42",
+          "G03_44",
+          "G03_48",
+          "G03_56",
+          "G04_02",
+          "G04_27",
+          "G04_34",
+          "G04_36",
+          "G04_41"
+        ],
+        "False_Negatives": [
+          "G03_21",
+          "G03_32",
+          "G03_55",
+          "G03_58",
+          "G04_16",
+          "G04_17",
+          "G04_18",
+          "G04_19",
+          "G04_20",
+          "G04_35",
+          "G04_48"
+        ]
+      },
+      "graph_cardinalities_per_backlog": {
+        "g03": {
+          "Backlog": 1,
+          "UserStory": 55,
+          "Persona": 22,
+          "Action": 81,
+          "Entity": 132,
+          "Benefit": 55,
+          "TRIGGERS": 74,
+          "TARGETS": 183
+        },
+        "g04": {
+          "Backlog": 1,
+          "UserStory": 48,
+          "Persona": 13,
+          "Action": 65,
+          "Entity": 87,
+          "Benefit": 48,
+          "TRIGGERS": 85,
+          "TARGETS": 116
+        }
+      },
+      "inputs": [
+        {
+          "model": "chatgpt",
+          "pid": "g03",
+          "source_file": "extracted_data/chatgpt/g03_chatgpt_intersecting.json",
+          "source_sha256": "0f9165a043d987b088c2f2867b84de0b0e5965b8f64fff7cec4a648972cdbb5f"
+        },
+        {
+          "model": "chatgpt",
+          "pid": "g04",
+          "source_file": "extracted_data/chatgpt/g04_chatgpt_intersecting.json",
+          "source_sha256": "bc737f57baf4f9c8aefe77142c057593dd375ee688dc22869f8d4f1a88f7dab8"
+        }
+      ]
+    }
+  }
+}

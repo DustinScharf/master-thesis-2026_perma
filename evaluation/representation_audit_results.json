@@ -1,0 +1,452 @@
+{
+  "schema_version": 1,
+  "archive_doi": "10.5281/zenodo.14254059",
+  "execution": "offline_source_checks",
+  "projection": {
+    "gpt-4-turbo": {
+      "g03": {
+        "matched_documents": 55,
+        "nonempty_source_or_semantic_metadata": 0
+      },
+      "g04": {
+        "matched_documents": 48,
+        "nonempty_source_or_semantic_metadata": 0
+      }
+    },
+    "gpt-4o-mini": {
+      "g03": {
+        "matched_documents": 55,
+        "nonempty_source_or_semantic_metadata": 0
+      },
+      "g04": {
+        "matched_documents": 48,
+        "nonempty_source_or_semantic_metadata": 0
+      }
+    }
+  },
+  "provenance_sensitivity": {
+    "g03": {
+      "scope": "Collapse type-and-endpoint-identical relations in the JSON target schema; infer ownership from endpoint membership. No live import.",
+      "merged_semantic_occurrences": 13,
+      "false_ownership_count": 5,
+      "false_ownership_by_type": {
+        "TARGETS": 1,
+        "TRIGGERS": 4
+      },
+      "false_ownership": [
+        {
+          "story_id": "g03_19e1d1f9",
+          "raw_story_ids": [
+            "G03_34"
+          ],
+          "relation": "TARGETS",
+          "pair": [
+            "record",
+            "outcome"
+          ]
+        },
+        {
+          "story_id": "g03_19e1d1f9",
+          "raw_story_ids": [
+            "G03_34"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "Staff member",
+            "track"
+          ]
+        },
+        {
+          "story_id": "g03_3b291024",
+          "raw_story_ids": [
+            "G03_44"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "Staff member",
+            "track"
+          ]
+        },
+        {
+          "story_id": "g03_6eafba7d",
+          "raw_story_ids": [
+            "G03_07"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "Applicant",
+            "satisfy"
+          ]
+        },
+        {
+          "story_id": "g03_a2015ecd",
+          "raw_story_ids": [
+            "G03_06"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "Applicant",
+            "satisfy"
+          ]
+        }
+      ],
+      "with_provenance": {
+        "dangling_actions": 3,
+        "overlap_groups": 4,
+        "cross_persona_pairs": 0
+      },
+      "without_provenance": {
+        "dangling_actions": 3,
+        "overlap_groups": 4,
+        "cross_persona_pairs": 0
+      }
+    },
+    "g04": {
+      "scope": "Collapse type-and-endpoint-identical relations in the JSON target schema; infer ownership from endpoint membership. No live import.",
+      "merged_semantic_occurrences": 19,
+      "false_ownership_count": 19,
+      "false_ownership_by_type": {
+        "TARGETS": 7,
+        "TRIGGERS": 12
+      },
+      "false_ownership": [
+        {
+          "story_id": "g04_1011389f",
+          "raw_story_ids": [
+            "G04_36"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "check"
+          ]
+        },
+        {
+          "story_id": "g04_2ed630e6",
+          "raw_story_ids": [
+            "G04_39"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "give"
+          ]
+        },
+        {
+          "story_id": "g04_365556a2",
+          "raw_story_ids": [
+            "G04_28"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "have"
+          ]
+        },
+        {
+          "story_id": "g04_3f580cf5",
+          "raw_story_ids": [
+            "G04_08"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "receive"
+          ]
+        },
+        {
+          "story_id": "g04_44d810d0",
+          "raw_story_ids": [
+            "G04_06"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "get"
+          ]
+        },
+        {
+          "story_id": "g04_44d810d0",
+          "raw_story_ids": [
+            "G04_06"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "have"
+          ]
+        },
+        {
+          "story_id": "g04_6f21d111",
+          "raw_story_ids": [
+            "G04_47"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "admin",
+            "keep"
+          ]
+        },
+        {
+          "story_id": "g04_728d4f5d",
+          "raw_story_ids": [
+            "G04_03"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "get"
+          ]
+        },
+        {
+          "story_id": "g04_7848d500",
+          "raw_story_ids": [
+            "G04_41"
+          ],
+          "relation": "TARGETS",
+          "pair": [
+            "view",
+            "users"
+          ]
+        },
+        {
+          "story_id": "g04_8259314c",
+          "raw_story_ids": [
+            "G04_34"
+          ],
+          "relation": "TARGETS",
+          "pair": [
+            "use",
+            "website"
+          ]
+        },
+        {
+          "story_id": "g04_8a0bec3c",
+          "raw_story_ids": [
+            "G04_02"
+          ],
+          "relation": "TARGETS",
+          "pair": [
+            "view",
+            "recycling centers"
+          ]
+        },
+        {
+          "story_id": "g04_8a0bec3c",
+          "raw_story_ids": [
+            "G04_02"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "know"
+          ]
+        },
+        {
+          "story_id": "g04_8d37edee",
+          "raw_story_ids": [
+            "G04_24"
+          ],
+          "relation": "TARGETS",
+          "pair": [
+            "have",
+            "data"
+          ]
+        },
+        {
+          "story_id": "g04_94de3b72",
+          "raw_story_ids": [
+            "G04_37"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "get"
+          ]
+        },
+        {
+          "story_id": "g04_9b0d7cf4",
+          "raw_story_ids": [
+            "G04_07"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "view"
+          ]
+        },
+        {
+          "story_id": "g04_aed664aa",
+          "raw_story_ids": [
+            "G04_22"
+          ],
+          "relation": "TARGETS",
+          "pair": [
+            "have",
+            "dashboard"
+          ]
+        },
+        {
+          "story_id": "g04_e4971abc",
+          "raw_story_ids": [
+            "G04_38"
+          ],
+          "relation": "TRIGGERS",
+          "pair": [
+            "user",
+            "get"
+          ]
+        },
+        {
+          "story_id": "g04_ef4b486c",
+          "raw_story_ids": [
+            "G04_51"
+          ],
+          "relation": "TARGETS",
+          "pair": [
+            "fix",
+            "issues"
+          ]
+        },
+        {
+          "story_id": "g04_f86d7036",
+          "raw_story_ids": [
+            "G04_29"
+          ],
+          "relation": "TARGETS",
+          "pair": [
+            "have",
+            "website"
+          ]
+        }
+      ],
+      "with_provenance": {
+        "dangling_actions": 1,
+        "overlap_groups": 5,
+        "cross_persona_pairs": 2
+      },
+      "without_provenance": {
+        "dangling_actions": 0,
+        "overlap_groups": 11,
+        "cross_persona_pairs": 7
+      }
+    }
+  },
+  "endpoint_type_sensitivity": {
+    "g03": {
+      "scope": "Keep original endpoint types; apply the same typed Action-to-Entity and Persona-to-Action rules. This is a source-level sensitivity calculation, not a second Neo4j import.",
+      "type_deviations": [],
+      "json_target_schema": {
+        "dangling_actions": 3,
+        "overlap_groups": 4,
+        "cross_persona_pairs": 0
+      },
+      "original_endpoint_types": {
+        "dangling_actions": 3,
+        "overlap_groups": 4,
+        "cross_persona_pairs": 0
+      },
+      "missing_benefit_and_atomicity_unchanged": true
+    },
+    "g04": {
+      "scope": "Keep original endpoint types; apply the same typed Action-to-Entity and Persona-to-Action rules. This is a source-level sensitivity calculation, not a second Neo4j import.",
+      "type_deviations": [
+        {
+          "story_id": "g04_8d37edee",
+          "raw_story_ids": [
+            "G04_24"
+          ],
+          "relation": "TARGETS",
+          "source": [
+            "have",
+            "Action"
+          ],
+          "target": [
+            "access",
+            "Action"
+          ]
+        },
+        {
+          "story_id": "g04_f0817839",
+          "raw_story_ids": [
+            "G04_50"
+          ],
+          "relation": "TARGETS",
+          "source": [
+            "have",
+            "Action"
+          ],
+          "target": [
+            "access",
+            "Action"
+          ]
+        },
+        {
+          "story_id": "g04_fff68c45",
+          "raw_story_ids": [
+            "G04_46"
+          ],
+          "relation": "TARGETS",
+          "source": [
+            "try",
+            "Action"
+          ],
+          "target": [
+            "getting",
+            "Action"
+          ]
+        }
+      ],
+      "json_target_schema": {
+        "dangling_actions": 1,
+        "overlap_groups": 5,
+        "cross_persona_pairs": 2
+      },
+      "original_endpoint_types": {
+        "dangling_actions": 3,
+        "overlap_groups": 4,
+        "cross_persona_pairs": 1
+      },
+      "missing_benefit_and_atomicity_unchanged": true
+    }
+  },
+  "inputs": [
+    {
+      "path": "vendor/user-story-extractor/pickle/gpt-4-turbo/g03.pickle",
+      "sha256": "229a38999820d13d6977874941dc39b8ddaeeb9827d1b60a64e16a253b39a189"
+    },
+    {
+      "path": "extracted_data/gpt-4-turbo/g03.json",
+      "sha256": "8982fa6b832ee76fade0c3954898460e9a8f7e89d11ba9d0ed2ebf05f90e3fb8"
+    },
+    {
+      "path": "vendor/user-story-extractor/pickle/gpt-4-turbo/g04.pickle",
+      "sha256": "21d281f879268778a1e5a4c0f161d57a074bc1637c563ead525617b7a2bfbab1"
+    },
+    {
+      "path": "extracted_data/gpt-4-turbo/g04.json",
+      "sha256": "3b8e5cbdc033b732143b2e4a070a781c32e5dd0df45b00d63c4a044e620ad57a"
+    },
+    {
+      "path": "vendor/user-story-extractor/pickle/gpt-4o-mini/g03.pickle",
+      "sha256": "57f59e5d38055b02e970f15b29d7539d28aa5a5396d9ef334a5227fd661132bb"
+    },
+    {
+      "path": "extracted_data/gpt-4o-mini/g03.json",
+      "sha256": "537d6d098323d50baba42c5b3552e0f58e6fc6943ae82a8d6e40cd6c107f3326"
+    },
+    {
+      "path": "vendor/user-story-extractor/pickle/gpt-4o-mini/g04.pickle",
+      "sha256": "cfeceee8640bf710fabe3e5cb7d9d2784028c357f34781783dea482addeeaffb"
+    },
+    {
+      "path": "extracted_data/gpt-4o-mini/g04.json",
+      "sha256": "05093bcd866a556b54f4323397217e6504a3bb9570ba2e858c33f5f313fd7a93"
+    },
+    {
+      "path": "ground_truth.json",
+      "sha256": "e10ea75792176da8144578f28fd53eb253eff03e976e03b8be9d69283c74c19a"
+    }
+  ],
+  "matched_documents_total": 206
+}

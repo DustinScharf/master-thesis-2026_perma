@@ -1,0 +1,98 @@
+{
+  "generated_at_utc": "2026-09-10T14:38:32.334414+00:00",
+  "command": "python -B -m unittest discover -s tests -v",
+  "tests_run": 55,
+  "passed": 55,
+  "failed": 0,
+  "errors": 0,
+  "skipped": [],
+  "live_database_revalidated": true,
+  "database_note": "Separate g03 and g04 databases checked; fixtures rolled back.",
+  "database_integrity": {
+    "g03": {
+      "database_id": "7D5319824EAE753B886CF4E3B62B0A67482781EEA82A7623FAD8FB4E6FD7E23F",
+      "name": "g03",
+      "node_count": 391,
+      "relationship_count": 847,
+      "content_sha256": "93d1da6da87b6fceb72e958f86cf0801ec2102a3fb4edde79041ae6c1f786daa",
+      "unchanged_after_tests": true
+    },
+    "g04": {
+      "database_id": "1DC6BE0E5C192CDDAD621E6A859C9ECF7524AEED1F4A6BF8E65CABB5A83C61BA",
+      "name": "g04",
+      "node_count": 304,
+      "relationship_count": 660,
+      "content_sha256": "dce7109cf22bbb876746d7da906cf50304d59ea5021af9a12f78091f7fc7e145",
+      "unchanged_after_tests": true
+    },
+    "userstories": {
+      "database_id": "2A6FFA32B260302EC67943A11A00A9C4807B5774AAD8C4743B4BC1A262B61F0F",
+      "name": "userstories",
+      "node_count": 678,
+      "relationship_count": 1372,
+      "content_sha256": "6e9250620459d3e9658689b9ccade2ce5c2d9efaa4afc04c844afbe19f7ecf99",
+      "unchanged_after_tests": true
+    }
+  },
+  "original_ground_truth_unchanged": true,
+  "ground_truth_sha256": "e10ea75792176da8144578f28fd53eb253eff03e976e03b8be9d69283c74c19a",
+  "source_comparison_matches_archived_neo4j_report": true,
+  "sources": [
+    {
+      "path": "evaluation_report.py",
+      "sha256": "7589fbf2c0a1f161ef3a6543f3fca962458d6817a0bc927af34439738925f178"
+    },
+    {
+      "path": "graph_database.py",
+      "sha256": "295c3af3eaac8acf3526dad6d2d35bc1320d20d5687c2ca542ed6949f275e66b"
+    },
+    {
+      "path": "graph_model.py",
+      "sha256": "be9af8e3337ae3133015f8ab758064410041b46a12b25cdb302fbb7d9bc77550"
+    },
+    {
+      "path": "graph_queries.py",
+      "sha256": "f209de58bffd93143d3c68bff692a329217255b17974ed903a173d15ba4b08e0"
+    },
+    {
+      "path": "import_to_neo4j.py",
+      "sha256": "780b4cef7c0f6cf30e3062f6b833d621a39a9eb78d7fa729880545535d4c7b46"
+    },
+    {
+      "path": "run_annotation_sensitivity.py",
+      "sha256": "9c399eefd7a56d241a57227ff100fddbf102bc6eff5b6bbd7bac7608730234e5"
+    },
+    {
+      "path": "run_extraction_validation.py",
+      "sha256": "e965e833f22c970640081199cfdfe170499c77dff885504522f187eaffb5bf09"
+    },
+    {
+      "path": "run_full_evaluation.py",
+      "sha256": "59307c1643d750e8e235d018ad3550b1069b4e0f2958025e2abdfe5267e54481"
+    },
+    {
+      "path": "run_llm_comparison.py",
+      "sha256": "e9b57b86eff3f8c439522929358d916ab240fecc1d4353f085b39f31b49dc7e2"
+    },
+    {
+      "path": "run_performance_evaluation.py",
+      "sha256": "6ad637bec06b5071217eda19302250d2c571166b811ea12344b85d5faa446bfd"
+    },
+    {
+      "path": "run_representation_audit.py",
+      "sha256": "90dc2b63b03c46a92bb78e4e115dc6f348d3ab8c1dd8994b82f290ba0779bea5"
+    },
+    {
+      "path": "tests/test_extraction_validation.py",
+      "sha256": "51e99b248fe7668b5b078b13a505010d52bf790541f6e6ccbff53a61d5febde3"
+    },
+    {
+      "path": "tests/test_final_controls.py",
+      "sha256": "ff314830c3f66f3deb4c1196a181d239840e3bf4ce602d787f002ee3eecccfdf"
+    },
+    {
+      "path": "tests/test_suite.py",
+      "sha256": "be1972bdde04ba214527682533ed97361c13a66c091e7abf8e18dc56c4213da4"
+    }
+  ]
+}

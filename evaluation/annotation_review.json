@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "purpose": "Post-hoc plausibility review of all 19 existing positive atomicity labels; original labels are preserved.",
+  "original_annotation_author": "Dustin Scharf",
+  "review_method": "AI-assisted review against the documented single-feature criterion after the original results were available; not an independent or blinded annotation.",
+  "selection_rule": "Flag positive atomicity labels where the means primarily enumerates objects, attributes or related terms under one action, without explicitly identifying a second separable operation. Retain the remaining labels for this limited sensitivity analysis, without claiming independent confirmation.",
+  "scope": "All positive atomicity labels were reviewed. Negative labels were not independently reannotated; this is not a new ground truth.",
+  "reviewed_positive_atomicity_labels": [
+    {"id": "G03_02", "status": "retained", "reason": "Researching requirements and selecting a service are two explicitly requested operations."},
+    {"id": "G03_21", "status": "retained", "reason": "Conducting and tracking amendments/studies are explicitly coordinated operations."},
+    {"id": "G03_32", "status": "retained", "reason": "Preparing for a hearing and supporting its execution address distinguishable activities."},
+    {"id": "G03_38", "status": "retained", "reason": "Conducting a meeting and recording its outcome are explicitly requested operations."},
+    {"id": "G03_55", "status": "ambiguous", "reason": "A custom query/report may denote one reporting function; the slash alone does not establish two independently deliverable functions."},
+    {"id": "G03_58", "status": "retained", "reason": "Sending and posting citations/fines are explicitly named alternative operations; their distinction still depends on domain interpretation."},
+    {"id": "G04_03", "status": "retained", "reason": "Entering a zip code and obtaining a facility list are explicitly linked interaction steps. Their treatment as separate operations follows the existing annotation, not a universal decomposition rule."},
+    {"id": "G04_06", "status": "retained", "reason": "Selecting waste types and obtaining facility/opening-hour results are explicitly coordinated before the final benefit clause; the unusual sentence structure remains an interpretive limitation."},
+    {"id": "G04_16", "status": "retained", "reason": "Adding and removing facility information are distinguishable operations."},
+    {"id": "G04_17", "status": "ambiguous", "reason": "Reading feedback and complaints can be one reading function with two kinds of content."},
+    {"id": "G04_18", "status": "retained", "reason": "Checking transaction history and keeping a record are explicitly requested operations."},
+    {"id": "G04_19", "status": "ambiguous", "reason": "UI and UX name related quality concepts; the means does not specify two separable functional operations."},
+    {"id": "G04_20", "status": "retained", "reason": "Accessing the site and doing other tasks are explicitly coordinated, although the second task is vague and device independence is a separate concern."},
+    {"id": "G04_35", "status": "ambiguous", "reason": "Attending UI/UX lessons is one stated activity; the slash in the subject area does not establish two required operations."},
+    {"id": "G04_46", "status": "ambiguous", "reason": "One dashboard may display both usage statistics and locations; multiple attributes do not by themselves prove multiple functions."},
+    {"id": "G04_48", "status": "retained", "reason": "Browsing a facility list and identifying environmentally friendly facilities are explicitly linked functions under the existing interpretation."},
+    {"id": "G04_49", "status": "ambiguous", "reason": "Updating information and accepted material types can be one maintenance function with different fields."},
+    {"id": "G04_50", "status": "ambiguous", "reason": "Access to user statistics and schedules can be one access function; extra actions in the benefit do not settle atomicity of the means."},
+    {"id": "G04_51", "status": "retained", "reason": "Communicating with the administrator and conveying issues are explicitly coordinated under the existing interpretation, although their functional separation remains domain-dependent."}
+  ],
+  "incomplete_means": {
+    "disputed_story_ids": ["G03_54"],
+    "classification_metrics_applicable": false,
+    "reason": "The only positive label is not independently confirmed. Notification wish and triggering event are stated; passive wording alone does not establish a missing means. Evaluate the graph alarms qualitatively, not as a validated classifier comparison."
+  }
+}

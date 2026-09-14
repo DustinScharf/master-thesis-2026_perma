@@ -1,0 +1,36 @@
+Story #3: "As a user, I want to be able to enter my zip code and get a list of nearby recycling facilities, so that I can determine which ones I should consider."
+   Defect type: atomic.conjunctions
+   Message: As a user, I want to be able to enter my zip code [* and *] get a list of nearby recycling facilities, so that I can determine which ones I should consider.
+Story #6: "As a user, I want to be able to select different types of recyclable waste, so I have and get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule."
+   Defect type: atomic.conjunctions
+   Message: As a user, I want to be able to select different types of recyclable waste, so I have [* and *] get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule.
+Story #6: "As a user, I want to be able to select different types of recyclable waste, so I have and get a list of facilities that accept each type and their opening hours, so that I can find an optimal route and schedule."
+   Defect type: minimal.indicator_repetition
+   Message: As a user, I want to be able to select different types of recyclable waste, [* so *] I have and get a list of facilities that accept each type and their opening hours, [* so that *] I can find an optimal route and schedule.
+Story #16: "As an admin, I want to be able to add or remove recycling facilities' information, so that users get the most recent information."
+   Defect type: atomic.conjunctions
+   Message: As an admin, I want to be able to add [* or *] remove recycling facilities' information, so that users get the most recent information.
+Story #18: "As a user, I want to be able to check transaction history and keep a record of it, so that I can go back when needed."
+   Defect type: atomic.conjunctions
+   Message: As a user, I want to be able to check transaction history [* and *] keep a record of it, so that I can go back when needed.
+Story #20: "As a user, I want to be able to access the site and do all the other stuffs on all of my electronic devices."
+   Defect type: atomic.conjunctions
+   Message: As a user, I want to be able to access the site [* and *] do all the other stuffs on all of my electronic devices.
+Story #48: "As a user, I want to be able to browse through the list of facolities and see which ones are environment-friendly, so that I can know for sure my waste is not going to leave a negative ecological footprint."
+   Defect type: atomic.conjunctions
+   Message: As a user, I want to be able to browse through the list of facolities [* and *] see which ones are environment-friendly, so that I can know for sure my waste is not going to leave a negative ecological footprint.
+Story #49: "As a recyclingfacility representative, I want to be able to update my information and the type of material I accept, so that I can avoid any miscommunication with users."
+   Defect type: atomic.conjunctions
+   Message: As a recyclingfacility representative, I want to be able to update my information [* and *] the type of material I accept, so that I can avoid any miscommunication with users.
+Story #50: "As a recyclingfacility representative, I want to have access to user stats and schedules, so that I can adjust my hours and/or upgrade equipment and capacity in order to be able to accomodate larger amounts of recyclable materials."
+   Defect type: atomic.conjunctions
+   Message: As a recyclingfacility representative, I want to have access to user stats [* and *] schedules, so that I can adjust my hours and [*/*] or upgrade equipment and capacity in order to be able to accomodate larger amounts of recyclable materials.
+Story #50: "As a recyclingfacility representative, I want to have access to user stats and schedules, so that I can adjust my hours and/or upgrade equipment and capacity in order to be able to accomodate larger amounts of recyclable materials."
+   Defect type: minimal.indicator_repetition
+   Message: As a recyclingfacility representative, I want to have access to user stats and schedules, [* so that *] I can adjust my hours and/or upgrade equipment and capacity [* in order to *] be able to accomodate larger amounts of recyclable materials.
+Story #51: "As a recyclingfacility, I want to be able to communicate directly with the site admin and convey any issues or concerns I have, so that they fix them."
+   Defect type: atomic.conjunctions
+   Message: As a recyclingfacility, I want to be able to communicate directly with the site admin [* and *] convey any issues [* or *] concerns I have, so that they fix them.
+Story #50: "As a recyclingfacility representative, I want to have access to user stats and schedules, so that I can adjust my hours and/or upgrade equipment and capacity in order to be able to accomodate larger amounts of recyclable materials."
+   Defect type: uniform.uniform
+   Message: Use the most common template: As a, I want to, So that

@@ -1,0 +1,2265 @@
+{
+  "schema_version": 1,
+  "purpose": "Reproduction of da Silva's text-component extraction evaluation",
+  "upstream_dependency": {
+    "name": "Thayná Camargo da Silva: user-story-extractor",
+    "archive_doi": "10.5281/zenodo.14254059",
+    "root_option": "--extractor-root (default: vendor/user-story-extractor, relative to this script)",
+    "bundled_subset": "unchanged evaluator, two reference JSON files, three strict-result CSV files containing six evaluated backlog rows; see vendor/user-story-extractor/THIRD_PARTY_NOTICE.md",
+    "reviewed_source_sha256_lf_utf8": "0473e807fdc7941735ae9b36143edd7eee5cc165dbe2271621edb15e8ad2cd8a",
+    "executed_functions": [
+      "compare_and_get_results",
+      "sort",
+      "strict_compare",
+      "inclusion_compare",
+      "check_inclusion_elements",
+      "count_true_false_positives_negatives",
+      "count_total_result_dataset",
+      "total_dataset",
+      "calculate_precision",
+      "calculate_recall",
+      "calculate_f_measure",
+      "individual_story",
+      "extract_all_baseline_info",
+      "extract_experiment_info"
+    ]
+  },
+  "method": {
+    "modes": [
+      "strict"
+    ],
+    "score_scale": "ratios in [0, 1], not percentages",
+    "matching": "case-sensitive source text; remove #GNN#; strip spaces/newlines/tabs; one-to-one in file order",
+    "aggregation": "original micro-aggregation of component TP/FP/FN within each backlog",
+    "coverage_policy": "only matched stories contribute to scores, as in the original evaluator; all missing occurrences are reported separately",
+    "component_fields": "Persona; Primary + Secondary Entity; Primary + Secondary Action; Benefit",
+    "benefit_convention": "the original evaluator compares a one-element Benefit-text list, including an empty string; this is not missing-benefit classification",
+    "adapters": "functions-only AST loading of a reviewed hash-pinned source; UTF-8 read-only file opening; explicit occurrence-level coverage",
+    "not_evaluated": [
+      "Neo4j import integrity",
+      "semantic relation extraction",
+      "quality defects",
+      "pairwise story redundancy",
+      "BERTScore"
+    ],
+    "configuration_note": "chatgpt is an artifact-folder identifier; exact model/prompt provenance is not inferred from that name"
+  },
+  "models": {
+    "gpt-4-turbo": {
+      "g03": {
+        "reference_input": "extractor_root/pos_baseline/g03_baseline_intersecting_pos.json",
+        "extraction_input": "evaluation/extracted_data/gpt-4-turbo/g03.json",
+        "coverage": {
+          "reference_stories": 55,
+          "extracted_stories": 55,
+          "matched_stories": 55,
+          "reference_coverage": 1.0,
+          "extraction_coverage": 1.0,
+          "row_numbering": "one-based [reference row, extraction row]",
+          "matched_pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              11,
+              11
+            ],
+            [
+              12,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              17,
+              17
+            ],
+            [
+              18,
+              18
+            ],
+            [
+              19,
+              19
+            ],
+            [
+              20,
+              20
+            ],
+            [
+              21,
+              21
+            ],
+            [
+              22,
+              22
+            ],
+            [
+              23,
+              23
+            ],
+            [
+              24,
+              24
+            ],
+            [
+              25,
+              25
+            ],
+            [
+              26,
+              26
+            ],
+            [
+              27,
+              27
+            ],
+            [
+              28,
+              28
+            ],
+            [
+              29,
+              29
+            ],
+            [
+              30,
+              30
+            ],
+            [
+              31,
+              31
+            ],
+            [
+              32,
+              32
+            ],
+            [
+              33,
+              33
+            ],
+            [
+              34,
+              34
+            ],
+            [
+              35,
+              35
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              37,
+              37
+            ],
+            [
+              38,
+              38
+            ],
+            [
+              39,
+              39
+            ],
+            [
+              40,
+              40
+            ],
+            [
+              41,
+              41
+            ],
+            [
+              42,
+              42
+            ],
+            [
+              43,
+              43
+            ],
+            [
+              44,
+              44
+            ],
+            [
+              45,
+              45
+            ],
+            [
+              46,
+              46
+            ],
+            [
+              47,
+              47
+            ],
+            [
+              48,
+              48
+            ],
+            [
+              49,
+              49
+            ],
+            [
+              50,
+              50
+            ],
+            [
+              51,
+              51
+            ],
+            [
+              52,
+              52
+            ],
+            [
+              53,
+              53
+            ],
+            [
+              54,
+              54
+            ],
+            [
+              55,
+              55
+            ]
+          ],
+          "unmatched_reference_stories": [],
+          "unmatched_extracted_stories": []
+        },
+        "modes": {
+          "strict": {
+            "components": {
+              "Persona": {
+                "TP": 46,
+                "FP": 9,
+                "FN": 9,
+                "precision": 0.8363636363636363,
+                "recall": 0.8363636363636363,
+                "f1": 0.8363636363636363
+              },
+              "Entity": {
+                "TP": 198,
+                "FP": 33,
+                "FN": 35,
+                "precision": 0.8571428571428571,
+                "recall": 0.8497854077253219,
+                "f1": 0.853448275862069
+              },
+              "Action": {
+                "TP": 125,
+                "FP": 11,
+                "FN": 20,
+                "precision": 0.9191176470588235,
+                "recall": 0.8620689655172413,
+                "f1": 0.889679715302491
+              },
+              "Benefit": {
+                "TP": 54,
+                "FP": 1,
+                "FN": 1,
+                "precision": 0.9818181818181818,
+                "recall": 0.9818181818181818,
+                "f1": 0.9818181818181818
+              }
+            },
+            "csv_reproduction": {
+              "status": "passed",
+              "checked_values": 12,
+              "mismatches": [],
+              "csv_input": "extractor_root/evaluation/gpt-4-turbo/strict_dataset_results.csv"
+            }
+          }
+        }
+      },
+      "g04": {
+        "reference_input": "extractor_root/pos_baseline/g04_baseline_intersecting_pos.json",
+        "extraction_input": "evaluation/extracted_data/gpt-4-turbo/g04.json",
+        "coverage": {
+          "reference_stories": 48,
+          "extracted_stories": 48,
+          "matched_stories": 48,
+          "reference_coverage": 1.0,
+          "extraction_coverage": 1.0,
+          "row_numbering": "one-based [reference row, extraction row]",
+          "matched_pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              11,
+              11
+            ],
+            [
+              12,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              17,
+              17
+            ],
+            [
+              18,
+              18
+            ],
+            [
+              19,
+              19
+            ],
+            [
+              20,
+              20
+            ],
+            [
+              21,
+              21
+            ],
+            [
+              22,
+              22
+            ],
+            [
+              23,
+              23
+            ],
+            [
+              24,
+              24
+            ],
+            [
+              25,
+              25
+            ],
+            [
+              26,
+              26
+            ],
+            [
+              27,
+              27
+            ],
+            [
+              28,
+              28
+            ],
+            [
+              29,
+              29
+            ],
+            [
+              30,
+              30
+            ],
+            [
+              31,
+              31
+            ],
+            [
+              32,
+              32
+            ],
+            [
+              33,
+              33
+            ],
+            [
+              34,
+              34
+            ],
+            [
+              35,
+              35
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              37,
+              37
+            ],
+            [
+              38,
+              38
+            ],
+            [
+              39,
+              39
+            ],
+            [
+              40,
+              40
+            ],
+            [
+              41,
+              41
+            ],
+            [
+              42,
+              42
+            ],
+            [
+              43,
+              43
+            ],
+            [
+              44,
+              44
+            ],
+            [
+              45,
+              45
+            ],
+            [
+              46,
+              46
+            ],
+            [
+              47,
+              47
+            ],
+            [
+              48,
+              48
+            ]
+          ],
+          "unmatched_reference_stories": [],
+          "unmatched_extracted_stories": []
+        },
+        "modes": {
+          "strict": {
+            "components": {
+              "Persona": {
+                "TP": 48,
+                "FP": 0,
+                "FN": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "Entity": {
+                "TP": 132,
+                "FP": 35,
+                "FN": 32,
+                "precision": 0.7904191616766467,
+                "recall": 0.8048780487804879,
+                "f1": 0.797583081570997
+              },
+              "Action": {
+                "TP": 93,
+                "FP": 19,
+                "FN": 23,
+                "precision": 0.8303571428571429,
+                "recall": 0.8017241379310345,
+                "f1": 0.8157894736842104
+              },
+              "Benefit": {
+                "TP": 47,
+                "FP": 1,
+                "FN": 1,
+                "precision": 0.9791666666666666,
+                "recall": 0.9791666666666666,
+                "f1": 0.9791666666666666
+              }
+            },
+            "csv_reproduction": {
+              "status": "passed",
+              "checked_values": 12,
+              "mismatches": [],
+              "csv_input": "extractor_root/evaluation/gpt-4-turbo/strict_dataset_results.csv"
+            }
+          }
+        }
+      }
+    },
+    "gpt-4o-mini": {
+      "g03": {
+        "reference_input": "extractor_root/pos_baseline/g03_baseline_intersecting_pos.json",
+        "extraction_input": "evaluation/extracted_data/gpt-4o-mini/g03.json",
+        "coverage": {
+          "reference_stories": 55,
+          "extracted_stories": 55,
+          "matched_stories": 55,
+          "reference_coverage": 1.0,
+          "extraction_coverage": 1.0,
+          "row_numbering": "one-based [reference row, extraction row]",
+          "matched_pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              11,
+              11
+            ],
+            [
+              12,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              17,
+              17
+            ],
+            [
+              18,
+              18
+            ],
+            [
+              19,
+              19
+            ],
+            [
+              20,
+              20
+            ],
+            [
+              21,
+              21
+            ],
+            [
+              22,
+              22
+            ],
+            [
+              23,
+              23
+            ],
+            [
+              24,
+              24
+            ],
+            [
+              25,
+              25
+            ],
+            [
+              26,
+              26
+            ],
+            [
+              27,
+              27
+            ],
+            [
+              28,
+              28
+            ],
+            [
+              29,
+              29
+            ],
+            [
+              30,
+              30
+            ],
+            [
+              31,
+              31
+            ],
+            [
+              32,
+              32
+            ],
+            [
+              33,
+              33
+            ],
+            [
+              34,
+              34
+            ],
+            [
+              35,
+              35
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              37,
+              37
+            ],
+            [
+              38,
+              38
+            ],
+            [
+              39,
+              39
+            ],
+            [
+              40,
+              40
+            ],
+            [
+              41,
+              41
+            ],
+            [
+              42,
+              42
+            ],
+            [
+              43,
+              43
+            ],
+            [
+              44,
+              44
+            ],
+            [
+              45,
+              45
+            ],
+            [
+              46,
+              46
+            ],
+            [
+              47,
+              47
+            ],
+            [
+              48,
+              48
+            ],
+            [
+              49,
+              49
+            ],
+            [
+              50,
+              50
+            ],
+            [
+              51,
+              51
+            ],
+            [
+              52,
+              52
+            ],
+            [
+              53,
+              53
+            ],
+            [
+              54,
+              54
+            ],
+            [
+              55,
+              55
+            ]
+          ],
+          "unmatched_reference_stories": [],
+          "unmatched_extracted_stories": []
+        },
+        "modes": {
+          "strict": {
+            "components": {
+              "Persona": {
+                "TP": 55,
+                "FP": 0,
+                "FN": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "Entity": {
+                "TP": 188,
+                "FP": 40,
+                "FN": 45,
+                "precision": 0.8245614035087719,
+                "recall": 0.8068669527896996,
+                "f1": 0.8156182212581344
+              },
+              "Action": {
+                "TP": 105,
+                "FP": 9,
+                "FN": 40,
+                "precision": 0.9210526315789473,
+                "recall": 0.7241379310344828,
+                "f1": 0.8108108108108109
+              },
+              "Benefit": {
+                "TP": 51,
+                "FP": 4,
+                "FN": 4,
+                "precision": 0.9272727272727272,
+                "recall": 0.9272727272727272,
+                "f1": 0.9272727272727272
+              }
+            },
+            "csv_reproduction": {
+              "status": "passed",
+              "checked_values": 12,
+              "mismatches": [],
+              "csv_input": "extractor_root/evaluation/gpt-4o-mini/strict_dataset_results.csv"
+            }
+          }
+        }
+      },
+      "g04": {
+        "reference_input": "extractor_root/pos_baseline/g04_baseline_intersecting_pos.json",
+        "extraction_input": "evaluation/extracted_data/gpt-4o-mini/g04.json",
+        "coverage": {
+          "reference_stories": 48,
+          "extracted_stories": 48,
+          "matched_stories": 48,
+          "reference_coverage": 1.0,
+          "extraction_coverage": 1.0,
+          "row_numbering": "one-based [reference row, extraction row]",
+          "matched_pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              11,
+              11
+            ],
+            [
+              12,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              17,
+              17
+            ],
+            [
+              18,
+              18
+            ],
+            [
+              19,
+              19
+            ],
+            [
+              20,
+              20
+            ],
+            [
+              21,
+              21
+            ],
+            [
+              22,
+              22
+            ],
+            [
+              23,
+              23
+            ],
+            [
+              24,
+              24
+            ],
+            [
+              25,
+              25
+            ],
+            [
+              26,
+              26
+            ],
+            [
+              27,
+              27
+            ],
+            [
+              28,
+              28
+            ],
+            [
+              29,
+              29
+            ],
+            [
+              30,
+              30
+            ],
+            [
+              31,
+              31
+            ],
+            [
+              32,
+              32
+            ],
+            [
+              33,
+              33
+            ],
+            [
+              34,
+              34
+            ],
+            [
+              35,
+              35
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              37,
+              37
+            ],
+            [
+              38,
+              38
+            ],
+            [
+              39,
+              39
+            ],
+            [
+              40,
+              40
+            ],
+            [
+              41,
+              41
+            ],
+            [
+              42,
+              42
+            ],
+            [
+              43,
+              43
+            ],
+            [
+              44,
+              44
+            ],
+            [
+              45,
+              45
+            ],
+            [
+              46,
+              46
+            ],
+            [
+              47,
+              47
+            ],
+            [
+              48,
+              48
+            ]
+          ],
+          "unmatched_reference_stories": [],
+          "unmatched_extracted_stories": []
+        },
+        "modes": {
+          "strict": {
+            "components": {
+              "Persona": {
+                "TP": 47,
+                "FP": 1,
+                "FN": 1,
+                "precision": 0.9791666666666666,
+                "recall": 0.9791666666666666,
+                "f1": 0.9791666666666666
+              },
+              "Entity": {
+                "TP": 127,
+                "FP": 44,
+                "FN": 37,
+                "precision": 0.7426900584795322,
+                "recall": 0.774390243902439,
+                "f1": 0.7582089552238805
+              },
+              "Action": {
+                "TP": 79,
+                "FP": 18,
+                "FN": 37,
+                "precision": 0.8144329896907216,
+                "recall": 0.6810344827586207,
+                "f1": 0.7417840375586854
+              },
+              "Benefit": {
+                "TP": 42,
+                "FP": 6,
+                "FN": 6,
+                "precision": 0.875,
+                "recall": 0.875,
+                "f1": 0.875
+              }
+            },
+            "csv_reproduction": {
+              "status": "passed",
+              "checked_values": 12,
+              "mismatches": [],
+              "csv_input": "extractor_root/evaluation/gpt-4o-mini/strict_dataset_results.csv"
+            }
+          }
+        }
+      }
+    },
+    "ollama3": {
+      "g03": {
+        "reference_input": "extractor_root/pos_baseline/g03_baseline_intersecting_pos.json",
+        "extraction_input": "evaluation/extracted_data/ollama3/g03.json",
+        "coverage": {
+          "reference_stories": 55,
+          "extracted_stories": 55,
+          "matched_stories": 55,
+          "reference_coverage": 1.0,
+          "extraction_coverage": 1.0,
+          "row_numbering": "one-based [reference row, extraction row]",
+          "matched_pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              11,
+              11
+            ],
+            [
+              12,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              15,
+              15
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              17,
+              17
+            ],
+            [
+              18,
+              18
+            ],
+            [
+              19,
+              19
+            ],
+            [
+              20,
+              20
+            ],
+            [
+              21,
+              21
+            ],
+            [
+              22,
+              22
+            ],
+            [
+              23,
+              23
+            ],
+            [
+              24,
+              24
+            ],
+            [
+              25,
+              25
+            ],
+            [
+              26,
+              26
+            ],
+            [
+              27,
+              27
+            ],
+            [
+              28,
+              28
+            ],
+            [
+              29,
+              29
+            ],
+            [
+              30,
+              30
+            ],
+            [
+              31,
+              31
+            ],
+            [
+              32,
+              32
+            ],
+            [
+              33,
+              33
+            ],
+            [
+              34,
+              34
+            ],
+            [
+              35,
+              35
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              37,
+              37
+            ],
+            [
+              38,
+              38
+            ],
+            [
+              39,
+              39
+            ],
+            [
+              40,
+              40
+            ],
+            [
+              41,
+              41
+            ],
+            [
+              42,
+              42
+            ],
+            [
+              43,
+              43
+            ],
+            [
+              44,
+              44
+            ],
+            [
+              45,
+              45
+            ],
+            [
+              46,
+              46
+            ],
+            [
+              47,
+              47
+            ],
+            [
+              48,
+              48
+            ],
+            [
+              49,
+              49
+            ],
+            [
+              50,
+              50
+            ],
+            [
+              51,
+              51
+            ],
+            [
+              52,
+              52
+            ],
+            [
+              53,
+              53
+            ],
+            [
+              54,
+              54
+            ],
+            [
+              55,
+              55
+            ]
+          ],
+          "unmatched_reference_stories": [],
+          "unmatched_extracted_stories": []
+        },
+        "modes": {
+          "strict": {
+            "components": {
+              "Persona": {
+                "TP": 54,
+                "FP": 3,
+                "FN": 1,
+                "precision": 0.9473684210526315,
+                "recall": 0.9818181818181818,
+                "f1": 0.9642857142857142
+              },
+              "Entity": {
+                "TP": 102,
+                "FP": 51,
+                "FN": 131,
+                "precision": 0.6666666666666666,
+                "recall": 0.43776824034334766,
+                "f1": 0.5284974093264249
+              },
+              "Action": {
+                "TP": 52,
+                "FP": 44,
+                "FN": 93,
+                "precision": 0.5416666666666666,
+                "recall": 0.3586206896551724,
+                "f1": 0.4315352697095436
+              },
+              "Benefit": {
+                "TP": 52,
+                "FP": 3,
+                "FN": 3,
+                "precision": 0.9454545454545454,
+                "recall": 0.9454545454545454,
+                "f1": 0.9454545454545454
+              }
+            },
+            "csv_reproduction": {
+              "status": "passed",
+              "checked_values": 12,
+              "mismatches": [],
+              "csv_input": "extractor_root/evaluation/ollama3/strict_dataset_results.csv"
+            }
+          }
+        }
+      },
+      "g04": {
+        "reference_input": "extractor_root/pos_baseline/g04_baseline_intersecting_pos.json",
+        "extraction_input": "evaluation/extracted_data/ollama3/g04.json",
+        "coverage": {
+          "reference_stories": 48,
+          "extracted_stories": 47,
+          "matched_stories": 47,
+          "reference_coverage": 0.9791666666666666,
+          "extraction_coverage": 1.0,
+          "row_numbering": "one-based [reference row, extraction row]",
+          "matched_pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              11,
+              11
+            ],
+            [
+              12,
+              12
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              15,
+              14
+            ],
+            [
+              16,
+              15
+            ],
+            [
+              17,
+              16
+            ],
+            [
+              18,
+              17
+            ],
+            [
+              19,
+              18
+            ],
+            [
+              20,
+              19
+            ],
+            [
+              21,
+              20
+            ],
+            [
+              22,
+              21
+            ],
+            [
+              23,
+              22
+            ],
+            [
+              24,
+              23
+            ],
+            [
+              25,
+              24
+            ],
+            [
+              26,
+              25
+            ],
+            [
+              27,
+              26
+            ],
+            [
+              28,
+              27
+            ],
+            [
+              29,
+              28
+            ],
+            [
+              30,
+              29
+            ],
+            [
+              31,
+              30
+            ],
+            [
+              32,
+              31
+            ],
+            [
+              33,
+              32
+            ],
+            [
+              34,
+              33
+            ],
+            [
+              35,
+              34
+            ],
+            [
+              36,
+              35
+            ],
+            [
+              37,
+              36
+            ],
+            [
+              38,
+              37
+            ],
+            [
+              39,
+              38
+            ],
+            [
+              40,
+              39
+            ],
+            [
+              41,
+              40
+            ],
+            [
+              42,
+              41
+            ],
+            [
+              43,
+              42
+            ],
+            [
+              44,
+              43
+            ],
+            [
+              45,
+              44
+            ],
+            [
+              46,
+              45
+            ],
+            [
+              47,
+              46
+            ],
+            [
+              48,
+              47
+            ]
+          ],
+          "unmatched_reference_stories": [
+            {
+              "reference_row": 13,
+              "text": "#G04# As a user, I want to get feedback when I enter an invalid zip code."
+            }
+          ],
+          "unmatched_extracted_stories": []
+        },
+        "modes": {
+          "strict": {
+            "components": {
+              "Persona": {
+                "TP": 44,
+                "FP": 4,
+                "FN": 3,
+                "precision": 0.9166666666666666,
+                "recall": 0.9361702127659575,
+                "f1": 0.9263157894736843
+              },
+              "Entity": {
+                "TP": 70,
+                "FP": 56,
+                "FN": 92,
+                "precision": 0.5555555555555556,
+                "recall": 0.43209876543209874,
+                "f1": 0.48611111111111116
+              },
+              "Action": {
+                "TP": 63,
+                "FP": 28,
+                "FN": 51,
+                "precision": 0.6923076923076923,
+                "recall": 0.5526315789473685,
+                "f1": 0.6146341463414634
+              },
+              "Benefit": {
+                "TP": 44,
+                "FP": 3,
+                "FN": 3,
+                "precision": 0.9361702127659575,
+                "recall": 0.9361702127659575,
+                "f1": 0.9361702127659575
+              }
+            },
+            "csv_reproduction": {
+              "status": "passed",
+              "checked_values": 12,
+              "mismatches": [],
+              "csv_input": "extractor_root/evaluation/ollama3/strict_dataset_results.csv"
+            }
+          }
+        }
+      }
+    },
+    "chatgpt": {
+      "g03": {
+        "reference_input": "extractor_root/pos_baseline/g03_baseline_intersecting_pos.json",
+        "extraction_input": "evaluation/extracted_data/chatgpt/g03_chatgpt_intersecting.json",
+        "coverage": {
+          "reference_stories": 55,
+          "extracted_stories": 55,
+          "matched_stories": 55,
+          "reference_coverage": 1.0,
+          "extraction_coverage": 1.0,
+          "row_numbering": "one-based [reference row, extraction row]",
+          "matched_pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              12
+            ],
+            [
+              3,
+              23
+            ],
+            [
+              4,
+              33
+            ],
+            [
+              5,
+              43
+            ],
+            [
+              6,
+              52
+            ],
+            [
+              7,
+              53
+            ],
+            [
+              8,
+              54
+            ],
+            [
+              9,
+              55
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              12,
+              4
+            ],
+            [
+              13,
+              5
+            ],
+            [
+              14,
+              6
+            ],
+            [
+              15,
+              7
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              18,
+              10
+            ],
+            [
+              19,
+              11
+            ],
+            [
+              20,
+              13
+            ],
+            [
+              21,
+              14
+            ],
+            [
+              22,
+              15
+            ],
+            [
+              23,
+              16
+            ],
+            [
+              24,
+              17
+            ],
+            [
+              25,
+              18
+            ],
+            [
+              26,
+              19
+            ],
+            [
+              27,
+              20
+            ],
+            [
+              28,
+              21
+            ],
+            [
+              29,
+              22
+            ],
+            [
+              30,
+              24
+            ],
+            [
+              31,
+              25
+            ],
+            [
+              32,
+              26
+            ],
+            [
+              33,
+              27
+            ],
+            [
+              34,
+              28
+            ],
+            [
+              35,
+              29
+            ],
+            [
+              36,
+              30
+            ],
+            [
+              37,
+              31
+            ],
+            [
+              38,
+              32
+            ],
+            [
+              39,
+              34
+            ],
+            [
+              40,
+              35
+            ],
+            [
+              41,
+              36
+            ],
+            [
+              42,
+              37
+            ],
+            [
+              43,
+              38
+            ],
+            [
+              44,
+              39
+            ],
+            [
+              45,
+              40
+            ],
+            [
+              46,
+              41
+            ],
+            [
+              47,
+              42
+            ],
+            [
+              48,
+              44
+            ],
+            [
+              49,
+              45
+            ],
+            [
+              50,
+              46
+            ],
+            [
+              51,
+              47
+            ],
+            [
+              52,
+              48
+            ],
+            [
+              53,
+              49
+            ],
+            [
+              54,
+              50
+            ],
+            [
+              55,
+              51
+            ]
+          ],
+          "unmatched_reference_stories": [],
+          "unmatched_extracted_stories": []
+        },
+        "modes": {
+          "strict": {
+            "components": {
+              "Persona": {
+                "TP": 55,
+                "FP": 1,
+                "FN": 0,
+                "precision": 0.9821428571428571,
+                "recall": 1.0,
+                "f1": 0.9909909909909909
+              },
+              "Entity": {
+                "TP": 132,
+                "FP": 23,
+                "FN": 101,
+                "precision": 0.8516129032258064,
+                "recall": 0.5665236051502146,
+                "f1": 0.6804123711340206
+              },
+              "Action": {
+                "TP": 97,
+                "FP": 12,
+                "FN": 48,
+                "precision": 0.8899082568807339,
+                "recall": 0.6689655172413793,
+                "f1": 0.7637795275590551
+              },
+              "Benefit": {
+                "TP": 18,
+                "FP": 37,
+                "FN": 37,
+                "precision": 0.32727272727272727,
+                "recall": 0.32727272727272727,
+                "f1": 0.32727272727272727
+              }
+            },
+            "csv_reproduction": {
+              "status": "not_available",
+              "checked_values": 0
+            }
+          }
+        }
+      },
+      "g04": {
+        "reference_input": "extractor_root/pos_baseline/g04_baseline_intersecting_pos.json",
+        "extraction_input": "evaluation/extracted_data/chatgpt/g04_chatgpt_intersecting.json",
+        "coverage": {
+          "reference_stories": 48,
+          "extracted_stories": 48,
+          "matched_stories": 48,
+          "reference_coverage": 1.0,
+          "extraction_coverage": 1.0,
+          "row_numbering": "one-based [reference row, extraction row]",
+          "matched_pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              11
+            ],
+            [
+              3,
+              22
+            ],
+            [
+              4,
+              33
+            ],
+            [
+              5,
+              45
+            ],
+            [
+              6,
+              46
+            ],
+            [
+              7,
+              47
+            ],
+            [
+              8,
+              48
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              11,
+              4
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              13,
+              6
+            ],
+            [
+              14,
+              7
+            ],
+            [
+              15,
+              8
+            ],
+            [
+              16,
+              9
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              12
+            ],
+            [
+              19,
+              13
+            ],
+            [
+              20,
+              14
+            ],
+            [
+              21,
+              15
+            ],
+            [
+              22,
+              16
+            ],
+            [
+              23,
+              17
+            ],
+            [
+              24,
+              18
+            ],
+            [
+              25,
+              19
+            ],
+            [
+              26,
+              20
+            ],
+            [
+              27,
+              21
+            ],
+            [
+              28,
+              23
+            ],
+            [
+              29,
+              24
+            ],
+            [
+              30,
+              25
+            ],
+            [
+              31,
+              26
+            ],
+            [
+              32,
+              27
+            ],
+            [
+              33,
+              28
+            ],
+            [
+              34,
+              29
+            ],
+            [
+              35,
+              30
+            ],
+            [
+              36,
+              31
+            ],
+            [
+              37,
+              32
+            ],
+            [
+              38,
+              34
+            ],
+            [
+              39,
+              35
+            ],
+            [
+              40,
+              36
+            ],
+            [
+              41,
+              37
+            ],
+            [
+              42,
+              38
+            ],
+            [
+              43,
+              39
+            ],
+            [
+              44,
+              40
+            ],
+            [
+              45,
+              41
+            ],
+            [
+              46,
+              42
+            ],
+            [
+              47,
+              43
+            ],
+            [
+              48,
+              44
+            ]
+          ],
+          "unmatched_reference_stories": [],
+          "unmatched_extracted_stories": []
+        },
+        "modes": {
+          "strict": {
+            "components": {
+              "Persona": {
+                "TP": 45,
+                "FP": 4,
+                "FN": 3,
+                "precision": 0.9183673469387755,
+                "recall": 0.9375,
+                "f1": 0.9278350515463918
+              },
+              "Entity": {
+                "TP": 81,
+                "FP": 23,
+                "FN": 83,
+                "precision": 0.7788461538461539,
+                "recall": 0.49390243902439024,
+                "f1": 0.6044776119402985
+              },
+              "Action": {
+                "TP": 65,
+                "FP": 27,
+                "FN": 51,
+                "precision": 0.7065217391304348,
+                "recall": 0.5603448275862069,
+                "f1": 0.625
+              },
+              "Benefit": {
+                "TP": 29,
+                "FP": 19,
+                "FN": 19,
+                "precision": 0.6041666666666666,
+                "recall": 0.6041666666666666,
+                "f1": 0.6041666666666666
+              }
+            },
+            "csv_reproduction": {
+              "status": "not_available",
+              "checked_values": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "inputs": [
+    {
+      "scope": "evaluation",
+      "path": "extracted_data/chatgpt/g03_chatgpt_intersecting.json",
+      "sha256": "0f9165a043d987b088c2f2867b84de0b0e5965b8f64fff7cec4a648972cdbb5f"
+    },
+    {
+      "scope": "evaluation",
+      "path": "extracted_data/chatgpt/g04_chatgpt_intersecting.json",
+      "sha256": "bc737f57baf4f9c8aefe77142c057593dd375ee688dc22869f8d4f1a88f7dab8"
+    },
+    {
+      "scope": "evaluation",
+      "path": "extracted_data/gpt-4-turbo/g03.json",
+      "sha256": "8982fa6b832ee76fade0c3954898460e9a8f7e89d11ba9d0ed2ebf05f90e3fb8"
+    },
+    {
+      "scope": "evaluation",
+      "path": "extracted_data/gpt-4-turbo/g04.json",
+      "sha256": "3b8e5cbdc033b732143b2e4a070a781c32e5dd0df45b00d63c4a044e620ad57a"
+    },
+    {
+      "scope": "evaluation",
+      "path": "extracted_data/gpt-4o-mini/g03.json",
+      "sha256": "537d6d098323d50baba42c5b3552e0f58e6fc6943ae82a8d6e40cd6c107f3326"
+    },
+    {
+      "scope": "evaluation",
+      "path": "extracted_data/gpt-4o-mini/g04.json",
+      "sha256": "05093bcd866a556b54f4323397217e6504a3bb9570ba2e858c33f5f313fd7a93"
+    },
+    {
+      "scope": "evaluation",
+      "path": "extracted_data/ollama3/g03.json",
+      "sha256": "31e6a8733a5c1358ed5b4b8c0d84f269213aec06dfd9a36dcd670b23bd63a900"
+    },
+    {
+      "scope": "evaluation",
+      "path": "extracted_data/ollama3/g04.json",
+      "sha256": "0b79db565b35633d4b49ed45a1425e29592c09050f56f041d417f536f702b54e"
+    },
+    {
+      "scope": "evaluation",
+      "path": "run_extraction_validation.py",
+      "sha256": "e965e833f22c970640081199cfdfe170499c77dff885504522f187eaffb5bf09"
+    },
+    {
+      "scope": "extractor_root",
+      "path": "evaluation.py",
+      "sha256": "0473e807fdc7941735ae9b36143edd7eee5cc165dbe2271621edb15e8ad2cd8a"
+    },
+    {
+      "scope": "extractor_root",
+      "path": "evaluation/gpt-4-turbo/strict_dataset_results.csv",
+      "sha256": "b17c3ce60269806b9f1659d69b5e4b4be0ac8755463b7f6383770730be2d8350"
+    },
+    {
+      "scope": "extractor_root",
+      "path": "evaluation/gpt-4o-mini/strict_dataset_results.csv",
+      "sha256": "d16244a031df97978bea1b46785c932f3b17814e5baefc0cc9bff3c4a39433e3"
+    },
+    {
+      "scope": "extractor_root",
+      "path": "evaluation/ollama3/strict_dataset_results.csv",
+      "sha256": "b05a4c57b77d31c946a35c732b02cbf2e8f3b5daf64012eb25e43587f451ca76"
+    },
+    {
+      "scope": "extractor_root",
+      "path": "pos_baseline/g03_baseline_intersecting_pos.json",
+      "sha256": "3756e788d7bdd57d3581e993540601ce52ee479eaa63d700c12cd81957f6ce5c"
+    },
+    {
+      "scope": "extractor_root",
+      "path": "pos_baseline/g04_baseline_intersecting_pos.json",
+      "sha256": "7e18460eed22db841b499ef510b988d6598d730bd8e9ae86eb98cba46e4ccfac"
+    }
+  ],
+  "reproduction_summary": {
+    "passed_csv_rows": 6,
+    "failed_csv_rows": 0,
+    "unavailable_csv_rows": 2,
+    "checked_metric_values": 72
+  }
+}

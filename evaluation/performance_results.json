@@ -1,0 +1,146 @@
+{
+  "protocol": {
+    "schema_version": "story-provenance-v2",
+    "execution": "neo4j",
+    "generated_at_utc": "2026-09-03T18:05:33.855298+00:00",
+    "database": {
+      "g03": "g03",
+      "g04": "g04"
+    },
+    "model": "gpt-4-turbo",
+    "backlogs": [
+      "g03",
+      "g04"
+    ],
+    "user_story_nodes_per_backlog": {
+      "g03": 55,
+      "g04": 48
+    },
+    "warmup_runs_per_query": 25,
+    "measured_runs_per_query": 250,
+    "timing": "client wall time including driver round trip",
+    "execution_conditions": "each backlog in its own physical database; sequential; warm cache; complete result consumption",
+    "inputs": [
+      {
+        "model": "gpt-4-turbo",
+        "pid": "g03",
+        "source_file": "extracted_data/gpt-4-turbo/g03.json",
+        "source_sha256": "8982fa6b832ee76fade0c3954898460e9a8f7e89d11ba9d0ed2ebf05f90e3fb8"
+      },
+      {
+        "model": "gpt-4-turbo",
+        "pid": "g04",
+        "source_file": "extracted_data/gpt-4-turbo/g04.json",
+        "source_sha256": "3b8e5cbdc033b732143b2e4a070a781c32e5dd0df45b00d63c4a044e620ad57a"
+      }
+    ]
+  },
+  "environment": {
+    "python": "3.13.2",
+    "neo4j_driver": "6.2.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "database_components": [
+      {
+        "name": "Neo4j Kernel",
+        "versions": [
+          "2026.04.0"
+        ],
+        "edition": "enterprise"
+      },
+      {
+        "name": "Cypher",
+        "versions": [
+          "5",
+          "25"
+        ],
+        "edition": ""
+      }
+    ]
+  },
+  "measurements_per_backlog": {
+    "g03": {
+      "missing_benefit": {
+        "result_rows": 0,
+        "db_hits": 386,
+        "median_ms": 3.169,
+        "p95_ms": 4.315,
+        "minimum_ms": 2.409,
+        "maximum_ms": 6.343
+      },
+      "fat_story_gt2": {
+        "result_rows": 21,
+        "db_hits": 673,
+        "median_ms": 4.509,
+        "p95_ms": 7.048,
+        "minimum_ms": 3.345,
+        "maximum_ms": 27.712
+      },
+      "dangling_action": {
+        "result_rows": 3,
+        "db_hits": 1866,
+        "median_ms": 3.635,
+        "p95_ms": 4.718,
+        "minimum_ms": 2.756,
+        "maximum_ms": 5.288
+      },
+      "overlap_candidate": {
+        "result_rows": 4,
+        "db_hits": 3911,
+        "median_ms": 4.274,
+        "p95_ms": 6.162,
+        "minimum_ms": 3.026,
+        "maximum_ms": 9.335
+      },
+      "cross_persona_overlap": {
+        "result_rows": 0,
+        "db_hits": 3263,
+        "median_ms": 3.649,
+        "p95_ms": 4.913,
+        "minimum_ms": 2.756,
+        "maximum_ms": 7.69
+      }
+    },
+    "g04": {
+      "missing_benefit": {
+        "result_rows": 6,
+        "db_hits": 343,
+        "median_ms": 2.701,
+        "p95_ms": 3.42,
+        "minimum_ms": 2.115,
+        "maximum_ms": 4.018
+      },
+      "fat_story_gt2": {
+        "result_rows": 14,
+        "db_hits": 545,
+        "median_ms": 3.019,
+        "p95_ms": 3.98,
+        "minimum_ms": 2.267,
+        "maximum_ms": 7.454
+      },
+      "dangling_action": {
+        "result_rows": 1,
+        "db_hits": 1889,
+        "median_ms": 3.123,
+        "p95_ms": 4.414,
+        "minimum_ms": 2.189,
+        "maximum_ms": 7.348
+      },
+      "overlap_candidate": {
+        "result_rows": 5,
+        "db_hits": 2729,
+        "median_ms": 3.523,
+        "p95_ms": 4.578,
+        "minimum_ms": 2.674,
+        "maximum_ms": 9.399
+      },
+      "cross_persona_overlap": {
+        "result_rows": 2,
+        "db_hits": 7641,
+        "median_ms": 4.92,
+        "p95_ms": 6.355,
+        "minimum_ms": 3.849,
+        "maximum_ms": 11.388
+      }
+    }
+  }
+}
