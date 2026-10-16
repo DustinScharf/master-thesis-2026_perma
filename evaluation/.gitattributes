@@ -1,0 +1,3 @@
+# Preserve the delivered bytes, including original third-party line endings.
+# MANIFEST.sha256 verifies bytes rather than a normalized text representation.
+* -text
